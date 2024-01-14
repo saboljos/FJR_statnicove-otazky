@@ -1,0 +1,349 @@
+\section{Poruchová teorie a její využití v reaktorové fyzice}
+
+\subsection{Odůvodnění}
+
+Při provozu reaktoru dochází k častým dochylkám v parametrech od běžného stavu, tzv. \textbf{odchylky}. Ty se vyznačují:
+
+\begin{itemize}
+  \item prostorovou závislostí; jedná se o lokální změny v důsledku akumulace FP, lokálního vyhoření, vkládání vzorků k ozařování apod.
+\end{itemize}
+
+Pokud bychom chtěli systém analyzovat pomocí 2G, čí vícegrupového přístupu, nelze použít klasickou teorii, jelikož grupové konstanty se vztahují k celému objemu a nikoliv k lokálním změnám $\rightarrow$ bylo by potřeba velmi náročného 3D vícegrupového přístupu s prostorově závislými konstantami $\rightarrow$ vzhledem k výpočetní náročnosti nelze použít.\\
+
+Alternativou je tzv. \textbf{poruchová teorie}, kterou lze využít pouze za předpokladu, že \textbf{daná porucha neovlivňuje výrazně hustotu toku neutronů v blízkosti poruchy}. Lze ji využít pro analýzu lokálních i celozónových poruch.
+
+\subsection{Odvození poruchy reaktivity}
+
+Uvažujme, že máme \textbf{holý homogenní tepelný reaktor} a hledáme poruchu v reaktivitě $\rho$. Pro koeficient násobení v takovém systému platí:
+
+$$ k = \varepsilon p f \eta P_{NL} = \nu \left ( \dfrac{\Sigma_f}{\Sigma_a^F} \varepsilon p f P_{NL} \right ), $$
+
+kde:
+
+\begin{itemize}
+  \item $\varepsilon$ (-) značí koeficient násobění rychlými neutrony,
+  \item $p$ (-) značí pravděpodobnost úniku rezonančního záchytu,
+  \item $f$ (-) značí koeficient využití tepelných neutronů $\left ( f = \dfrac{\Sigma_a^F}{\Sigma_a} \right )$,
+  \item $\eta$ (-) značí regenerační faktor $\left ( \eta = \nu \dfrac{\Sigma_f}{\Sigma_a^F} \right )$,
+  \item $P_{NL}$ (-) značí pravděpodobnost, že neutron neunikne ze systému,
+  \item $\nu$ (-) značí průměrný počet neutronů uvolněných ze štěpení.
+\end{itemize}
+
+Označíme-li si:
+
+$$  g = \left ( \dfrac{\Sigma_f}{\Sigma_a^F} \varepsilon p f P_{NL} \right ), $$
+
+tak pro kritický systém musí platit, že:
+
+$$ k = \nu g = 1, $$
+
+kde parametr $\nu$ je pevně daný typem použitého paliva a vlivem poruchy se nemůže změnit, zatímco $g$ je závislý na složení a rozměrech systému a vlivem poruchy se změní. Nastane-li nějaká porucha, změní se koeficient násobení na $k'$, což vyústí na změnu v parametru $g'$, tedy:
+
+$$ k' = \nu g' \neq 1. $$
+
+Poté reaktivitu v systému s poruchou určíme podle vztahu:
+
+$$ \rho = \dfrac{k'-1}{k} = \dfrac{k'-k}{k} = \dfrac{\cancel{\nu} g' - \cancel{\nu} g}{\cancel{\nu} g} = \dfrac{g'-g}{g}. $$
+
+Naším cílem je vrátit reaktor zpět do kritického stavu. Předpokládejme, že nového kritického stavu jde docílit změnou parametru $\nu'$ (ačkoliv fyzikálně to možné není) tak, že:
+
+$$ \nu' g' = 1. $$
+
+Po vyjádření $g'$ a dosazení do předešlé rovnice získáme \textbf{vztah pro reaktivitu systému s poruchou jako}:
+
+\begin{equation}
+  \boxed{
+  \rho = \dfrac{g'-g}{g} = \dfrac{\nu-\nu'}{\nu} = - \dfrac{\nu'-\nu}{\nu} = - \dfrac{\Delta \nu}{\nu}.
+  \label{reaktivita_s_poruchou}}
+\end{equation}
+
+Chceme-li zjistit reaktivitu systému s poruchou, stačí pouze nalézt vyjádření pro $\Delta \nu$ (pouze matematická představa, fyzikálně nic takového neexistuje) a tu dosadit do vztahu \eqref{reaktivita_s_poruchou}.
+
+\subsection{Způsoby výpočtu $\Delta \nu$}
+
+\subsubsection{Matematický aparát}
+
+\textbf{Operátorový zápis:}
+
+Pro zjednodušení je vhodné vycházet z difúzní rovnice v operátorovém zápisu. Zavedeme si tzv. \textbf{difúzní operátor} $\mathcal{M}$ tak, že pro kritický systém musí platit:
+
+\begin{equation}
+  \boxed{
+  \mathcal{M} \Phi = 0.
+  \label{definice_maticovy_operator}}
+\end{equation}
+
+Jeho tvar je závislý na geometrii a počtu uvažovaných grup. Tvary mohou být následovné:
+
+\begin{itemize}
+  \item \textbf{1G v 1D:} \hspace{1.5cm} $\mathcal{M} = \dfrac{\text{d}}{\text{d}x} D(x) \dfrac{\text{d}}{\text{d}x} + F(x)$,
+  \item \textbf{1G ve 3D:} \hspace{1.3cm} $\mathcal{M} = \text{div} D \text{grad} + F$,
+  \item \textbf{2G ve 3D:} \hspace{1.3cm} $\mathcal{M} = \begin{pmatrix} \text{div} D_1 \text{grad} + F_{1,1} & F_{1,2} \\ F_{2,1} & \text{div} D_2 \text{grad} + F_{2,2} \end{pmatrix}$.
+\end{itemize}
+
+\textbf{Sdružený operátor:}
+
+Dále je potřeba zavést \textbf{sdružený operátor} $\mathcal{M}^+$ tak, že pro každé 2 funkce $u$, $v$ splňující hraniční podmínky (nulovost na extrapolovaném rozhraní) platí:
+
+\begin{equation}
+  \boxed{
+  \int_{reaktor} u \mathcal{M} v = \int_{reaktor} v \mathcal{M}^+ u.
+  \label{definice_sdruzeny_operator}}
+\end{equation}
+
+Navíc, platí-li:
+
+\begin{equation}
+  \boxed{
+  \mathcal{M} = \mathcal{M}^+,
+  \label{definice_samosdruzeny_operator}}
+\end{equation}
+
+pak operátor $\mathcal{M}$ nazveme \textbf{samosdružený}.\\
+
+Jednoduchým aplikováním metody per partes a s trochou důvtipu jde dokázat, že:
+
+\begin{itemize}
+  \item všechny 1G operátory jsou samosdružené,
+  \item 2G operátor není samosdružený, ale platí $\mathcal{M}^+ = \mathcal{M}^T$ (tudíž je jednoduché ho vytvořit).
+\end{itemize}
+
+\textbf{Sdružená hustota toku:}
+
+Jako \textbf{sdruženou hustotu toku}, neboli \textbf{funkci vlivu} definujeme funkci $\Psi$ tak, že funkce musí splňovat stejné okrajové podmínky jako funkce $\Phi$ (nulovost na extrapolovaném rozhraní) a zároveň rovnici:
+
+\begin{equation}
+  \boxed{
+  \mathcal{M}^+ \Psi = 0.
+  \label{definice_sdruzena_funkce}}
+\end{equation}
+
+Je tedy očividné, že pro 1G přiblížení platí $\Psi = \Phi$, ale pro 2G přiblížení už tato relace neplatí. Funkci $\Psi$ musíme v takovém případě dopočíst (např. numericky) pomocí vztahu \eqref{definice_sdruzena_funkce} (což ovšem není těžké, jelikož sdružený operátor $\mathcal{M}^+$ lze získat prostou transpozicí).\\
+\\
+Stejně jako u funkce $\Phi$, tak i u funkce $\Psi$ lze z hraničních podmínek určit pouze tvar, a nikoliv velikost (tu získáme z normování výkonu), nicméně pro poruchovou teorii nic takového není potřeba.
+
+\subsubsection{1G poruchová teorie}
+
+V 1G difúzní rovnici pro kritický reaktor platí vztah:
+
+\begin{equation}
+  \text{div} D \text{grad} \Phi + (\nu \Sigma_f - \Sigma_a) \Phi = 0,
+  \label{1G_difuzka}
+\end{equation}
+
+což v operátorové notaci značí:
+
+$$ \mathcal{M} \Phi = 0 \text{, kde:} $$
+$$ \mathcal{M} = \text{div} D \text{grad} + (\nu \Sigma_f - \Sigma_a). $$
+
+\textbf{a) Porucha v $\Sigma$:}
+
+Nejprve uvažujme poruchu pouze v $\Sigma_f$ a $\Sigma_a$, přičemž difúzní koeficient $D$ zůstává zachován. Takovou poruchu lze vyjádřit pomocí malého přírůstku $\delta \Sigma$ jako:
+
+$$ \Sigma_f' = \Sigma_f + \delta \Sigma_f, $$
+$$ \Sigma_a' = \Sigma_a + \delta \Sigma_a. $$
+
+Nyní uvažujme, že dojde k poruše (změní se $\Sigma'$ a $\Phi'$) a reaktor se opět uvede do kritického stavu změnou $\nu'$. V takovém (teď už novém stavu) musí opět platit rovnice \eqref{1G_difuzka} v označení:
+
+$$ \mathcal{M'} \Phi' = 0 \text{, kde:} $$
+$$ \mathcal{M'} = \text{div} D \text{grad} + (\nu' \Sigma_f' - \Sigma_a'). $$
+
+Předpokládejme malou změnu v $\nu'$ jako:
+
+$$ \nu' = \nu + \Delta \nu, $$
+
+kterou spolu se změnami pro $\Sigma'$ dosadíme do operátoru $\mathcal{M'}$, upravíme a získáme:
+
+$$ \mathcal{M'} = \mathcal{M} + \nu \delta \Sigma_f + \Delta \nu \Sigma_f + \Delta \nu \delta \Sigma_f - \delta \Sigma_a. $$
+
+Dále zanedbáme člen $\Delta \nu \delta \Sigma_f$ (zajímá nás porucha pouze do 1. řádu) a výraz upravíme pomocí \textbf{poruchového operátoru} $\mathcal{P}$ na:
+
+$$ (\mathcal{M} + \mathcal{P}) \Phi' = 0 \text{, kde:} $$
+$$ \mathcal{P} = \nu \delta \Sigma_f + \Delta \nu \Sigma_f - \delta \Sigma_a. $$
+
+Nyní zašátráme v paměti a vylovíme definici sdružené hustoty toku \eqref{definice_sdruzena_funkce}:
+
+$$ \mathcal{M^+} \Psi = 0, $$
+
+kterou spolu se zavedeným vztahem:
+
+$$ (\mathcal{M} + \mathcal{P}) \Phi' = 0 $$
+
+vynásobíme zleva $\Phi'$, resp. $\Psi$, zintegrujeme přes objem reaktoru $V$ a vzájemně odečteme (na pravé straně odečítám 0 od 0, což je stále 0), čímž dostaneme:
+
+$$ \int_V (\Psi \mathcal{M} \Phi' - \Phi' \mathcal{M^+} \Psi) \text{d}V + \int_V \Psi \mathcal{P} \Phi' \text{d}V = 0. $$
+
+Z definice sdruženého operátoru \eqref{definice_sdruzeny_operator} se nám první člen vynuluje, u druhého členu rozepíšeme poruchový operátor $\mathcal{P}$ a integrál rozsekáme přes sčítání, čímž získáme:
+
+$$ \int_V \Psi \nu \delta \Sigma_f \Phi' \text{d}V + \int_V \Psi \Delta \nu \Sigma_f \Phi' \text{d}V - \int_V \Psi \delta \Sigma_a \Phi' \text{d}V = 0. $$
+
+Nyní pouze vyjádříme hledané $\Delta \nu$, dosadíme do vztahu \eqref{reaktivita_s_poruchou} a získáme:
+
+$$ \rho = - \dfrac{\Delta \nu}{\nu} = \dfrac{\int_V \Psi (\nu \delta \Sigma_f - \delta \Sigma_a) \Phi' \text{d}V}{\nu \int_V \Psi \Sigma_f \Phi' \text{d}V}. $$
+
+Ještě využijeme předpokladu, že v lokálním místě poruchy se nám hustota toku příliš nemění (tedy $\Phi = \Phi'$) a faktu, že operátor $\mathcal{M}$ je samosdružený (tedy $\mathcal{M^+} = \mathcal{M}$). Čímž konečně získáváme finální vztah pro reaktivitu s poruchou:
+
+\begin{equation}
+  \boxed{
+  \rho = \dfrac{\int_V (\nu \delta \Sigma_f - \delta \Sigma_a) \Phi^2 \text{d}V}{\nu \int_V \Sigma_f \Phi^2 \text{d}V}.
+  \label{reaktivita_1G_Sigma}}
+\end{equation}
+
+Z výše uvedené rovnice tedy vyplývá, že \textbf{efekt poruchy makroskopických účinných průřezů lze získat jejím vážením přes druhou mocninu hustoty toku neutronů}.\\
+
+Jako poruchu v účinných průřezech lze uvažovat například vkládání štěpného ($\Sigma_f$) či absorbčního ($\Sigma_a$) materiálu dovnitř AZ. Např. na VR-1, pokud zavádíme vzorek či detektor do AZ, musíme se v její úrovni pohybovat pomaleji, aby regulační tyče stihly kompenzovat přebytek reaktivity a ta nevzrostla nad bezpečnostní úroveň, při jejíž překročení se reaktor sám odstaví.\\
+
+\textbf{b) Porucha v $D$:}
+
+Nyní naopak předpokládejme poruchu v $D$ při zachování $\Sigma$, přičemž poruchu opět vyjádříme pomocí lineárního přírůstku:
+
+$$D' = D + \delta D.$$
+
+Následující postup je zcela identický, změní se nám pouze poruchový operátor na:
+
+$$ \mathcal{P} = \text{div} \delta D \text{grad} + \Delta \nu \Sigma_f, $$
+
+což po zintegrování dává:
+
+$$ \int_V \Psi \mathcal{P} \Phi' \text{d}V = 0. $$
+
+Nyní opět budeme uvažovat samosdruženost operátoru a minimální vliv poruchy na hustotu toku, dosadíme do \eqref{reaktivita_s_poruchou} a dostáváme:
+
+$$ \rho = - \dfrac{\Delta \nu}{\nu} = - \dfrac{\int_V \Phi \text{div} \delta D \text{grad} \Phi \text{d}V}{\nu \int_V \Sigma_f \Phi^2 \text{d}V}. $$
+
+Trošku začarujeme s operátorem divergence a gradientu a získáváme finální tvar:
+
+\begin{equation}
+  \boxed{
+  \rho = - \dfrac{\int_V \delta D (\text{grad}\Phi)^2 \text{d}V}{\nu \int_V \Sigma_f \Phi^2 \text{d}V}.
+  \label{reaktivita_1G_D}}
+\end{equation}
+
+Rovnice nám tedy říká, že \textbf{změny v difúzním koeficientu jsou váženy pomocí druhé mocniny změny hustoty toku}. Nárůst difúzního koeficientu vede k záporné změně reaktivity, protože se zvyšuje únik neutronů.\\
+
+Efekt poruchy v difúzním koeficientu lze na VR-1 způsobit např. vypouštěním bublinek do AZ.\\
+
+\textbf{c) Součet poruch:}
+
+Pokud dochází k poruše v $D$ i $\Sigma$ současně, lze vzorce \eqref{reaktivita_1G_Sigma} a \eqref{reaktivita_1G_D} sečíst, čímž získáme ten nejfinálnější vztah:
+
+\begin{equation}
+  \boxed{
+  \rho = \dfrac{\int_V [(\nu \delta \Sigma_f - \delta \Sigma_a) \Phi^2 - \delta D (\text{grad}\Phi)^2] \text{d}V}{\nu \int_V \Sigma_f \Phi^2 \text{d}V}.
+  \label{reaktivita_1G}}
+\end{equation}
+
+Odvozené vztahy jsou použitelné pouze za předpokladu platnosti 1G difúzní rovnice. Toto přiblížení má ovšem své limity, jelikož nedokáže popsat hustotu toku neutronů v reflektoru a poruchy, které se odráží pouze v tepelných či rychlých neutronech. Dále je potřeba brát v potaz, že změny v $\Sigma_f$ a $\Sigma_a$ jsou vzájemně provázány.
+
+\subsubsection{2G poruchový operátor}
+
+Pro analýzu tepelných reaktorů je přesnější použít 2G přiblížení. Zde platí:
+
+\begin{equation}
+  \begin{matrix}
+  \text{div} D_1 \text{grad} \Phi_1 - \Sigma_1 \Phi_1 + \nu \varepsilon \Sigma_{f2} \Phi_2 = 0, \\
+  \text{div} D_2 \text{grad} \Phi_2 - \Sigma_2 \Phi_2 + p \Sigma_1 \Phi_1 = 0.
+  \end{matrix}
+  \label{1G_difuzka}
+\end{equation}
+
+Vyjdeme opět z operátorového zápisu, tedy:
+
+$$ \mathcal{M} \Phi = 0 \text{, kde:} $$
+$$ \mathcal{M} = \begin{pmatrix} \text{div} D_1 \text{grad} -\Sigma_1 & \nu \varepsilon \Sigma_{f2} \\ p \Sigma_1 & \text{div} D_2 \text{grad} - \Sigma_2 \end{pmatrix}. $$
+
+\textbf{a) Porucha v $\Sigma$:}
+
+Uvažujme nyní poruchu ve všech 3 $\Sigma$, vše ostatní zůstává zachováno. Platí:
+
+$$ \Sigma_1' = \Sigma_1 + \delta \Sigma_1, $$
+$$ \Sigma_2' = \Sigma_2 + \delta \Sigma_2, $$
+$$ \Sigma_{f2}' = \Sigma_{f2} + \delta \Sigma_{f2}. $$
+
+Do kritického stavu se reaktor vrátí opět změnou v $\nu'$ a $\Phi'$ a v systému s poruchou musí platit:
+
+$$ \mathcal{M'} \Phi' = 0. $$
+
+Opět vše podosazujeme do sebe (pozor, pracujeme po složkách, jde o matici), čímž vznikne nový poruchový operátor (logicky matice):
+
+$$ \mathcal{P} = \begin{pmatrix} - \delta \Sigma_1 & \varepsilon(\Delta \nu \Sigma_{f2} + \nu \delta \Sigma_{f2}) \\ p \delta \Sigma_1 & - \delta \Sigma_2 \end{pmatrix}. $$
+
+Dále aplikujeme úplně stejný přístup jako v 1G přiblížení (ale stále pracujeme po složkách) i předpoklad malé poruchy ($\Phi' = \Phi$). Jediné, co tentokrát nelze uvažovat je fakt, že $\Psi \neq \Phi$! Nakonec po tom všem dostáváme finální tvar:
+
+\begin{equation}
+  \boxed{
+  \rho = \dfrac{\int_V \left ( - \delta \Sigma_1 \Psi_1 \Phi_1 + \varepsilon \nu \delta \Sigma_{f2} \Psi_1 \Phi_2 + p \delta \Sigma_1 \Psi_2 \Phi_1 - \delta \Sigma_2 \Psi_2 \Phi_2 \right ) \text{d}V}{\varepsilon \nu \int_V \Sigma_{f2} \Psi_1 \Phi_2 \text{d}V}.
+  \label{reaktivita_2G_Sigma}}
+\end{equation}
+
+\textbf{b) Porucha v $D$:}
+
+Uvažujeme-li naopak poruchu v $D$, tedy:
+
+$$ D_1' = D_1 + \delta D_1, $$
+$$ D_2' = D_2 + \delta D_2, $$
+
+dostaneme finální vzorec tvaru:
+
+\begin{equation}
+  \boxed{
+  \rho = \dfrac{\int_V \left ( - \delta D_1 \text{grad} \Psi_1 \cdot \text{grad} \Phi_1 - \delta D_2 \text{grad} \Psi_2 \cdot \text{grad} \Phi_2 \right ) \text{d}V}{\varepsilon \nu \int_V \Sigma_{f2} \Psi_1 \Phi_2 \text{d}V}.
+  \label{reaktivita_2G_D}}
+\end{equation}
+
+\textbf{c) Součet poruch:}
+
+Poruchy \eqref{reaktivita_2G_Sigma} a \eqref{reaktivita_2G_D} je možné opět kombinovat a výsledkem je absolutně nezapamatovatelný a šílený vztah, který se sem ani nevejde.\\
+
+Jedinou neznámou nakonec představuje sdružená hustota toku $\Psi$, ale jak je psáno v úvodu, její získání není obtížné, stačí pouze řešit okrajovou úlohu \eqref{definice_sdruzena_funkce}, kde sdružený operátor $\mathcal{M^+}$ získáme transpozicí.\\
+
+Výsledky rovnic \eqref{reaktivita_2G_Sigma} a \eqref{reaktivita_2G_D} nejsou překvapivé, jejich interpretace je stejná jako v 1G případě. Opět je třeba uvažovat propojení $\Sigma$ a především to, že $\Sigma_{f2}$ výrazně ovlivňuje $\Sigma_2$.
+
+\subsection{Význam sdružené hustoty toku}
+
+Na jeji hodnotu lze aplikovat stejná předpokládaná řešení jako na $\Phi$, zároveň musí splňovat stejné hraniční podmínky. Ve vícegrupovém přiblížení se většinou využívá numerických metod.\\
+
+Uvažujme nyní 1G přiblížení. Mějme velmi malý absorbátor o objemu $V_p$, který po vložení do AZ vyvolá poruchu v bodě $r_0$, kterou lze vyjádřit pomocí Diracovy delta funkce jako:
+
+$$ \delta \Sigma_a = \Sigma_{ap} \delta (r - r_0). $$
+
+Pak po dosazení do rovnice \eqref{reaktivita_1G_Sigma} (ale ještě bez uvažování samosdruženosti operátoru) získáme vliv poruchy jako:
+
+$$ \rho = - \dfrac{\int_V \Psi \delta \Sigma_a \Phi \text{d}V}{\nu \int_V \Psi \Sigma_f \Phi \text{d}V} = - \dfrac{\Sigma_{ap} V_p \Psi(r_0) \Phi(r_0) \text{d}V}{\nu \int_V \Psi \Sigma_f \Phi \text{d}V}. $$
+
+Jmenovatel pro velikost poruchy je nezávislý na její povaze (tento integrál bude stejný pro libovolný bod $r$) a můžeme jej označit jako $1/C$. Pak, poku vyjádříme $\Psi(r_0)$, získáváme:
+
+$$ \Psi_0 = - \dfrac{\rho}{C \Sigma_{ap} V_p \Phi(r_0)}. $$
+
+Výraz $\Sigma_{ap} V_p \Phi(r_0)$ udává počet neutronů zachycených absorbátorem za 1 sekundu $\rightarrow$ potom hodnota $\Psi(r_0)$ \textbf{je úměrná záporné změně reaktivity vztažené na 1 absorbovaný neutron v bodě $r_0$ za 1 sekundu}.\\
+
+Ukazuje se tedy, že hodnota funkce $\Psi(r_0)$ \textbf{měří význam bodu $r_0$ vzhledem k jeho vlivu na reaktivitu systému}. Proto se také sdružené hustotě toku říká funkce vlivu.\\
+
+Podobný závěr je možné učinit také pro vložený štěpný materiál a pozitivní změnu reaktivity. \textbf{Sdružená hustota toku vyjadřuje relativní význam každé lokální změny v místě $r_0$, ať už vede k poklesu či vzrůstu reaktivity.}\\
+
+Obdobné změny lze učinit i pro vícegrupové přiblížení. Ve 2G přiblížení je funkce $\Psi_1(r)$ úměrná změně reaktivity vyvolané poruchou způsobující změnu počtu neutronů v rychlé, a $\Psi_2(r)$ v tepelné grupě (přičemž index 1 označuje právě rychlou, a index 2 tepelnou grupu).\\
+
+Z toho plyne finální dedukce, že \textbf{grupová sdružená hustota toku $\Psi_n(r)$ je úměrná vzrůstu či poklesu reaktivity v důsledku přírůstku či úbytku jednoho neutronu v dané grupě za sekundu v místě $r$}.
+
+\subsection{Příklady aplikace poruchové teorie}
+
+Poruchovou teorii je možné využít pro:
+
+\begin{itemize}
+  \item popis vlivu nerovnoměrné produkce FP (je třeba vyčíslovat numericky),
+  \item analýzu částečně zasunuté regulační tyče (tzv. integrální charakteristiku regulační tyče):
+\end{itemize}
+
+\begin{equation}
+  \rho(x) = \rho(H) \left [ \dfrac{x}{H} - \dfrac{1}{2 \pi} \sin \left ( \dfrac{2 \pi x}{H} \right ) \right ]
+  \label{integralni_charakteristika}
+\end{equation}
+
+\begin{itemize}
+  \item a derivací vztahu \eqref{integralni_charakteristika} relativní změnu vlivu regulační tyče (tzv. diferenciální charakteristiku regulační tyče):
+\end{itemize}
+
+\begin{equation}
+  \dfrac{\text{d}\rho(x)}{\text{d}x} = \dfrac{\rho(H)}{H} \left [ 1 - \cos \left ( \dfrac{2 \pi x}{H} \right ) \right ].
+  \label{diferencialni_charakteristika}
+\end{equation}

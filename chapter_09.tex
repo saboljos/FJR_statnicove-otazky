@@ -1,0 +1,83 @@
+\section{Výpočty vyhoření jaderného paliva a příprava homogenizovaných dat pro celozónové výpočty}
+
+\subsection{Transportní (deterministický) výpočet}
+
+Ve zkratce: 
+
+\begin{enumerate}
+  \item[1.] Nejprve si vymyslím, jakou knihovnu dat použiji a pro tu šáhnu (např. \textbf{ENDF/B}. Jde o bodové knihovny a každá má různý počet bodů pro různé materiály).
+  \item[2.] Tato nezpracovaná data je potřeba zpracovat (zgrupovat, upravit na teplotu apod.) vhodným nástrojem (např. \textbf{NJOY}), čímž vzniká pracovní knihovna obsahující stovky až tisíce grup.
+  \item[3.] Následuje \textbf{Lattice výpočet} pomocí nějakého mikrokódu (např. \textbf{Newt/TRITON}, \textbf{Helios}), často v nekonečné mříži (pro tepelné systémy to stačí) pomocí transportní teorie. Tento model už by měl zohledňovat samostínění. Homogenizovat je možné i stochasticky bez aplikace transportní teorie (např. \textbf{Serpent}).
+  \item[4.] Tím dochází k homogenizaci a k tvorbě homogenizovaných dat (difúzní koeficient, makroskopické průřezy apod.) pro daný palivový soubor. Zároveň se slučují grupy do menšího počtu (tepelný systém stačí 2, rychlé 4, lépe 8, záleží na složení. Neplechu dělá větší množství Pu, kde je potřeba více grup).
+  \item[5.] Homogenizované veličiny putují do celozónového výpočtu makrokódem (např. \textbf{PARCS}, \textbf{Andrea}), který častou pouze s pomocí difúzního přiblížení určí hledané parametry (kritičnost, energetická distribuce, vyhoření apod.).
+\end{enumerate}
+
+\subsubsection{Homogenizace}
+
+Pro deterministické kódy se postupuje podobně, jako při grupování mikroskopických průřezů, akorát že teď se grupují makroskopické průřezy vážené hustotou toku a nově i objemem. Opět se musí zachovat reakční rychlost:
+
+\begin{equation}
+  \boxed{
+    \Sigma_G = \dfrac{\sum_{h \in G} \sum_i V_i \Sigma_{i,h} \Phi_{i,h}}{\sum_{h \in G} \sum_i V_i \Phi_{i,h}}.}
+\end{equation}
+
+Problém je, že takto homogenizovaná data jde použít pouze na původně řešený problém, nepaltí tedy obecně. Při změně geometrie se musí homogenizovat znovu. Pro následující nodální výpočet nám jde o:
+
+\begin{itemize}
+  \item $\Sigma_\text{tr}$ -- převrácená hodnota představuje dráhu, kterou neutron urazí po nekonečném množství srážek. Potřebujeme znát pro výpočet difúzního koeficientu, který se používá v difúzním přiblížení. Pro jeho určení se vychází z In-scatter nebo Out-scatter aproximace (nebo obojího), což je rozdíl totálního průřezu a sumy rozptylových průřezů z rychlé grupy.
+  \item $\Sigma_\text{a}$ -- představuje zánik neutronů.
+  \item $\nu \Sigma_\text{f}$ -- představuje produkci neutronů.
+  \item $\kappa \Sigma_\text{f}$ -- představuje energii ze štěpení.
+  \item $\Sigma_\text{s, g - g'}$ -- vyjadřuje přechod mezi grupami. 
+  \item relativní výkony jednotlivých proutků.
+\end{itemize}
+
+Pro zachování spojitosti hustoty proudu mezi soubory se využívají tzv. ADF (Assembly Discontinuity Factors).\\
+
+Homogenizace ve štěpném prostředí (speciálně pro tepelné reaktory, rychlé si myslím že jsou obtížnější) probíhá v nekonečné mříži za použití zrcadlových hraničních podmínek. To má v sobě některá úskalí:
+
+\begin{itemize}
+  \item Neuvažuje se únik, který tam ve skutečnosti je. Ten je možné opravit pomocí B1 aproximace, což je oprava přes hranice souboru na základě kritičnosti. Jednoduše řečeno, k totální grupové reakční rychlosti se přičte/odečte B-násobek grupové hustoty proudu tak, aby došlo k dosažení kritického stavu, čímž se získají zbylé homogenizované průřezy.
+  \item Neuvažuje se prostorový gradient hustoty toku (v celozónovém výpočtu není hustota toku ve všech souborech středově souměrná). Oprava pomocí rehomogenizace, která kombinuje hustotu toku v nekonečné mříži a hustotu toku z celozónového výpočtu, která se získala po dosazení původních dat. Je důležité hlavně v blízkosti silných absorbátorů, kde je gradient hustoty toku významný.
+  \item Spektrum (teď nemyslím prostorové, ale energetické) neodpovídá skutečnosti.
+\end{itemize}
+
+Homogenizace v neštěpném prostředí je obtížnější, protože tady už tuplem neznáme spektrum neutronů. Jsou zde jiné hraniční podmínky (vacuum v okolí reflektoru, reflective/periodic v okolí souborů), nepoužívá se B1 aproximace. Pro anizotropní rozptyl na vodíku se zavádí speciální opravná funkce, která se dá získat výpočtem v 1D prostředí pomocí In-scatter aproximace.
+
+
+\subsubsection{Parametrizace}
+
+Homogenizace se provádí pro různé stavy řešeného systému, tzv. odskoky. Celozónový výpočet totiž potřebuje data, která jsou závislá na provozu reaktoru (změní-li se teplota paliva, jak se změní homogenizovaná data). Odskoky se provádí např. na teplotě (moderátoru i paliva), vyhoření, hustotě (moderátoru) a koncentraci absorbátoru.\\
+
+Odskoky fungují tak, že se změní zkoumaný parametr (stačí jednou nahoru a podruhé dolu), systém se zhomogenizuje a výsledná data se proloží lineárním (či jiným) fitem. Tak se získá závislost homogenizované veličiny na měnícím se parametru. Jde to i složitě, mohou se např. měnit 2 parametry najednou (což dle Pavla dává mnohem lepší výsledky), prokládání fitem se může lišit apod.\\
+
+Mzi odskoky v klasické provozní fyzice patří:
+
+\begin{itemize}
+  \item teplota a hustota moderátoru $\dfrac{\partial \Sigma}{\partial T_\text{M}}$,
+  \item teplota paliva $\dfrac{\partial \Sigma}{\partial \sqrt{T_\text{P}}}$,
+  \item koncentrace kyseliny borité $\dfrac{\partial \Sigma}{\partial C_\text{B}}$,
+  \item regulačních tyčí $\alpha$.
+\end{itemize}
+
+Takto získám původní provozní sadu průřezů, parametrizované odskoky a pro nové průřezy pak platí:
+
+\begin{equation}
+  \boxed{
+    \Sigma (T_\text{M}, T_\text{P}, C_\text{B}, \text{CR}) = \Sigma + \dfrac{\partial \Sigma}{\partial T_\text{M}} \Delta T_\text{M} + \dfrac{\partial \Sigma}{\partial \sqrt{T_\text{P}}} \Delta \sqrt{T_\text{P}} + \dfrac{\partial \Sigma}{\partial C_\text{B}} \Delta C_\text{B} + \alpha \Delta \Sigma_\text{CR}.}
+\end{equation}
+
+\subsubsection{Celozónový výpočet}
+
+Po takto zhomogenizovaných a zparametrizovaných souborech následuje celozónový výpočet. Ten probíhá buď pomocí zjednodušeného difúzního přístupu, nebo pomocí Simplified P3 metody transportní rovnice (SP3).\\
+
+Obecně jsou 2 přístupy:
+
+\begin{itemize}
+  \item Diferenční přístup -- derivace se nahradí diferencemi a postupuje se pomocí sítí. Je to metodicky snažší, ale zdlouhavé. Objemové elementy jsou mezi sebou vázány přes hustotu toku (rovnost na hranici) a systém vede na soustavu rovnic, která je řešitelná triagonální maticí se 2 neznámými ($\Phi$ a $k_\text{ef}$). Nejprve se provede počáteční odhad a pak se iteruje, dokud se nedokonverguje k nějaké hodnotě $\Phi$ (vnitřní iterace), pomocí které se získá nový $k_\text{ef}$ (podělí se zdroj neutronů z iterace 0 a 1, vnější iterace). Vnější iterace končí po dosažení nějakého kritéria.
+  \item Nodální přístup -- hustota toku se rozvine do bazických funkcí, a pak je možné redukovat objemové elementy až na úroveň celého souboru (nódy). Rychlejší, ale fakt složité.
+\end{itemize}
+
+Celozónové kódy musí být rychlé a jednoduché. Dále se nabízí coupling s termohydraulickým kódem (RELAP, TRACE), ale to je už fakt hardcore, protože nikdo pořádně neví, jak k tomu přistupovat.
+
+\subsection{Výpočty vyhoření}

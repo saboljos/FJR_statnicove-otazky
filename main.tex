@@ -1,0 +1,117 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[version=3]{mhchem}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[total={16cm,25cm}, top=3cm, left=2.5cm, includefoot]{geometry}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{easytable}
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage[makeroom]{cancel}
+\renewcommand{\figurename}{Obrázek}
+\renewcommand{\refname}{Zdroje}
+\renewcommand{\tablename}{Tabulka}
+\renewcommand{\contentsname}{Obsah}
+
+\setlength\parindent{0pt}
+\setcounter{section}{0}
+\renewcommand{\labelenumi}{\alph{enumi}.}
+\usepackage{xcolor}
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+\newcommand{\logoCVUT}{\includegraphics[width = 0.5\textwidth]{img/symbol_cvut_konturova_verze_cb.pdf}}
+\newcommand{\logoFJFI}{\includegraphics[width = 0.4\textwidth]{img/fjfi_logo.png}}
+
+\begin{document}
+% \include{veličiny}
+% \include{zkratky}
+
+% titulní strana
+\thispagestyle{empty}
+
+\begin{center}
+	{\LARGE
+		České vysoké učení technické v Praze \par
+		Fakulta jaderná a fyzikálně inženýrská
+	}
+    \vspace{10mm}
+
+    \begin{tabular}{c}
+		\textbf{Katedra jaderných reaktorů} \\[3pt]
+    \end{tabular}
+
+   \vspace{10mm} \logoCVUT \vspace{15mm}
+
+   {\huge \textbf{Fyzika jaderných reaktorů}\par}
+   \vspace{5mm}
+   {\huge \textbf{Magisterské studium}\par}
+
+   \vspace{15mm}
+   {\Large \MakeUppercase{Státnicové otázky}}
+
+   \vfill
+   {\large
+    \begin{tabular}{ll}
+    Rok: & 2024
+    \end{tabular}
+   }
+\end{center}
+
+% Prohlášení
+\newpage
+\thispagestyle{empty}
+
+%~
+\vfill
+
+\vspace{1em}
+Čau ahoj. Právě čtete soubor magisterských státnicových otázek k předmětu Fyzika jaderných reaktorů, který byl vypracován za dlouhých zimních večerů v pokojíku ve Švýcarsku. Jedná se o sepis všech prezentací, skript a materiálů, ze kterých jsme během výuky čerpali, a které jsou dle mého názoru k pochopění nejdůležitější. Šlo zejména o:
+
+\begin{itemize}
+    \item prezentace k předmětu FARE (J. Frýbort),
+    \item prezentace k předmětu DERF (J. Frýbort a P. Suk),
+    \item přednášky z předmětu SMRF (O. Huml),
+    \item přednášky z předmětu KID (O. Huml),
+    \item zápisky z předmětu KID (O. Huml),
+    \item Dynamika jaderných reaktorů -- B. Heřmanský,
+    \item Nuclear Reactor Physics -- W. Stacey,
+    \item Introduction to Nuclear Engineering -- J. Lamarsch,
+    \item manuál ke kódu NJOY,
+    \item manuál ke kódu SCALE,
+    \item manuál ke kódu MCNP,
+    \item prezentace MCNP z LANL,
+    \item apod.
+\end{itemize}
+
+Pokud najdete chybu, hoďte issue na Git: \\
+
+\rm Hodně zdaru!
+
+\vspace{2em}
+
+\clearpage{\pagestyle{empty}}
+
+\include{none}
+
+\newpage
+\parskip=0pt
+\begin{small}
+\tableofcontents
+\end{small}
+\parskip=7pt
+\newpage
+
+\include{chapter_01}
+\include{chapter_02}
+\include{chapter_03}
+\include{chapter_04}
+\include{chapter_05}
+\include{chapter_06}
+\include{chapter_09}
+
+\end{document}
