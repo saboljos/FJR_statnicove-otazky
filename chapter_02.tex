@@ -22,13 +22,23 @@ Dále existují 2 přístupy:
 
 \subsubsection{Příprava a shromažďování}
 
-Veškeré experimentální výsledky jsou shromažďovány v mezinárodní databází \textbf{EXFOR} podle standardu z konference v Moskvě roku 1969. Současně obsahuje přibližně 23 tisíc sad experimentálních měření. 
+Veškeré experimentální výsledky jsou shromažďovány v mezinárodní databází \textbf{EXFOR} podle standardu z konference v Moskvě roku 1969. Současně obsahuje přibližně 23 tisíc sad experimentálních měření. Dále existuje ještě databáze \textbf{CINDA}, která obsahuje i dodatečné informace. \\
+
+K získávání dat se využívají různé metody. Pro získání celkového průřezu stačí změřit svazek před a za materiálem. Konkrétní reakce (štěpení, záchyt apod.) je možné dopočíst sledujeme-li i sekundární částice, které z reakcí vyletují. Úhlovou závislost je možné získat z různého pozicování detektoru. Pokud chceme vyfiltrovat určité energie, využívá se metoda ddoba letu (time of flight).\\
+
+Tato data se dají získat např. v CERNu, dále laboratoř GELINA v Belgii, nebo v ORNL. Nicméně získají se pouze bodové hodnoty v daných energiích, které se musí dále zpracovat a rozšířit (evaluovat). Např. $^{135}$Xe má známých pouze 80 hodnot, což skutečně není mnoho.
 
 \subsubsection{Evaluace (zhodnocení) a ukládání}
 
 Následuje evaluace (zhodnocení) v jednom ze světových datových center (USA, Evropa, Jaoponsko, Rusko, Čína). Proces evaluace má za úkol data protřídit, něco vyházet, něco zkombinovat (hlavně v oblasti rezonancí, používá se metoda nejmenších čtverců, Breit-Wigner apod.). Využívají se k tomu specializované kódy, např. \textbf{GNASH}, \textbf{EMPIRE}, \textbf{SAMMY}, jejichž aplikace je závislá na energetické rozsahu. Důraz se klade na aktinoidy a štěpení.\\
 
-Takto zhodnocená data se ukládají v tabulce ve formátu \textbf{ENDF-6} (standard z roku 1968, ale za mě je nepřehledný a dost naprd), který je čitelný jazykem FORTRAN.V budoucnu se snad  nahradí modernějším a obecnějším formátem \textit{Generalized Nuclear Data}, který umí XML a JSON.
+Jednoduchou ukázkou evaluace je např. aplikace Breit-Wignerovy formule pro rezonance:
+
+\begin{equation}
+  \sigma_\gamma(E) = \sigma_0 \dfrac{\Gamma_\gamma}{\Gamma} \sqrt{\dfrac{E_0}{E}} \left ( \dfrac{1}{1+y^2} \right ).
+\end{equation}
+
+Takto zhodnocená data se ukládají v tabulce ve formátu \textbf{ENDF-6} (standard z roku 1968, ale za mě je nepřehledný a dost naprd), který je čitelný jazykem FORTRAN. V budoucnu se snad  nahradí modernějším a obecnějším formátem \textit{Generalized Nuclear Data}, který umí XML a JSON.
 
 \subsubsection{Verifikace}
 

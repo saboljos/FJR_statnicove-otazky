@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.30)  7 JAN 2024 22:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.30)  19 FEB 2024 18:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/sabol/Desktop/FJFI/Státnice/Státnice Ing/Reaktorová fyzika/main.tex"
-(c:/Users/sabol/Desktop/FJFI/Státnice/Státnice Ing/Reaktorová fyzika/main.tex
+**"c:/Users/sabol/Desktop/FJFI/Státnice/Státnice Ing/Reaktorová fyzika/FJR_statnicove-otazky/main.tex"
+(c:/Users/sabol/Desktop/FJFI/Státnice/Státnice Ing/Reaktorová fyzika/FJR_statnicove-otazky/main.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
 (C:\Users\sabol\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -634,7 +634,7 @@ Package translations Info: No language package found. I am going to use `english
 
 LaTeX Warning: Label `1G_difuzka' multiply defined.
 
-) (chapter_04.aux) (chapter_05.aux) (chapter_06.aux) (chapter_09.aux))
+) (chapter_04.aux) (chapter_05.aux) (chapter_06.aux) (chapter_07.aux) (chapter_08.aux) (chapter_09.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -743,7 +743,7 @@ Package pdftex.def Info: img/symbol_cvut_konturova_verze_cb.pdf  used on input l
  [1
 
 {C:/Users/sabol/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/symbol_cvut_konturova_verze_cb.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
@@ -879,7 +879,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
@@ -888,62 +898,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 [15]
-Overfull \hbox (7.2116pt too wide) in paragraph at lines 66--67
-\OT1/cmr/m/n/10.95 Zhodnocen^^Sa jadern^^Sa data se ukl^^Sadaj^^S^^P pro teplotu 0 K. Nicm^^Sen^^Te d^^S^^Pky Dopplerov^^Te efektu (roz^^Tsi^^Trov^^San^^S^^P
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
 
-Overfull \hbox (0.3041pt too wide) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Overfull \hbox (7.2116pt too wide) in paragraph at lines 76--77
+\OT1/cmr/m/n/10.95 Zhodnocen^^Sa jadern^^Sa data se ukl^^Sadaj^^S^^P pro teplotu 0 K. Nicm^^Sen^^Te d^^S^^Pky Dopplerov^^Te efektu (roz^^Tsi^^Trov^^San^^S^^P
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Overfull \hbox (0.3041pt too wide) in paragraph at lines 78--79
 []\OT1/cmr/m/n/10.95 V NJOY prov^^Sad^^S^^P modul \OT1/cmr/bx/n/10.95 BROADR\OT1/cmr/m/n/10.95 . Ten to prov^^Sad^^S^^P po-moc^^S^^P p^^Tresn^^Seho ^^Tre^^Tsen^^S^^P efek-tivn^^S^^Pho ^^Su^^Tcinn^^Seho
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
@@ -1438,6 +1448,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
  []
 
 ) [61]
+\openout2 = `chapter_07.aux'.
+
+ (chapter_07.tex
+Overfull \hbox (0.15489pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/n/10.95 Z^^Sakladn^^S^^Pm principem pro de-ter-min-i-stick^^Se k^^Sody je p^^Tr^^S^^Pm^^Se ^^Tre^^Tsen^^S^^P matem-at-ick^^Sych rovnic popisuj^^S^^Pc^^S^^Pch
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+[62
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+[63]) [64]
+\openout2 = `chapter_08.aux'.
+
+ (chapter_08.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Overfull \hbox (2.40315pt too wide) in paragraph at lines 19--20
+\OT1/cmr/m/n/10.95 D^^Sale je pot^^Treba nav-zorko-vat dan^^Sa ^^Tc^^S^^Psla po-dle jist^^Sych pravd^^Tepodobnostn^^S^^Pch funkc^^S^^P $\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )$. Gener^^Sator
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+[65
+
+
+
+]
+<img/rejection_sampling.png, id=254, 578.16pt x 264.5082pt>
+File: img/rejection_sampling.png Graphic file (type png)
+<use img/rejection_sampling.png>
+Package pdftex.def Info: img/rejection_sampling.png  used on input line 48.
+(pdftex.def)             Requested size: 318.66946pt x 145.79073pt.
+ [66 <./img/rejection_sampling.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+[67]
+Overfull \hbox (29.40564pt too wide) in paragraph at lines 116--117
+\OT1/cmr/m/n/10.95 Nyn^^S^^P jsme u^^Tz v bod^^Te, kde do-jde k n^^Tejak^^Se reakci, zb^^Syv^^Sa zjis-tit k jak^^Se. To se op^^Tet ur^^Tc^^S^^P pravd^^Tepodobnostn^^Te,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+) [68] [69]
 \openout2 = `chapter_09.aux'.
 
  (chapter_09.tex
@@ -1460,7 +1565,7 @@ Overfull \hbox (1.09846pt too wide) in paragraph at lines 27--28
 []$\OT1/cmr/m/n/10.95 ^^F[]$ -- p^^Trevr^^Sacen^^Sa hod-nota p^^Tredstavuje dr^^Sahu, kterou neu-tron uraz^^S^^P po nekone^^Tcn^^Sem mno^^Tzstv^^S^^P
  []
 
-[62
+[70
 
 
 
@@ -1479,12 +1584,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-[63]
+[71]
 Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-) [64] (main.aux (none.aux) (chapter_01.aux) (chapter_02.aux) (chapter_03.aux) (chapter_04.aux) (chapter_05.aux) (chapter_06.aux) (chapter_09.aux))
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+Overfull \hbox (6.4511pt too wide) in paragraph at lines 117--118
+[]\OT1/cmr/m/n/10.95 Funguje na stejn^^Sem z^^Sakladu, pouze rozkl^^Sad^^Sa ex-po-nenci^^Saln^^S^^P matici do Cheby-shevov^^Sych racion^^Saln^^S^^Pch
+ []
+
+) [73] (main.aux (none.aux) (chapter_01.aux) (chapter_02.aux) (chapter_03.aux) (chapter_04.aux) (chapter_05.aux) (chapter_06.aux) (chapter_07.aux) (chapter_08.aux) (chapter_09.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -1495,17 +1620,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 30168 strings out of 475502
- 793091 string characters out of 5761813
+ 30227 strings out of 475502
+ 795812 string characters out of 5761813
  1939248 words of memory out of 5000000
- 50914 multiletter control sequences out of 15000+600000
+ 50959 multiletter control sequences out of 15000+600000
  571866 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,15n,103p,883b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,15n,103p,1012b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\sabol\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/sabol/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (64 pages, 1242974 bytes).
+Output written on main.pdf (73 pages, 1302617 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
+ 389 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 

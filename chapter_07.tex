@@ -1,0 +1,72 @@
+\section{Prinicipy metody Monte-Carlo}
+
+\subsection{Základní filosofie}
+
+Základním principem pro deterministické kódy je přímé řešení matematických rovnic popisujících chování v jaderném reaktoru, tedy difúzní rovnice, nebo transportní rovnice. Máme tedy jasný matematický model a ten řešeíme pomocí numeriky.\\
+
+Oproti tomu stochastické metody ke svému řešení žádné rovnice nepotřebují a simulují přímo konkrétní částice. Modelování tedy probíhá na takovém prinicpu, že se jasně stanoví geometrie a pomocí generátoru náhodných čísel se generují imaginární částice, které s danými geometriemi interagují. To, jak budou částice interagovat čistě závisí na účinných průřezech (je potřeba znát diferenciální průřezy, jelikož nás i zajímá směr příletu/odletu částice). \\
+
+Z této základní filosofie tedy platí jasné rozdíly mezi deterministickými a stochastickými metodami:\\
+
+Deterministické:
+\begin{itemize}
+  \item Rychlejší, ale přesné pouze tak, jak přesný je daný matematický model.
+  \item Získám jeden výsledek bez nejistot (ačkoliv nejistoty jsou dané zjednodušeními, není je tak jednoduché vyčíslit).
+  \item Složité modelování geometrie $\rightarrow$ aplikují se různá geometrická zjednodušení (nekonečná mříž, 2D aproximace apod.)
+  \item Účinné průřezy se musejí grupovat $\rightarrow$ je potřeba více programů a více přístupů (nejprve příprava v rámci jednoho souboru pomocí transportky, poté aplikace ve velkém celozónovém modelu pomocí difúzní rovnice).
+\end{itemize}
+
+Stochastické:
+\begin{itemize}
+  \item Pomalejší, ale teoreticky přesnější. S rozvojem techniky se dá očekávat převládnutí. Přesnost je ovlivněna hlavně účinnými průřezy, a pak trochu generací pseudonáhodných čísel.
+  \item Vždy mi nástroj vyplivne výsledek s danou nejistotou, kterou je teoreticky možné snížit simulací většího počtu částic.
+  \item Jednoduché 3D modelování.
+  \item Spojité účinné průřezy (lze získat pomocí NJOY).
+\end{itemize}
+
+Stochatické metody tedy nepotřebují žádné matematické rovnice, celý výpočet probíhá pomocí tzv. \textbf{náhodné procházky} metodou Monte-Carlo, což je dále rozebráno v další otázce.\\
+
+Jako částice je možné simulovat absolutně cokoliv, záleží na znalosti účinných průřezů a rozšíření výpočetního kódu:
+\begin{itemize}
+  \item Serpent 2 -- hlavní využití pro reaktorovou fyziku, specializuje se tedy převážně na neutrony (ačkoliv by měl nějak zohledňovat i (n,$\gamma$) reakce, ze zkušenosti se mi zdá, že to moc nefunguje).
+  \item MCNP 6 -- momentálně asi nejznámnější kód, umí modelovat neutrony, fotony, elektrony..., skoro cokoliv. Bere se jako benchmark pro ostatní kódy, ale je složitý na syntaxi a zdlouhavý.
+  \item OpenMC -- o tom moc nevím. Dobrý je, že je zadarmo.
+  \item KENO -- low-budget alternativa od Scaleu. Prý stojí za prd, ale umí hezky spolupracovat s ostatními SCALE balíky, tudíž se taky může hodit.
+\end{itemize}
+
+\subsection{Analogová a neanalogová metoda}
+
+Základním principem \textbf{analogové metody} je to, že trekujeme konkrétní neutrony, které když zaniknou (absorbcí či únikem), tak prostě zaniknou a dál neexistují. Při výpočtu skórování v datém detektoru/tallies se tedy započítávají s váhou 1. Tato metoda více odpovídá realitě, nicméně je zdlouhavá, jelikož pro přesnější výsledek je nutné simulovat větší populaci částic.\\
+
+To platí např. pro prostředí s velkou absorbcí a malým zdrojem (chceme-li např. řešit problematiku stínění, reflektoru apod.)\\
+
+Oproti tomu \textbf{neanalogová metoda} či \textbf{implicitní metoda} funguje tak, že narodí-li se částice, tak je jí přiřazena váha 1. A tím, jak se částice toulá po daném systému, tak interaguje s prostředím až do místa, kde by teoreticky mělo dojít k její absorbci. Nicméně, nedojde k úplné absorbci, pouze se dojde k započítání do skórování a dále se jí srazí váha na nižší hodnotu. Nedojde tedy k zániku, a jedna částice může pokračovat v toulání se po systému. Pouze má nižší váhu, proto narazí-li na další absorbci, opět dojde k započtení do skórování, ale s nižší váhou, jelikož v tomto druhém místě by už částice neměla teoreticky existovat. Dojde-li po několika srážkách ke snížení váhy pod jistou hladinu, až tehdy dojde k celkovému zániku dané částice.\\
+
+Tímto způsobem se dají zpřesnit výsledky za pomoci menšího počtu částic. Nicméně, jde o komplikovanější metodu a je potřeba znát širší matematický základ. V prvním případě je důležité určit, jakým zpsůobem se změní váha dané částice. Tato technika se nazývá \textbf{redukce variance} (redukce variance, jelikož zpřesňují výsledek a snižuji rozptyl, tedy varianci).
+
+\subsection{Redukce variance}
+
+První možností při sražení váhy je za pomoci teoretické absorbce. To se určí jednoduše dle vztahu:
+
+$$ w = w' \left ( 1-\dfrac{\Sigma_\text{a}}{\Sigma_\text{t}} \right ). $$
+
+Dále je třeba určit, při jaké energii dojde ke skutečnému zániku částice, jelikož trekování částice s příliš malou váhou je naopak kontraproduktivní. To se určuje dle tzv. Ruské rulety, jejíž nejjednodušší zápis je ve tvaru:
+
+$$ P = 1-\dfrac{w}{w_0}, $$
+
+kde $w_0$ značí váhu na začátku historie a $P$ značí pravděpodobnost, při které dojde k zániku.
+
+Dále je možné podobnou metodu aplikovat na vznik částic (z hlediska neutronů štěpení (n,xn) reakce). V takovém případě se nová váha určí jako:
+
+$$ w = w' \nu. $$
+
+Tohle jsou jenom základní metody, ve skutečnosti je nutné aplikovat více metod redukce variance. Těmi hlavními jsou:
+
+\begin{itemize}
+  \item cut-off -- zánik při poklesu pod jistou hladinu (energetické, váhové, časové apod.),
+  \item splitting -- rozdělení na 2 částice, každá s jinou váhou (geometrické, energetické, časové),
+  \item ruská ruleta -- naopak zánik dané částice, kombinace se splittingem (velká váha splitting, malá váha ruská ruleta),
+  \item biassing -- to je to zmiňované sražení váhy (absorbcí).
+\end{itemize}
+
+Nicméně nejdůležitější je pochopitelně kombinace všeho.

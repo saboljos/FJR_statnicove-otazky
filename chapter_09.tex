@@ -81,3 +81,41 @@ Obecně jsou 2 přístupy:
 Celozónové kódy musí být rychlé a jednoduché. Dále se nabízí coupling s termohydraulickým kódem (RELAP, TRACE), ale to je už fakt hardcore, protože nikdo pořádně neví, jak k tomu přistupovat.
 
 \subsection{Výpočty vyhoření}
+
+Vyhoření se počítá pomocí Batemanových rovnic:
+
+\begin{equation}
+  \dfrac{\text{d}n_i}{\text{d}t} = -\sigma_i \phi n_i + \sum_{j \to i} \gamma_i \sigma_j \phi n_j - \lambda_i n_i + \sum_{j \to i} \gamma_i \lambda_j n_j,
+\end{equation}
+
+nicméně aby šly dopočíst, je třeba znát hodnotu $\phi$, která se časem mění. Proto se postupuje pomocí tzv. metody \textbf{prediktor-korektor}, která nejprve odhadne $\phi$ na začátku cyklu, dopočte na konec cyklu (prediktor), přepočte novou $\phi$ z konce. Z těchto dvou hodnot poté stanoví průměr (korektor) a dopočte nové složení na konci cyklu.\\
+
+Proto je důležité vhodně stanovit délku kroku. Například u tepelných systémů je třeba počáteční kroky volit velmi krátké, jelikož dochází k ustalování koncentrace xenonu, což má za následek velký nárůst $\phi$. U rychlých systémů to tak kritické není.\\
+
+Nicméně, tato metoda je pouze na odhad hustoty toku. Stále máme kombinaci LDR o hodně členech (např. ENDF/B-VIII.0 1600 nuklidů). Vypíšu 2 metody řešení:
+
+\subsubsection{MATREX metoda}
+
+Maticovou formu Batemanových rovnic:
+
+\begin{equation}
+  \dfrac{\text{d}\vec{N}}{\text{d}t} = \textbf{A} \vec{N}(t)
+\end{equation}
+
+řeším ve formě exponenciály:
+
+\begin{equation}
+  \vec{N}(t) = \text{exp} (\textbf{A}t) \vec{N}(0),
+\end{equation}
+
+$$ \text{exp} (\textbf{A}t) = \sum_{k=0}^\infty \dfrac{(\textbf{A}t)^k}{k!}. $$
+
+\subsubsection{CRAM metoda}
+
+Neboli aproximace pomocí Chebyshevových racionálních funkcí. Obyčejně se využívá CRAM metoda 16. řádu, která má stejnou přesnost, jenom je rychlejší než MATREX metoda.\\
+
+Funguje na stejném základu, pouze rozkládá exponenciální matici do Chebyshevových racionálních funkcí:
+
+$$ \vec{N}(t) = \left [ \sum_{k=0}^\infty \dfrac{(\textbf{A}t)^k}{k!} \right ] \vec{N}(0) \approx \left [ \alpha_{0,K} \textbf{I} + 2 \text{Re} \left [ \sum_{j=1}^{K/2} \left ( -\dfrac{\alpha_{j,K}}{\theta_{j,K}} \right ) \left ( \textbf{I} + \textbf{A} \left ( -\dfrac{t}{\theta_{j,K}} \right ) \right ) ^{-1} \right ] \right ] \vec{N}(0), $$
+
+kde $K$ představuje řád a $\alpha_{i,j}$ a $\theta_{i,j}$ jsou příslušné CRAMerovy koeficienty k dohledání v literatuře.

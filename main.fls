@@ -1,6 +1,6 @@
-PWD c:\Users\sabol\Desktop\FJFI\Státnice\Státnice Ing\Reaktorová fyzika
+PWD c:\Users\sabol\Desktop\FJFI\Státnice\Státnice Ing\Reaktorová fyzika\FJR_statnicove-otazky
 INPUT C:\Users\sabol\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\sabol\Desktop\FJFI\Státnice\Státnice Ing\Reaktorová fyzika\main.tex
+INPUT c:\Users\sabol\Desktop\FJFI\Státnice\Státnice Ing\Reaktorová fyzika\FJR_statnicove-otazky\main.tex
 OUTPUT main.log
 INPUT C:\Users\sabol\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\sabol\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -273,6 +273,12 @@ INPUT chapter_05.aux
 INPUT .\chapter_06.aux
 INPUT .\chapter_06.aux
 INPUT chapter_06.aux
+INPUT .\chapter_07.aux
+INPUT .\chapter_07.aux
+INPUT chapter_07.aux
+INPUT .\chapter_08.aux
+INPUT .\chapter_08.aux
+INPUT chapter_08.aux
 INPUT .\chapter_09.aux
 INPUT .\chapter_09.aux
 INPUT chapter_09.aux
@@ -515,6 +521,25 @@ INPUT .\img\voda-uran.JPG
 INPUT .\img\voda-uran.JPG
 INPUT .\img\voda-uran.JPG
 INPUT .\img\voda-uran.JPG
+INPUT .\chapter_07.tex
+INPUT .\chapter_07.tex
+OUTPUT chapter_07.aux
+INPUT .\chapter_07.tex
+INPUT .\chapter_07.tex
+INPUT chapter_07.tex
+INPUT .\chapter_08.tex
+INPUT .\chapter_08.tex
+OUTPUT chapter_08.aux
+INPUT .\chapter_08.tex
+INPUT .\chapter_08.tex
+INPUT chapter_08.tex
+INPUT .\img\rejection_sampling.png
+INPUT .\img\rejection_sampling.png
+INPUT .\img\rejection_sampling.png
+INPUT .\img\rejection_sampling.png
+INPUT .\img\rejection_sampling.png
+INPUT .\img\rejection_sampling.png
+INPUT .\img\rejection_sampling.png
 INPUT .\chapter_09.tex
 INPUT .\chapter_09.tex
 OUTPUT chapter_09.aux
@@ -543,6 +568,12 @@ INPUT chapter_05.aux
 INPUT .\chapter_06.aux
 INPUT .\chapter_06.aux
 INPUT chapter_06.aux
+INPUT .\chapter_07.aux
+INPUT .\chapter_07.aux
+INPUT chapter_07.aux
+INPUT .\chapter_08.aux
+INPUT .\chapter_08.aux
+INPUT chapter_08.aux
 INPUT .\chapter_09.aux
 INPUT .\chapter_09.aux
 INPUT chapter_09.aux
