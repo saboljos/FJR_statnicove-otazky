@@ -346,6 +346,7 @@ INPUT C:\Users\sabol\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\sabol\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\sabol\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\sabol\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT C:\Users\sabol\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 OUTPUT none.aux
 INPUT C:\Users\sabol\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\main.toc
@@ -378,7 +379,6 @@ OUTPUT chapter_02.aux
 INPUT .\chapter_02.tex
 INPUT .\chapter_02.tex
 INPUT chapter_02.tex
-INPUT C:\Users\sabol\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT .\chapter_03.tex
 INPUT .\chapter_03.tex
 OUTPUT chapter_03.aux
