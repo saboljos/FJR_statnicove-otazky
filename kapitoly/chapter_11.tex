@@ -1,4 +1,4 @@
-\section{Náhodná procházka při simulaci neutronu}
+\section[Náhodná procházka]{Náhodná procházka při simulaci životního cyklu neutronů v jaderném reaktoru}
 
 Jak bylo zmíněno, ýpočty ve stochatických kódech probhají díky simulaci tzv. \textbf{random walks - náhodné procházky} dané částice, tedy simulace skutečného života dané částice. K tomu je potřeba znát pár základů.
 
@@ -10,13 +10,13 @@ Jde o stochastickou/pravděpodobnostní metodu, tedy základem je generování n
 
 $$ S_{i+1} = ( S_i \cdot g + c ) \: \text{mod} \: 2^m, $$
 
-kde $S_i$ značí seed (typicky nějaké velké číslo, pokaždé jiné), $g$ značí generátor/násobič (opět veliké číslo, to může být stejné), $c$ značí přírůstek (může být 0, 1, nebo opět jakékoliv) a z toho všeho určíme modulus (tedy zbytek po dělení) nějakého čísla $2^m$.\\
+kde $S_i$ značí seed (typicky nějaké velké číslo, pokaždé jiné), $g$ značí generátor/násobič (opět veliké číslo, to může být stejné), $c$ značí přírůstek (může být 0, 1, nebo opět jakékoliv) a z toho všeho určíme modulus (tedy zbytek po dělení) nějakého čísla $2^m$.
 
 Přesnou kombinací těchto čísel je možné stanovit konkrétní generátor, např. MCNP využívá: $m = 63$, $g$ je různé a $c = 1$.
 
 \subsubsection{Random Sampling - Náhodné vzorkování}
 
-Dále je potřeba navzorkovat daná čísla podle jistých pravděpodobnostních funkcí $f(x)$. Generátor náhodných čísel nám poskytne uniformní rozdělení na intervalu (0,1), nicméně např. k rozptylu dochází pod jistým úhlem s danou pravděpodobností, nebo energie vzniklých neutronů také mají jistou pravděpodobnost.\\
+Dále je potřeba navzorkovat daná čísla podle jistých pravděpodobnostních funkcí $f(x)$. Generátor náhodných čísel nám poskytne uniformní rozdělení na intervalu (0,1), nicméně např. k rozptylu dochází pod jistým úhlem s danou pravděpodobností, nebo energie vzniklých neutronů také mají jistou pravděpodobnost.
 
 Máme-li tedy danou pravděpodobnostní funkci (PDF) $f(x)$ normovanou na 1. Z té jsme schopni určit distribuční funkci (CDF) $F(x)$ jako postupný integrál:
 
@@ -82,7 +82,7 @@ V tomto případě je CDF funkci možné vyjádřit pomocí přímého vzorková
 
 $$ x = -\dfrac{1}{\Sigma_{\text{t}}} \text{ln}(1-\xi) = -\dfrac{1}{\Sigma_{\text{t}}} \text{ln}(\xi), $$
 
-kde $\xi = F(x)$ navzorkujeme rovnoměrně z intervalu (0,1). \\
+kde $\xi = F(x)$ navzorkujeme rovnoměrně z intervalu (0,1). 
 
 Tohle platí, je-li geometrie složena homogenně pouze z jednoho materiálu. Máme-li ale geometrii s různými materiály (a tedy i různými $\Sigma_{t})$, je třeba postupovat postupně. Rozlišují se 2 přístupy:
 
@@ -121,9 +121,9 @@ V případě absorbce se dále může uplatnit redukce variance. V případě ro
 
 \subsubsection{Detektory}
 
-V posledním případě zbývá zaznamenat dané reakce a určit nějakou integrální hodnotu. Může jít o hustotu toku, hustotu proudu, reakční rychlosti apod. Dá se postupovat analogově/implicitně, viz předešlá otázka.\\
+V posledním případě zbývá zaznamenat dané reakce a určit nějakou integrální hodnotu. Může jít o hustotu toku, hustotu proudu, reakční rychlosti apod. Dá se postupovat analogově/implicitně, viz předešlá otázka.
 
-Neméně důležité je zapracování nejistot. U výsledků se předpokládá Gaussovské rozdělení kolem nějaké střední hodnoty s daným rozptylem. Čím větší statistika, tím menší rozptyl. K tomuto určování se aplikují jakési matematicko-statistické nástroje, o kterých nemám ponětí, nicméně bavili jsme se o tzv. \textbf{Central Limit Theorem}, který tohleto umí dělat.\\
+Neméně důležité je zapracování nejistot. U výsledků se předpokládá Gaussovské rozdělení kolem nějaké střední hodnoty s daným rozptylem. Čím větší statistika, tím menší rozptyl. K tomuto určování se aplikují jakési matematicko-statistické nástroje, o kterých nemám ponětí, nicméně bavili jsme se o tzv. \textbf{Central Limit Theorem}, který tohleto umí dělat.
 
 Výsledky jdou posléze i kombinovat mezi sebou. Dále se hodí vědět, že celkový rozptyl klesá s odmocninou celkové generace, tedy:
 

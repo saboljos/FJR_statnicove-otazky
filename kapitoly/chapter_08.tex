@@ -1,4 +1,4 @@
-\section{Základní charakteristiky jaderného reaktoru a jejich dopady na provoz}
+\section[Základní charakteristiky jednobodové kinitiky]{Základní charakteristiky (odezvy) jaderného reaktoru a jejich praktické dopady na kinetiku nulového reaktoru}
 
 Charakteristikami jaderného reaktoru rozumíme různá řešení rovnic jednobodové kinetiky s vlivem zpožděných neutronů. Tahle kapitola je trochu delší, kyžtak to přeskákejte.
 
@@ -22,7 +22,7 @@ $$ \dfrac{dN}{dt} = \dfrac{\rho(t) - \beta_{\text{ef}}}{\Lambda} N(t) + \sum_{i=
 
 $$ \dfrac{dC_i}{dt} = -\lambda_i C_i(t) + \dfrac{\beta_{\text{ef},i}  N(t)}{\Lambda}, $$
 
-s počátečními podmínkami (ty platí pro ustálený stav) $N(0) = N_0$ a $C_i(0) = C_{i,0}$ se pak řeší přes Laplaceovu transformaci. Konstantní počáteční podmínky pro prekurzory lze předpokládat, pokud se reaktor nachází dostatečně dlouhou dobu v ustáleném stavu (při konstantním výkonu), a potom je tedy i koncentrace jader $C_i$ konstantní.\\
+s počátečními podmínkami (ty platí pro ustálený stav) $N(0) = N_0$ a $C_i(0) = C_{i,0}$ se pak řeší přes Laplaceovu transformaci. Konstantní počáteční podmínky pro prekurzory lze předpokládat, pokud se reaktor nachází dostatečně dlouhou dobu v ustáleném stavu (při konstantním výkonu), a potom je tedy i koncentrace jader $C_i$ konstantní.
 
 Číselnou hodnotu tustálených koncentrací lze získat z druhé rovnice z doby před $t=0$:
 
@@ -178,7 +178,7 @@ Vztah mezi kořeny $z_n$ v závislosti na reaktivitě zobrazuje graf na obrázku
   \label{fig_zn-rho}
 \end{figure}
 
-Pro $\rho_0 < 0$ bude relativní četnost v čase exponenciálně klesat (což bude ovlivněno největším $|z_n|$, což je závislé na $\Lambda$ $\rightarrow$ s menším $\Lambda$ očekáváme strmější nástup).\\
+Pro $\rho_0 < 0$ bude relativní četnost v čase exponenciálně klesat (což bude ovlivněno největším $|z_n|$, což je závislé na $\Lambda$ $\rightarrow$ s menším $\Lambda$ očekáváme strmější nástup).
 
 Pro $\rho_0 > 0$ po chvíli převládne kladné $z_0$ s $C_0$ a relativní četnost exponenciálně poroste. Do tohoto zlomového okamžiku bude relativní četnost také růst, ale s jiným průběhem.
 
@@ -232,7 +232,7 @@ Závorka v tomto výrazu je již definovaná efektivní střední doba života n
 
 $$ T_e^* = \dfrac{\ell^*}{\rho_0} \approx \dfrac{\ell^*}{k_{\text{ef}}-1}, $$
 
-což je v podstatě důkaz již definované efektivní periody reaktoru. Pro malé reaktivity je tedy očividné, že se na reaktivitě a periodě systému výrazně podílí zpožděné neutrony.\\
+\noindent což je v podstatě důkaz již definované efektivní periody reaktoru. Pro malé reaktivity je tedy očividné, že se na reaktivitě a periodě systému výrazně podílí zpožděné neutrony.
 
 \textbf{b) Velmi velká kladná reaktivita}
 
@@ -244,7 +244,7 @@ Po úpravě a vyjádření periody:
 
 $$ T_e = \dfrac{\Lambda}{\rho_0 - \beta_{\text{ef}}} = \dfrac{\ell}{k_{\text{ef}} \cdot (\rho_0 - \beta_{\text{ef}})} \approx \dfrac{\ell}{k_{\text{ef}}-1}. $$
 
-Pro velké reaktivity tedy vymizí efekt zpožděných neutronů a perioda je dána pouze okamžitými (jak nečekané).\\
+Pro velké reaktivity tedy vymizí efekt zpožděných neutronů a perioda je dána pouze okamžitými (jak nečekané).
 
 \textbf{c) Velmi velké záporné reaktivity}
 
@@ -252,7 +252,7 @@ Pokud $\rho_0 << -\beta_{\text{ef}}$, platí, že $|z_0| \approx -\lambda_1$\foo
 
 $$ T_e = \dfrac{-1}{z_0} = \tau_1. $$
 
-S libovolně malou vloženou reaktivitou není možné odstavovat reaktor pomaleji. Jsme tím schopni ovlivnit pouze rychlost okamžitého poklesu, ale tento doběh bude klesat vždy stejně rychle (řádově těch 80~s).\\
+S libovolně malou vloženou reaktivitou není možné odstavovat reaktor pomaleji. Jsme tím schopni ovlivnit pouze rychlost okamžitého poklesu, ale tento doběh bude klesat vždy stejně rychle (řádově těch 80~s).
 
 \textbf{d) Kritičnost na okamžitých neutronech}
 
@@ -307,7 +307,7 @@ Obě rovnice jsou opět v pohodě řešitelné, ale ani to zde dělat nebudeme\f
 
 $$ \dfrac{N(t)}{N_0} = \dfrac{\beta_{\text{ef}}}{\beta_{\text{ef}}-\rho_0} \left [ 1 - \dfrac{\rho_0}{\beta_{\text{ef}}} \exp{ \left ( \dfrac{\rho_0 - \beta_{\text{ef}}}{\Lambda}t \right ) } \right ]. $$
 
-Tímto vztahem je tedy možné popsat průběh do inflexního bodu, který je dán parametrem $C_0$. Je zde možné nalézt paralelu s př. 3, kde se uvažovala pouze jedna skupina zpožděnek. Člen $C_0$ a $C_1$ zde vyšel stejně a exponenciela ve výraze představuje kořen $z_1$. Tato aproximace přibližuje odezvu pouze okamžitých neutronů.\\
+Tímto vztahem je tedy možné popsat průběh do inflexního bodu, který je dán parametrem $C_0$. Je zde možné nalézt paralelu s př. 3, kde se uvažovala pouze jedna skupina zpožděnek. Člen $C_0$ a $C_1$ zde vyšel stejně a exponenciela ve výraze představuje kořen $z_1$. Tato aproximace přibližuje odezvu pouze okamžitých neutronů.
 
 Koeficient $C_0$:
 
@@ -328,7 +328,7 @@ Další možnou aproximací je metoda okamžitého skoku, kdy v čase $t = 0$ p�
 
 $$ \dfrac{dN}{dt} = 0. $$
 
-Tuto metodu lze aplikovat až po prvních pár desetinách vteřiny, kdy odezní vliv okamžitých neutronů, tedy v momentě, kdy se nacházíme za inflexním bodem\footnote{Metoda konstantní produkce neutronů se dá použít před inflexním bodem a metoda okamžitého skoku po inflexním bodu.}. Jde o aproximaci přibližující vliv zpožděných neutronů.\\
+Tuto metodu lze aplikovat až po prvních pár desetinách vteřiny, kdy odezní vliv okamžitých neutronů, tedy v momentě, kdy se nacházíme za inflexním bodem\footnote{Metoda konstantní produkce neutronů se dá použít před inflexním bodem a metoda okamžitého skoku po inflexním bodu.}. Jde o aproximaci přibližující vliv zpožděných neutronů.
 
 Následující vztahy jsou odvozeny pouze pro 1 skupinu zpožděných neutronů\footnote{Metoda konstantní produkce zpožděných neutronů vyjadřuje chování v systému díky okamžitým neutronům, proto nebylo potřeba uvažovat různé skupiny zpožděnek. Metoda okamžitého skoku naopak vyjadřuje vliv zpožděných neutronů, ovšem vztahy pro $m$ skupin by byl složitý.} a pro konstantní reaktivitu, přičemž odvození je opět ve skriptech\footnote{To bych se musel fakt hodně nudit.}. Řešíme rovnice tvaru:
 
@@ -349,7 +349,7 @@ Je opět možné nalézt paralelu s př. 3, jelikož exponenciála představuje 
   \label{fig_okamzity_skok}
 \end{figure}
 
-Ve skutečnosti je přiblížení jednou skupinou dost mimo a je vhodnější k popisu použít více skupin. Příklad je pouze demonstrační\footnote{Nebo by bylo vhodnější středovat $\bar{\lambda}$ pomocí $\tau_i$.}.\\
+Ve skutečnosti je přiblížení jednou skupinou dost mimo a je vhodnější k popisu použít více skupin. Příklad je pouze demonstrační\footnote{Nebo by bylo vhodnější středovat $\bar{\lambda}$ pomocí $\tau_i$.}.
 
 \textbf{Externí zdroj neutronů}
 
@@ -401,7 +401,7 @@ Po úpravě a vyjádření získáme:
 
 $$ \dfrac{N_2}{N_1} = \dfrac{\beta_{\text{ef}} - \rho_1}{\beta_{\text{ef}} - \rho_2} + \dfrac{\Lambda}{N_1} \dfrac{S_2 - S_1}{\beta_{\text{ef}} - \rho_2}. $$
 
-Toto přiblížení, přestože je jeho odvození dosti nepřesné a idealistické dává kupodivu přesné výsledky. Předvedeme na pár příkladech.\\
+Toto přiblížení, přestože je jeho odvození dosti nepřesné a idealistické dává kupodivu přesné výsledky. Předvedeme na pár příkladech.
 
 Mějme kritický stav ($\rho_1 = 0$) s externím zdrojem $S_1$. V jistém momentu zdroj vypneme (ve stavu s aktuální četností $N_1$), čímž se dostáváme do stavu s $\rho_2 = 0$ (stále máme kritický stav, četnost ovlivňujeme pouze pomocí zdroje), $S_2 = 0$ a $N_2$. Kupodivu, $N_2$ se neustálí ihned na pozici jako předchozí $N_1$, ale skočí na nižší hladinu, přesně podle rovnice:
 
@@ -433,7 +433,7 @@ Z praktického hlediska je výhodnější najíždět mezi stavy postupně a nik
 
 \subsubsection{Frekvenční charakteristika}
 
-Pro odvození frekvenční charakteristiky je třeba trochu více matematiky.\\
+Pro odvození frekvenční charakteristiky je třeba trochu více matematiky.
 
 \textbf{Přenosová funkce nulového reaktoru}
 
@@ -486,7 +486,7 @@ Právě ten druhý člen představuje nelinearitu systému. Zavedeme-li předpok
   \label{linearizovana_kinetika}}
 \end{equation}
 
-Podobného výsledku jsme dosáhli už v impulsní charakteristice, ale tam jsme museli předpokládat okamžitý skok pomocí Diracovy funkce. Zde je to o něco málo obecnější a za $\rho(t)$ jde dosazovat víceméně cokoliv.\\
+Podobného výsledku jsme dosáhli už v impulsní charakteristice, ale tam jsme museli předpokládat okamžitý skok pomocí Diracovy funkce. Zde je to o něco málo obecnější a za $\rho(t)$ jde dosazovat víceméně cokoliv.
 
 Odtud přejdeme opět zpět k LT pomocí konvoluce a dostáváme:
 
@@ -549,7 +549,7 @@ kde pro $\varphi$ platí:
   \label{frekvencni_charakteristika_faze}}
 \end{equation}
 
-Co to tedy znamená? Máme-li periodickou změnu reaktivity, tak dostáváme periodickou odezvu na četnosti, která je ovšem posunutá o fázový posuv $\varphi$, viz graf na obrázku \ref{fig_frekvencni}.\\
+Co to tedy znamená? Máme-li periodickou změnu reaktivity, tak dostáváme periodickou odezvu na četnosti, která je ovšem posunutá o fázový posuv $\varphi$, viz graf na obrázku \ref{fig_frekvencni}.
 
 \begin{figure}[H]
  \centering
@@ -558,7 +558,7 @@ Co to tedy znamená? Máme-li periodickou změnu reaktivity, tak dostáváme per
  \label{fig_frekvencni}
 \end{figure}
 
-Absolutní hodnota je závislá pouze na frekvenci $\omega$ a vlastnostech reaktoru ($\Lambda$, $\lambda_i$ atd.). Ve skutečnosti ale maximální hodnota četnosti roste (viz obrázek \ref{fig_periodicke_reseni}). Tato nesrovnalost je způsobena právě linearizací systému. Toto přiblížení je tedy možné použít pouze pro kratší časy nebo menší reaktivity, kdy se nestihne rozvinout exponenciální odezva.\\
+Absolutní hodnota je závislá pouze na frekvenci $\omega$ a vlastnostech reaktoru ($\Lambda$, $\lambda_i$ atd.). Ve skutečnosti ale maximální hodnota četnosti roste (viz obrázek \ref{fig_periodicke_reseni}). Tato nesrovnalost je způsobena právě linearizací systému. Toto přiblížení je tedy možné použít pouze pro kratší časy nebo menší reaktivity, kdy se nestihne rozvinout exponenciální odezva.
 
 Pokud by nás zajímalo, jak vypadá závislost mezi frekvencí a aplitudou, resp. fázovým posuvem, stačí se juknout na graf na obrázku \ref{fig_frekvencni_zavislost}.
 
@@ -569,7 +569,7 @@ Pokud by nás zajímalo, jak vypadá závislost mezi frekvencí a aplitudou, res
   \label{fig_frekvencni_zavislost}
 \end{figure}
 
-Důkaz pro závislost amplitudy (která je ovlivněna $|\tilde{G_0}(\omega)|$) zde:\\
+Důkaz pro závislost amplitudy (která je ovlivněna $|\tilde{G_0}(\omega)|$) zde:
 
 \textbf{a) Oblast pomalých změn:}
 
@@ -632,11 +632,11 @@ Dosadíme do definice přenosové funkce:
 
 $$ \tilde{G_0}(s) = \dfrac{\tilde{\Delta N}}{N_0 \rho} = \dfrac{1}{s \ell}. $$
 
-Toto je v podstatě to samé, co jsme získali v oblasti rychlých změn frekvenční charakteristiky. To tedy znamená, že toto přiblížení (bez zpožděnek) platí právě pro oblast rychlých změn reaktivity.\\
+Toto je v podstatě to samé, co jsme získali v oblasti rychlých změn frekvenční charakteristiky. To tedy znamená, že toto přiblížení (bez zpožděnek) platí právě pro oblast rychlých změn reaktivity.
 
 \textbf{Efektivní doba života neutronů}
 
-Co se stane, pokud zaměníme $\ell$ za $\ell^*$? Odvození stejné, pouze dosadím nakonec $\ell^*$, zjednodušení tedy platí v oblasti pomalých změn reaktivity.\\
+Co se stane, pokud zaměníme $\ell$ za $\ell^*$? Odvození stejné, pouze dosadím nakonec $\ell^*$, zjednodušení tedy platí v oblasti pomalých změn reaktivity.
 
 \textbf{Konstantní produkce zpožděnek}
 
@@ -652,7 +652,7 @@ Zlaplaceujeme, dosadíme opět do přenosové funkce a máme:
 
 $$ \tilde{G_0} (s) = \dfrac{1}{\Lambda s +  \beta_{\text{eff}}}. $$
 
-Tento vztah je možné získat i z přímé definice přenosové funkce, při $\lambda_i \rightarrow 0$. Toto zjednodušení platí v oblasti rychlých a částečně rychlých změn.\\
+Tento vztah je možné získat i z přímé definice přenosové funkce, při $\lambda_i \rightarrow 0$. Toto zjednodušení platí v oblasti rychlých a částečně rychlých změn.
 
 \textbf{Okamžitý skok}
 

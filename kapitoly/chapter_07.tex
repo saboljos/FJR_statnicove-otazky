@@ -1,12 +1,12 @@
-\section{Rovnice bodové kinetiky nulového reaktoru}
+\section[Bodová kinetika]{Rovnice bodové kinetiky nulového reaktoru, použité předpoklady, význam jednotlivých členů}
 
 \subsection{Pojmy}
 
-\textbf{Kinetika reaktoru} = zkoumá časové chování reaktoru se změnou vstupních parametrů.\\
+\textbf{Kinetika reaktoru} = zkoumá časové chování reaktoru se změnou vstupních parametrů.
 
-\textbf{Vstupní parametry} = chápeme primárně $k_{\text{ef}}$, resp. $\rho$, a lze je ovlivnit změnou materiálů či geometrií systému.\\
+\textbf{Vstupní parametry} = chápeme primárně $k_{\text{ef}}$, resp. $\rho$, a lze je ovlivnit změnou materiálů či geometrií systému.
 
-\textbf{Výstupní parametry} = to, co v systému měříme ($P(t)$, $\Phi (\textbf{r}, t) $ atd.).\\
+\textbf{Výstupní parametry} = to, co v systému měříme ($P(t)$, $\Phi (\textbf{r}, t) $ atd.).
 
 \textbf{Nulový reaktor} = neboli reaktor nulového výkonu; reaktor pracující v takovém výkonovém rozsahu, že jsou jeho zpětné vazby (ZV) zanedbatelné.
 
@@ -15,21 +15,21 @@
   \item Často složité odlišit, u některých nulových reaktorů lze pozorovat ZV (ve vyšších energetických hladinách) a naopak některé energetické reaktory lze provozovat bez ZV (při minimálním provozním výkonu).
 \end{itemize}
 
-\textbf{Zpětná vazba} = proces, díky kterému se změna výstupních parametrů ($P$, $\Phi$) může podílet na změnu vstupních parametrů.\\
+\textbf{Zpětná vazba} = proces, díky kterému se změna výstupních parametrů ($P$, $\Phi$) může podílet na změnu vstupních parametrů.
 
-\textbf{Dynamika reaktoru} = to samé co kinetika, pouze už uvažuje zapojení ZV.\\
+\textbf{Dynamika reaktoru} = to samé co kinetika, pouze už uvažuje zapojení ZV.
 
 \subsection{Odvození}
 
-\textbf{Rovnice kinetiky reaktoru} = rovnice popisující závislost změny výstupních parametrů (výsledků) na změně vstupních parametrů.\\
+\textbf{Rovnice kinetiky reaktoru} = rovnice popisující závislost změny výstupních parametrů (výsledků) na změně vstupních parametrů.
 
-K popisu lze využít transportní rovnici, resp. zjednodušenou difúzní rovnici $\rightarrow$ vede na komplikované soustavy, které nelze v obecném případě řešit analyticky (s projevem heterogenity systému).\\
+K popisu lze využít transportní rovnici, resp. zjednodušenou difúzní rovnici $\rightarrow$ vede na komplikované soustavy, které nelze v obecném případě řešit analyticky (s projevem heterogenity systému).
 
-Řešením jsou \textbf{Rovnice bodové kinetiky}, které zanedbávají změnu prostorového rozložení $\rightarrow$ nastane-li změna na vstupních parametrech (zvětší-li se reaktivita), tak změna výstupních parametrů (např. $\Phi$) se ve všech místech změní stějnou měrou $\rightarrow$ výstupní parametry se tedy pouze škálují a průběh zůstává zachován.\\
+Řešením jsou \textbf{Rovnice bodové kinetiky}, které zanedbávají změnu prostorového rozložení $\rightarrow$ nastane-li změna na vstupních parametrech (zvětší-li se reaktivita), tak změna výstupních parametrů (např. $\Phi$) se ve všech místech změní stějnou měrou $\rightarrow$ výstupní parametry se tedy pouze škálují a průběh zůstává zachován.
 
-\textbf{Rovnice jednobodové kinetiky} = kromě prostorové závislosti se zanedbává i energetické rozdělení $\rightarrow$ vede na 1G rovnice.\\
+\textbf{Rovnice jednobodové kinetiky} = kromě prostorové závislosti se zanedbává i energetické rozdělení $\rightarrow$ vede na 1G rovnice.
 
-V reálu to tak není, ale kupodivu dávají rovnice přijatelné výsledky.\\
+V reálu to tak není, ale kupodivu dávají rovnice přijatelné výsledky.
 
 Pro odvození se vychází z 1G difúzní rovnice (s konstantním $D$ a $\Sigma_a$):
 
@@ -39,7 +39,7 @@ Pro odvození se vychází z 1G difúzní rovnice (s konstantním $D$ a $\Sigma_
   \label{difuzka}}
 \end{equation}
 
-\subsubsection{a) Bez vlivu zpožděných neutronů:}
+\subsubsection{Bez vlivu zpožděných neutronů:}
 
 Uvažuji zjednodušení tvaru:
 
@@ -62,7 +62,7 @@ Poté rovnice \eqref{difuzka} vede na rovnici:
   \label{difuzka_v_separaci}
 \end{equation}
 
-tedy na 2 obyčejné diferenciální rovnice provázané konstantou $\omega$.\\
+\noindent tedy na 2 obyčejné diferenciální rovnice provázané konstantou $\omega$.
 
 Rovnice s $\Psi (\textbf{r})$ vede po uvažování okrajových podmínek (extrapolované rozhraní, konečnost, spojitost apod.) na vlastní funkce, jejichž tvar závisí na použité geometrii a tvaru Laplaciánu (kombinace goniometrických, Besselových, hyperbolických apod.). Řešení vyplývá z jednoduché vlnové rovnice:
 
@@ -76,7 +76,7 @@ Obecně lze výsledek zapsat tvarem:
 
 $$ \Psi (\textbf{r}) = \sum_n A_n \Psi_n (\textbf{r}), $$
 
-kde $A_n$ značí normalizační konstantu a zjistíme ji z výkonu reaktoru.\\
+kde $A_n$ značí normalizační konstantu a zjistíme ji z výkonu reaktoru.
 
 Rovnice s $T(t)$ vede na exponenciálu tvaru:
 
@@ -89,9 +89,9 @@ Jelikož je ovšem $\omega$ závislá na volbě vlastních čísel, tak i zde pl
   \label{difuzka_reseni}
 \end{equation}
 
-Jelikož vlastní čísla splňují bilanci $B_1 < B_2 < B_3 < ...$, platí to samé i pro $\omega_1 < \omega_2 < \omega_3 < ...$ a první vlastní číslo po chvíli převáží ta zbylá. Proto dále zavádíme \textbf{geometrický faktor} $B_g$ jako první nejmenší vlastní číslo, tedy $B_g = B_1$.\\
+Jelikož vlastní čísla splňují bilanci $B_1 < B_2 < B_3 < ...$, platí to samé i pro $\omega_1 < \omega_2 < \omega_3 < ...$ a první vlastní číslo po chvíli převáží ta zbylá. Proto dále zavádíme \textbf{geometrický faktor} $B_g$ jako první nejmenší vlastní číslo, tedy $B_g = B_1$.
 
-Pro stacionární systém navíc platí $\omega = 0$ a poté $B_m = B_g$ (viz ZAF2).\\
+Pro stacionární systém navíc platí $\omega = 0$ a poté $B_m = B_g$ (viz ZAF2).
 
 Nyní přejdeme k prostorové nezávislosti (což je vlastně smysl celé kapitoly :D). Lze uvažovat (za předpokladu převážení prvního členu v rovnici \eqref{difuzka_reseni}), že:
 
@@ -108,7 +108,7 @@ Po dosazení do rovnice \eqref{difuzka_v_separaci} získáme novou rovnici tvaru
   \label{rovnice_kinetiky_v_separaci}
 \end{equation}
 
-která opět vede na 2 obyčejné diferenciální rovnice provázané konstantou $\omega_1$. Nyní už ovšem nejde o superpozici, jelikož uvažujeme pouze první člen (ačkoliv nestacionaritu zachováváme).\\
+která opět vede na 2 obyčejné diferenciální rovnice provázané konstantou $\omega_1$. Nyní už ovšem nejde o superpozici, jelikož uvažujeme pouze první člen (ačkoliv nestacionaritu zachováváme).
 
 Pro zopakování a osvěžení paměti, stále platí:
 
@@ -140,9 +140,9 @@ Což lze dosadit do rovnice \eqref{rovnice_kinetiky_v_separaci} (část s $\Psi$
   \label{rovnice_kinetiky_reseni}}
 \end{equation}
 
-Tím jsme si odvodili obyčejnou diferenciální rovnici 1. řádu pro hustotu neutronů $n(t)$, kterou lze řešit jednoduše pomocí integračního faktoru/separace proměnných (čímkoliv).\\
+Tím jsme si odvodili obyčejnou diferenciální rovnici 1. řádu pro hustotu neutronů $n(t)$, kterou lze řešit jednoduše pomocí integračního faktoru/separace proměnných (čímkoliv).
 
-Často nás ale více než hustota neutronů zajímá časový vývoj výkonu, tedy $P(t)$. Zde ale platí úměra, tudíž hustotu neutrnonů je možné nahradit výkonem.\\
+Často nás ale více než hustota neutronů zajímá časový vývoj výkonu, tedy $P(t)$. Zde ale platí úměra, tudíž hustotu neutrnonů je možné nahradit výkonem.
 
 K rovnici \eqref{rovnice_kinetiky_reseni} je možné dojít i jednoduchou úvahou. Jelikož platí úměra mezi $n(t)$ a $N(t)$:
 
@@ -189,11 +189,11 @@ Rovnice udávají, jak rychle se mění výkon v systému v závislosti na $k_{\
   \label{perioda}}
 \end{equation}
 
-Zatímco $k_{\text{ef}}$ lze ovlivnit (geometrie, obohacení, materiály), $\ell$ je pevně dáno a spjato se systémem\footnote{Teoreticky to lze také ovlivnit, ale asi těžko z rychlého reaktoru udělám tak jednoduše lehkovodní, žejo.}.\\
+Zatímco $k_{\text{ef}}$ lze ovlivnit (geometrie, obohacení, materiály), $\ell$ je pevně dáno a spjato se systémem\footnote{Teoreticky to lze také ovlivnit, ale asi těžko z rychlého reaktoru udělám tak jednoduše lehkovodní, žejo.}.
 
-Obecně platí, že rychlé reaktory mají střední dobu kratší (nedochází k moderaci, řádově 10$^{-7}$) než moderované lehkou vodou (10$^{-5}$) či grafitem (10$^{-3}$). Rychlý reaktor tedy bude na změny $k_{\text{ef}}$ reagovat mnohem rychleji, než reaktor moderovaný grafitem.\\
+Obecně platí, že rychlé reaktory mají střední dobu kratší (nedochází k moderaci, řádově 10$^{-7}$) než moderované lehkou vodou (10$^{-5}$) či grafitem (10$^{-3}$). Rychlý reaktor tedy bude na změny $k_{\text{ef}}$ reagovat mnohem rychleji, než reaktor moderovaný grafitem.
 
-\subsubsection{b) S vlivem zpožděných neutronů:}
+\subsubsection{S vlivem zpožděných neutronů:}
 
 Nejprve si ujasníme, o co se jedná. Neutrony vznikající při štěpení můžeme členit na:
 
@@ -217,7 +217,7 @@ kde:
   \item $\nu_T$ (-) značí střední počet všech vzniklých neutronů.
 \end{itemize}
 
-Obdobně lze zavést $\nu_i$, $\beta_i$, $T_{1/2}^i$, $\tau_i$ a $\lambda_i$ pro jednotlivé skupiny (rodiny) zpožděných neutronů.\\
+Obdobně lze zavést $\nu_i$, $\beta_i$, $T_{1/2}^i$, $\tau_i$ a $\lambda_i$ pro jednotlivé skupiny (rodiny) zpožděných neutronů.
 
 Dále se pro popis zavádí tzv. \textbf{efektivní střední doba života} $\ell^*$ (s) jako:
 
@@ -243,11 +243,11 @@ a \textbf{efektivní perioda reaktoru} $T_e^*$ (s) jako:
   \label{efektivni_perioda}}
 \end{equation}
 
-V podstatě se jedná o vážený průměr přes koeficienty $\beta$, a ačkoliv je podíl zpožděných neutronů minimální (do 1~\%), díky dlouhým $\tau$ se efektivní doba života velmi prodlouží a perioda reaktoru natáhne. Proto jsou zpožděné neutrony velmi důležité k řízení reaktoru. Nastane-li kritičnost na okamžitých neutronech, tento prodlužovací efekt zcela vymizí, perioda reaktoru se zkrátí až o několik řádů a máme tu druhý Černobyl.\\
+V podstatě se jedná o vážený průměr přes koeficienty $\beta$, a ačkoliv je podíl zpožděných neutronů minimální (do 1~\%), díky dlouhým $\tau$ se efektivní doba života velmi prodlouží a perioda reaktoru natáhne. Proto jsou zpožděné neutrony velmi důležité k řízení reaktoru. Nastane-li kritičnost na okamžitých neutronech, tento prodlužovací efekt zcela vymizí, perioda reaktoru se zkrátí až o několik řádů a máme tu druhý Černobyl.
 
-Pro klasický PWR reaktor platí, že $\sum \beta_i \tau_i \approx 0,1$~s. S uvažováním zpožděných neutronů se efektivní perioda natáhne o několik řádů a reaktor už není tolik citlivý na změnu $k_{\text{ef}}$.\\
+Pro klasický PWR reaktor platí, že $\sum \beta_i \tau_i \approx 0,1$~s. S uvažováním zpožděných neutronů se efektivní perioda natáhne o několik řádů a reaktor už není tolik citlivý na změnu $k_{\text{ef}}$.
 
-Lépe se řídí takové systémy, které mají větší $\beta$. Ve skutečnosti není reaktor takto ideální. Je třeba dále započítávat fotoneutrony (vznikající ($\gamma$,n) reakcí na lehkých jádrech, např. Be), více skupin zpožděných neutronů apod. Důležitá je i energetická závislost. Jelikož zpožděné neutrony vznikají s menší energií (0,5~MeV vs. 2~MeV) a mají náskok ve zpomalování. Díky nižší energii nemohou zpožděné neutrony nikdy zapříčinit štepení na štěpitelných jádrech.\\
+Lépe se řídí takové systémy, které mají větší $\beta$. Ve skutečnosti není reaktor takto ideální. Je třeba dále započítávat fotoneutrony (vznikající ($\gamma$,n) reakcí na lehkých jádrech, např. Be), více skupin zpožděných neutronů apod. Důležitá je i energetická závislost. Jelikož zpožděné neutrony vznikají s menší energií (0,5~MeV vs. 2~MeV) a mají náskok ve zpomalování. Díky nižší energii nemohou zpožděné neutrony nikdy zapříčinit štepení na štěpitelných jádrech.
 
 Kvůli tomu všemu se zavádí tzv. \textbf{efektivní podíl zpožděných neutronů} $\beta_{\text{ef}}$ (-), což je umělá hodnota, která koriguje energetický rozdíl ve skupinách, jelikož každá ze skupin má jiný vliv na štepení. Lze ji zavést pomocí vztahu:
 
@@ -255,7 +255,7 @@ Kvůli tomu všemu se zavádí tzv. \textbf{efektivní podíl zpožděných neut
   \beta_{\text{ef}} = \beta \cdot I,
 \end{equation}
 
-kde $I$ (-) značí tzv. \textbf{funkci vlivu} a závisí na konkrétním reaktoru. Říká, jak je snadné pro zpožděné neutrony štěpit, oproti okamžitým neutronům. Obecně se pohybuje okolo $\approx 1$, při bližším studiu lze napsat: FR $<1$ a LWR $>1$.\\
+kde $I$ (-) značí tzv. \textbf{funkci vlivu} a závisí na konkrétním reaktoru. Říká, jak je snadné pro zpožděné neutrony štěpit, oproti okamžitým neutronům. Obecně se pohybuje okolo $\approx 1$, při bližším studiu lze napsat: FR $<1$ a LWR $>1$.
 
 Nyní si ještě ukažme rovnice jednobodové kinetiky se zpožděnými neutrony. Odvození je podobné jako v předcházejícím případě, pouze se původní vztah modifikuje. Výsledkem je soustava lineárních diferenciálních rovnic v destrukčním tvaru:
 

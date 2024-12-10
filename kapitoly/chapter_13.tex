@@ -1,4 +1,6 @@
-\section{Výpočty vyhoření jaderného paliva a příprava homogenizovaných dat pro celozónové výpočty}
+\section[Celozónové výpočty]{Celozónové výpočty jaderných reaktorů, příprava makroskopických dat pro celozónové výpočty a používané předpoklady}
+
+UPRAIT!
 
 \subsection{Transportní (deterministický) výpočet}
 
@@ -32,7 +34,7 @@ Problém je, že takto homogenizovaná data jde použít pouze na původně ře�
   \item relativní výkony jednotlivých proutků.
 \end{itemize}
 
-Pro zachování spojitosti hustoty proudu mezi soubory se využívají tzv. ADF (Assembly Discontinuity Factors).\\
+Pro zachování spojitosti hustoty proudu mezi soubory se využívají tzv. ADF (Assembly Discontinuity Factors).
 
 Homogenizace ve štěpném prostředí (speciálně pro tepelné reaktory, rychlé si myslím že jsou obtížnější) probíhá v nekonečné mříži za použití zrcadlových hraničních podmínek. To má v sobě některá úskalí:
 
@@ -44,12 +46,11 @@ Homogenizace ve štěpném prostředí (speciálně pro tepelné reaktory, rychl
 
 Homogenizace v neštěpném prostředí je obtížnější, protože tady už tuplem neznáme spektrum neutronů. Jsou zde jiné hraniční podmínky (vacuum v okolí reflektoru, reflective/periodic v okolí souborů), nepoužívá se B1 aproximace. Pro anizotropní rozptyl na vodíku se zavádí speciální opravná funkce, která se dá získat výpočtem v 1D prostředí pomocí In-scatter aproximace.
 
-
 \subsubsection{Parametrizace}
 
-Homogenizace se provádí pro různé stavy řešeného systému, tzv. odskoky. Celozónový výpočet totiž potřebuje data, která jsou závislá na provozu reaktoru (změní-li se teplota paliva, jak se změní homogenizovaná data). Odskoky se provádí např. na teplotě (moderátoru i paliva), vyhoření, hustotě (moderátoru) a koncentraci absorbátoru.\\
+Homogenizace se provádí pro různé stavy řešeného systému, tzv. odskoky. Celozónový výpočet totiž potřebuje data, která jsou závislá na provozu reaktoru (změní-li se teplota paliva, jak se změní homogenizovaná data). Odskoky se provádí např. na teplotě (moderátoru i paliva), vyhoření, hustotě (moderátoru) a koncentraci absorbátoru.
 
-Odskoky fungují tak, že se změní zkoumaný parametr (stačí jednou nahoru a podruhé dolu), systém se zhomogenizuje a výsledná data se proloží lineárním (či jiným) fitem. Tak se získá závislost homogenizované veličiny na měnícím se parametru. Jde to i složitě, mohou se např. měnit 2 parametry najednou (což dle Pavla dává mnohem lepší výsledky), prokládání fitem se může lišit apod.\\
+Odskoky fungují tak, že se změní zkoumaný parametr (stačí jednou nahoru a podruhé dolu), systém se zhomogenizuje a výsledná data se proloží lineárním (či jiným) fitem. Tak se získá závislost homogenizované veličiny na měnícím se parametru. Jde to i složitě, mohou se např. měnit 2 parametry najednou (což dle Pavla dává mnohem lepší výsledky), prokládání fitem se může lišit apod.
 
 Mzi odskoky v klasické provozní fyzice patří:
 
@@ -69,7 +70,7 @@ Takto získám původní provozní sadu průřezů, parametrizované odskoky a p
 
 \subsubsection{Celozónový výpočet}
 
-Po takto zhomogenizovaných a zparametrizovaných souborech následuje celozónový výpočet. Ten probíhá buď pomocí zjednodušeného difúzního přístupu, nebo pomocí Simplified P3 metody transportní rovnice (SP3).\\
+Po takto zhomogenizovaných a zparametrizovaných souborech následuje celozónový výpočet. Ten probíhá buď pomocí zjednodušeného difúzního přístupu, nebo pomocí Simplified P3 metody transportní rovnice (SP3).
 
 Obecně jsou 2 přístupy:
 
@@ -79,43 +80,3 @@ Obecně jsou 2 přístupy:
 \end{itemize}
 
 Celozónové kódy musí být rychlé a jednoduché. Dále se nabízí coupling s termohydraulickým kódem (RELAP, TRACE), ale to je už fakt hardcore, protože nikdo pořádně neví, jak k tomu přistupovat.
-
-\subsection{Výpočty vyhoření}
-
-Vyhoření se počítá pomocí Batemanových rovnic:
-
-\begin{equation}
-  \dfrac{\text{d}n_i}{\text{d}t} = -\sigma_i \phi n_i + \sum_{j \to i} \gamma_i \sigma_j \phi n_j - \lambda_i n_i + \sum_{j \to i} \gamma_i \lambda_j n_j,
-\end{equation}
-
-nicméně aby šly dopočíst, je třeba znát hodnotu $\phi$, která se časem mění. Proto se postupuje pomocí tzv. metody \textbf{prediktor-korektor}, která nejprve odhadne $\phi$ na začátku cyklu, dopočte na konec cyklu (prediktor), přepočte novou $\phi$ z konce. Z těchto dvou hodnot poté stanoví průměr (korektor) a dopočte nové složení na konci cyklu.\\
-
-Proto je důležité vhodně stanovit délku kroku. Například u tepelných systémů je třeba počáteční kroky volit velmi krátké, jelikož dochází k ustalování koncentrace xenonu, což má za následek velký nárůst $\phi$. U rychlých systémů to tak kritické není.\\
-
-Nicméně, tato metoda je pouze na odhad hustoty toku. Stále máme kombinaci LDR o hodně členech (např. ENDF/B-VIII.0 1600 nuklidů). Vypíšu 2 metody řešení:
-
-\subsubsection{MATREX metoda}
-
-Maticovou formu Batemanových rovnic:
-
-\begin{equation}
-  \dfrac{\text{d}\vec{N}}{\text{d}t} = \textbf{A} \vec{N}(t)
-\end{equation}
-
-řeším ve formě exponenciály:
-
-\begin{equation}
-  \vec{N}(t) = \text{exp} (\textbf{A}t) \vec{N}(0),
-\end{equation}
-
-$$ \text{exp} (\textbf{A}t) = \sum_{k=0}^\infty \dfrac{(\textbf{A}t)^k}{k!}. $$
-
-\subsubsection{CRAM metoda}
-
-Neboli aproximace pomocí Chebyshevových racionálních funkcí. Obyčejně se využívá CRAM metoda 16. řádu, která má stejnou přesnost, jenom je rychlejší než MATREX metoda.\\
-
-Funguje na stejném základu, pouze rozkládá exponenciální matici do Chebyshevových racionálních funkcí:
-
-$$ \vec{N}(t) = \left [ \sum_{k=0}^\infty \dfrac{(\textbf{A}t)^k}{k!} \right ] \vec{N}(0) \approx \left [ \alpha_{0,K} \textbf{I} + 2 \text{Re} \left [ \sum_{j=1}^{K/2} \left ( -\dfrac{\alpha_{j,K}}{\theta_{j,K}} \right ) \left ( \textbf{I} + \textbf{A} \left ( -\dfrac{t}{\theta_{j,K}} \right ) \right ) ^{-1} \right ] \right ] \vec{N}(0), $$
-
-kde $K$ představuje řád a $\alpha_{i,j}$ a $\theta_{i,j}$ jsou příslušné CRAMerovy koeficienty k dohledání v literatuře.

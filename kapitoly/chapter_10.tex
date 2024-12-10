@@ -1,12 +1,12 @@
-\section{Prinicipy metody Monte-Carlo}
+\section[Monte-Carlo]{Princip metody Monte Carlo, analogová a neanalogová metoda, srovnání s deterministickými metodami}
 
 \subsection{Základní filosofie}
 
-Základním principem pro deterministické kódy je přímé řešení matematických rovnic popisujících chování v jaderném reaktoru, tedy difúzní rovnice, nebo transportní rovnice. Máme tedy jasný matematický model a ten řešeíme pomocí numeriky.\\
+Základním principem pro deterministické kódy je přímé řešení matematických rovnic popisujících chování v jaderném reaktoru, tedy difúzní rovnice, nebo transportní rovnice. Máme tedy jasný matematický model a ten řešeíme pomocí numeriky.
 
-Oproti tomu stochastické metody ke svému řešení žádné rovnice nepotřebují a simulují přímo konkrétní částice. Modelování tedy probíhá na takovém prinicpu, že se jasně stanoví geometrie a pomocí generátoru náhodných čísel se generují imaginární částice, které s danými geometriemi interagují. To, jak budou částice interagovat čistě závisí na účinných průřezech (je potřeba znát diferenciální průřezy, jelikož nás i zajímá směr příletu/odletu částice). \\
+Oproti tomu stochastické metody ke svému řešení žádné rovnice nepotřebují a simulují přímo konkrétní částice. Modelování tedy probíhá na takovém prinicpu, že se jasně stanoví geometrie a pomocí generátoru náhodných čísel se generují imaginární částice, které s danými geometriemi interagují. To, jak budou částice interagovat čistě závisí na účinných průřezech (je potřeba znát diferenciální průřezy, jelikož nás i zajímá směr příletu/odletu částice). 
 
-Z této základní filosofie tedy platí jasné rozdíly mezi deterministickými a stochastickými metodami:\\
+Z této základní filosofie tedy platí jasné rozdíly mezi deterministickými a stochastickými metodami:
 
 Deterministické:
 \begin{itemize}
@@ -24,7 +24,7 @@ Stochastické:
   \item Spojité účinné průřezy (lze získat pomocí NJOY).
 \end{itemize}
 
-Stochatické metody tedy nepotřebují žádné matematické rovnice, celý výpočet probíhá pomocí tzv. \textbf{náhodné procházky} metodou Monte-Carlo, což je dále rozebráno v další otázce.\\
+Stochatické metody tedy nepotřebují žádné matematické rovnice, celý výpočet probíhá pomocí tzv. \textbf{náhodné procházky} metodou Monte-Carlo, což je dále rozebráno v další otázce.
 
 Jako částice je možné simulovat absolutně cokoliv, záleží na znalosti účinných průřezů a rozšíření výpočetního kódu:
 \begin{itemize}
@@ -36,11 +36,11 @@ Jako částice je možné simulovat absolutně cokoliv, záleží na znalosti ú
 
 \subsection{Analogová a neanalogová metoda}
 
-Základním principem \textbf{analogové metody} je to, že trekujeme konkrétní neutrony, které když zaniknou (absorbcí či únikem), tak prostě zaniknou a dál neexistují. Při výpočtu skórování v datém detektoru/tallies se tedy započítávají s váhou 1. Tato metoda více odpovídá realitě, nicméně je zdlouhavá, jelikož pro přesnější výsledek je nutné simulovat větší populaci částic.\\
+Základním principem \textbf{analogové metody} je to, že trekujeme konkrétní neutrony, které když zaniknou (absorbcí či únikem), tak prostě zaniknou a dál neexistují. Při výpočtu skórování v datém detektoru/tallies se tedy započítávají s váhou 1. Tato metoda více odpovídá realitě, nicméně je zdlouhavá, jelikož pro přesnější výsledek je nutné simulovat větší populaci částic.
 
-To platí např. pro prostředí s velkou absorbcí a malým zdrojem (chceme-li např. řešit problematiku stínění, reflektoru apod.)\\
+To platí např. pro prostředí s velkou absorbcí a malým zdrojem (chceme-li např. řešit problematiku stínění, reflektoru apod.)
 
-Oproti tomu \textbf{neanalogová metoda} či \textbf{implicitní metoda} funguje tak, že narodí-li se částice, tak je jí přiřazena váha 1. A tím, jak se částice toulá po daném systému, tak interaguje s prostředím až do místa, kde by teoreticky mělo dojít k její absorbci. Nicméně, nedojde k úplné absorbci, pouze se dojde k započítání do skórování a dále se jí srazí váha na nižší hodnotu. Nedojde tedy k zániku, a jedna částice může pokračovat v toulání se po systému. Pouze má nižší váhu, proto narazí-li na další absorbci, opět dojde k započtení do skórování, ale s nižší váhou, jelikož v tomto druhém místě by už částice neměla teoreticky existovat. Dojde-li po několika srážkách ke snížení váhy pod jistou hladinu, až tehdy dojde k celkovému zániku dané částice.\\
+Oproti tomu \textbf{neanalogová metoda} či \textbf{implicitní metoda} funguje tak, že narodí-li se částice, tak je jí přiřazena váha 1. A tím, jak se částice toulá po daném systému, tak interaguje s prostředím až do místa, kde by teoreticky mělo dojít k její absorbci. Nicméně, nedojde k úplné absorbci, pouze se dojde k započítání do skórování a dále se jí srazí váha na nižší hodnotu. Nedojde tedy k zániku, a jedna částice může pokračovat v toulání se po systému. Pouze má nižší váhu, proto narazí-li na další absorbci, opět dojde k započtení do skórování, ale s nižší váhou, jelikož v tomto druhém místě by už částice neměla teoreticky existovat. Dojde-li po několika srážkách ke snížení váhy pod jistou hladinu, až tehdy dojde k celkovému zániku dané částice.
 
 Tímto způsobem se dají zpřesnit výsledky za pomoci menšího počtu částic. Nicméně, jde o komplikovanější metodu a je potřeba znát širší matematický základ. V prvním případě je důležité určit, jakým zpsůobem se změní váha dané částice. Tato technika se nazývá \textbf{redukce variance} (redukce variance, jelikož zpřesňují výsledek a snižuji rozptyl, tedy varianci).
 

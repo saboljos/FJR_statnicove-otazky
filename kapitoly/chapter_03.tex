@@ -1,8 +1,12 @@
-\section{Odvození a využití transportní teorie v reaktorové fyzice}
+\section[Transportní rovnice]{Odvození a využití transportní teorie v reaktorové fyzice}
+
+Transportní rovnice je základní matematický model používaný v reaktorové fyzice k popisu pohybu a interakce neutronů v materiálu. Její cílem je určit rozložení neutronů v prostoru, energii a čase v jaderném reaktoru nebo jiném prostředí.
+
+Momentálně se jedná o rovnici, která co nejvěrněji popisuje chování a šíření neutronů, nicméně její zápis je příliš složitý a neexistuje obecné analytické řešení. Z toho důvodu je nutné přecháet k určitým zjednodušením, kterými může být například difúzní rovnice.
 
 \subsection{Boltzmanova integro-diferenciální transportní rovnice}
 
-Odvození musí nutně vycházet z dějů, které má popisovat. Vzhledem k běžným podmínkám v reaktorech je možné popis chování neutronů zúžit na úlohu neutrálních částic pohybujících se podle zákonitostí klasické mechaniky s kvantovým popisem jejich interakcí s jádry okolního prostředí.\\
+Odvození musí nutně vycházet z dějů, které má popisovat. Vzhledem k běžným podmínkám v reaktorech je možné popis chování neutronů zúžit na úlohu neutrálních částic pohybujících se podle zákonitostí klasické mechaniky s kvantovým popisem jejich interakcí s jádry okolního prostředí.
 
 Cílem je převést izolovanou částicovou povahu interakcí neutronů na spojitou veličinu.
 
@@ -12,16 +16,16 @@ Pro odvození musíme předpokládat:
 
 \begin{itemize}
   \item dostatečná populace neutronů, abychom mohli uvažovat statistické středování,
-  \item neutrony interagují pouze s jádry okolí (která jsou v klidu) a nikoliv mezi sebou $\rightarrow$ v reaktorech splněno vždy (projevuje se až pro $\Phi > 10^{20}$ 1/cm$ˇ2$/s).
+  \item neutrony interagují pouze s jádry okolí (která jsou v klidu) a nikoliv mezi sebou $\rightarrow$ v reaktorech splněno vždy (projevuje se až pro $\Phi > 10^{20}$ 1/cm$^2$/s).
 \end{itemize}
 
 \subsubsection{Matematický aparát}
 
-Pro odvození je potřeba zavést:\\
+Pro odvození je potřeba zavést:
 
 \textbf{a) Nezávislé proměnné}:
 
-Nezávislé proměnné představují souřadnice, pomocí kterých jsme schopni neutronům přiřadit bod fázového prostoru. Pro jednoznačné určení je potřeba 6~nezávislých proměnných (v klasické mechanice jde o 3~složky polohového vektoru a 3~složky vektoru rychlosti), nicméně v tomto případě se od vektoru rychlosti přechází ke směru pohybu a velikosti rychlosti.\\
+Nezávislé proměnné představují souřadnice, pomocí kterých jsme schopni neutronům přiřadit bod fázového prostoru. Pro jednoznačné určení je potřeba 6~nezávislých proměnných (v klasické mechanice jde o 3~složky polohového vektoru a 3~složky vektoru rychlosti), nicméně v tomto případě se od vektoru rychlosti přechází ke směru pohybu a velikosti rychlosti.
 
 Pro popis tedy předpokládáme:
 
@@ -36,7 +40,7 @@ Pro případný přepočet poté platí:
 $$ v = \sqrt{\dfrac{2m}{E}}, $$
 $$ \textbf{v} = v \Omega. $$
 
-Časovou závislost zanedbáváme a na čas nahlížíme jako na parametr, nikoliv souřadnici.\\
+Časovou závislost zanedbáváme a na čas nahlížíme jako na parametr, nikoliv souřadnici.
 
 \textbf{b) Fázový prostor:}
 
@@ -54,7 +58,7 @@ Počet neutronů v $\Delta \textbf{P}$ se může změnit vlivem změny v dílč�
 
 \textbf{c) Závislé proměnné:}
 
-Dále je potřeba zavést závislé proměnné (závislé od toho, že jsou závislé na těch nezávislých a času), které představují sledované veličiny.\\
+Dále je potřeba zavést závislé proměnné (závislé od toho, že jsou závislé na těch nezávislých a času), které představují sledované veličiny.
 
 Sem řadíme 3 základní:
 
@@ -82,9 +86,9 @@ Pro kontext, \textbf{$\Phi$ udává celkový součet drah všech neutronů za se
 
 \subsubsection{Odvození}
 
-Nejprve je potřeba si uvědomit, jak popisujeme interakce neutronů s jádry. Pravděpodobnost interakce je dána $\sigma$ (cm$^2$) a $\Sigma$ (1/cm), přičemž mezi možné interakce řadíme pouze: rozptyl, radiační záchyt a štěpení, případně absorbci (což je součet štěpení a radiačního záchytu).\\
+Nejprve je potřeba si uvědomit, jak popisujeme interakce neutronů s jádry. Pravděpodobnost interakce je dána $\sigma$ (cm$^2$) a $\Sigma$ (1/cm), přičemž mezi možné interakce řadíme pouze: rozptyl, radiační záchyt a štěpení, případně absorbci (což je součet štěpení a radiačního záchytu).
 
-\textbf{Makroskopický účinný průřez pro interakci $i$ na jádře $j$} -- $\Sigma_{ij}(\textbf{r}, E, t)$ definujeme jako podíl pravděpodobnosti interakce neutronu reakcí $i$ s jádrem $j$ na jednotku délky dráhy.\\
+\textbf{Makroskopický účinný průřez pro interakci $i$ na jádře $j$} -- $\Sigma_{ij}(\textbf{r}, E, t)$ definujeme jako podíl pravděpodobnosti interakce neutronu reakcí $i$ s jádrem $j$ na jednotku délky dráhy.
 
 Dále \textbf{reakční rychlost pro interakci $i$ na jádře $j$} -- $F_{ij}(\textbf{r}, E, t)$ určíme jako:
 
@@ -108,7 +112,7 @@ $$\Sigma_{sj}(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E, t) = \Sigma_{s
 $$\int_\mathbb{R^+} \int_{4 \pi} f_s(\Omega' \cdot \Omega, E' \rightarrow E) \text{d} \Omega \text{d}E = 1. $$
 
 
-Pro odvození musíme vycházet z bilanční rovnice neutronů, kde sledujeme změnu počtu neutronů v libovolném elementu fázového prostoru tvořeném objemem $V$ a $\Delta \Omega \Delta E$ během časového intervalu $\Delta t$.\\
+Pro odvození musíme vycházet z bilanční rovnice neutronů, kde sledujeme změnu počtu neutronů v libovolném elementu fázového prostoru tvořeném objemem $V$ a $\Delta \Omega \Delta E$ během časového intervalu $\Delta t$.
 
 Jednodušeji řečeno posuzujeme jednotlivé příspěky či ztráty neutronů:
 
@@ -118,7 +122,7 @@ Jednodušeji řečeno posuzujeme jednotlivé příspěky či ztráty neutronů:
   \label{bilancni_rovnice}}
 \end{equation}
 
-Nyní popíšeme jednotlivé stavy:\\
+Nyní popíšeme jednotlivé stavy:
 
 \textbf{a) Počet neutronů v čase $t + \Delta t$:}
 
@@ -238,7 +242,7 @@ Jelikož se jedná o integro-diferenciální rovnici, je třeba znát okrajové 
   \item směrové omezení.
 \end{itemize}
 
-Takovýmito zjednodušeními je např. možné přejít zpět k difúzní teorii. Pro numerické řešení je dáel třeba dostatečné množství jaderných dat (průřezy, štěpné spektrum apod.), aplikuje se bodové řešení:
+Takovýmito zjednodušeními je např. možné přejít zpět k difúzní teorii. Pro numerické řešení je dále třeba dostatečné množství jaderných dat (průřezy, štěpné spektrum apod.), aplikuje se bodové řešení:
 
 \begin{itemize}
   \item Rozsekání energetické spojitosti na grupy,
@@ -295,53 +299,6 @@ $$\Phi(x, \mu) = \dfrac{1}{\mu} \int_a^x e^{\dfrac{-\Sigma (x-x')}{\mu}} Q(x', \
 
 Tyto integrály není možné analyticky vyjádřit v obecném tvaru pro $Q(x, \mu)$, ale je to možné například pro konstantní člen $Q_0$. Pokud bychom se chtěli zbavit i směrové závislosti, musel by se výraz $\Phi(x, \mu)$ vyintegrovat přes $\mu$ (180° rozmezí pro $\vartheta$, tedy od -1 do +1 pro $\mu$), čímž by se z diferenciální hustoty toku stala "normální" hustota toku. Není to vidět, ale obě veličiny jsou rozdílné, mají i rozdílné jednotky (1/cm$^2$/s/rad vs. 1/cm$^2$/s). Takže bacha jaké píšete proměnné, je potřeba si to ohlídat.
 
-\subsubsection{Numerika}
+\subsection{Využití}
 
-Jak bylo zmíněno, aplikuje se přechod ze spojitosti na bodovou aproximaci, tj. grupové rozsekání pro energii, metoda sítí pro prostor a S$_n$ metoda pro směr. Výsledkem je strašně moc elementů a do té doby, než se začnou prodávat kvantové počítače, tak pro celozónový výpočet nevhodné $\rightarrow$ nutná zjednodušení.\\
-
-Dále se pro zjednodušení aplikuje oddělení velikosti a úhlové závislosti průřezu pro rozptyl, protože je závislý na všech proměnných a složitě by se vyčísloval. Zní to sice nóbl, ale ve výsledku se z funkce o více proměnných udělá součin dvou funkcí o méně proměnných pomocí rozvoje do Legendrových polynomů  (tím se oddělí směrová závislost) a sférických harmonických funkcí (tím se oddělí závislost původního a nového směru). \\
-
-Z teorie Fourierova rozkladu platí:
-
-$$\Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) = \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) P_l(\Omega' \cdot \Omega),$$
-$$\Sigma_{s,l}(\textbf{r}, E' \rightarrow E) = \int_{-1}^1 \Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) P_l(\Omega' \cdot \Omega) \text{d}\mu,$$
-
-\noindent kde $\Sigma_{s,l}$ je $l$-tý Legendrův koeficient pro rozptyl a $P_l$ je $l$-tý Legandrův polynom. Tím se oddělil prostor od směru. Dále se Legendrův polynom rozloží na sférické harmonické funkce:
-
-$$P_l(\Omega' \cdot \Omega) = \sum_{m=-l}^{+l} R_l^m(\Omega) R_l^m(\Omega'),$$
-
-\noindent kde $R_l^m$ jsou zmiňované sférické harmonické funkce. Tím se oddělil původní a nový směr. Rozptyl pak vypadá:
-
-$$\Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) = \sum_{l=0}^{\infty} \sum_{m=-l}^{+l} \dfrac{2l + 1}{4 \pi} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) R_l^m(\Omega) R_l^m(\Omega').$$
-
-Matematická vsuvka: Legandrovy polynomy i sférické harmonické funkce jsou bázové funkce, jsou tedy navzájem ortonormální (Legendrovy polynomy nejsou ortogonální, proto je tam ten normalizační zlomek). Legendrovy polynomy rozkládají prostor $(-1, +1)$ se skalárním součinem definovaným přes obyčejný integrál a sférické harmonické funkce sféru $(0, 4 \pi)$ a je možné je získat jako vlastní funkce Laplaciánu.\\
-
-Dále se zavádějí \textbf{úhlové momenty} $\phi_l^m$, které zjednodušují zápis. Jde o průmět do sférických harmonických funkcí, takže zjednodušeně řečeno, pokud jsou sférické harmonické funkce bází prostoru, tak vezmu hustotu toku a pomocí superpozice ji vyjádřím v těchto bázových souřadnicích:
-
-$$\phi_l^m(\textbf{r}, E') = \int_{4 \pi} R_l^m (\Omega') \Phi(\textbf{r}, \Omega', E') \text{d}\Omega'.$$
-
-Pro následný zápis transportní rovnice pak tedy platí:
-
-\begin{equation*}
-  \begin{multlined}
-    \int_\mathbb{R^+} \int_{4 \pi} \Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \text{d}E' = \\
-    = \int_\mathbb{R^+} \int_{4 \pi} \left [ \sum_{l=0}^{\infty} \sum_{m=-l}^{+l} \dfrac{2l + 1}{4 \pi} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) R_l^m(\Omega) R_l^m(\Omega') \right ] \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \text{d}E' = \\
-    = \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega) \int_\mathbb{R^+} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) \left ( \int_{4 \pi} R_l^m(\Omega') \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \right ) \text{d}E' =\\
-    = \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega) \int_\mathbb{R^+} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) \phi_l^m(\textbf{r}, E') \text{d}E'
-  \end{multlined}
-\end{equation*}
-
-A kvůli tomu se to dělá. Je to hezká matematika, ale reálně tomu na katedře skutečně rozumí jenom pár lidí, takže je asi zbytečný to umět nazpaměť.\\
-
-\noindent \textbf{a) S$_n$ metoda}
-
-Jedná se o směrovou diskretizaci prostorového úhlu $\Omega$. Neznámé poté představují úhlové hustoty toku neutronů $\Phi_d(\textbf{r})$ v $n$ vybraných směrech, čímž se z transportní rovnice odstraní směrová závislost. Pro výsledné řešní platí:
-
-$$\Phi(\textbf{r}, \Omega) \approx \sum_{d=1}^{n} \Phi_d(\textbf{r}) \delta(1-\Omega \cdot \Omega_d).$$
-
-\noindent \textbf{b) P$_n$ metoda}
-
-Vyjde se z rozvoje do Legendrových polynomů a sférických harmonickcý funkcí, který se utne ve stupni $n$. Tento rozvoj se poté zpětně dosadí do transportní rovnice (viz předešlé kompletní dosazení) a řeší se soustava $(n+1)^2$ rovnic, ve kterých neznámou hraje úhlový moment $\phi_l^m(\textbf{r})$. Tím se úplně zbavíme závislosti na $\Omega$. Výsledné řešení bude tvaru:
-
-$$\Phi(\textbf{r}, \Omega) \approx \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega)  \phi_l^m(\textbf{r}). $$
-
+DOPSAT!!!

@@ -1,15 +1,15 @@
-\section{Jaderná data v reaktorové fyzice}
+\section[Jaderná data]{Jaderná data v reaktorové fyzice, jejich validace a verifikace a zohlednění efektu samostínění ve výpočtech}
 
-Jadrná data jsou prostředek, díky kterému matematický popis systému dostává skutečný fyzikální význam. Každé řešení difúzní či transportní rovnice je tak přesné, jak přesné jsou právě jaderná data. Obecně jsou 2 způsoby, jak data získat:
+Jaderná data jsou prostředek, díky kterému matematický popis systému dostává skutečný fyzikální význam. Každé řešení difúzní či transportní rovnice je tak přesné, jak přesné jsou právě jaderná data. Obecně jsou 2 způsoby, jak data získat:
 
 \begin{itemize}
   \item Teoretické určení -- je možné určit průřezy pro různé energetické oblasti (pružný rozptyl), či popsat izolovanou rezonanci (Breit-Wignerova formule), nicméně není možné je aplikovat obecně (neexistuje přesný matematický popis štěpení, komplikace v rezonanční oblasti apod.).
   \item Experimentální určení -- důležitější a významnější způsob určování dat, nicméně takovéto hodnoty mají pouze omezenou a konečnou přesnost.
 \end{itemize}
 
-Dále je důležité si klást otázku, k čemu data potřebujeme. Pro reaktorovou fyziku stačí energetické rozmezí 10 $\mu$eV až 20 MeV (knihovny ENDF/B, JEFF, atd.), jiné je to ale např. pro astrofyziku, částicovou fyziku atd.\\
+Dále je důležité si klást otázku, k čemu data potřebujeme. Pro reaktorovou fyziku stačí energetické rozmezí 10 $\mu$eV až 20 MeV (knihovny ENDF/B, JEFF, atd.), jiné je to ale např. pro astrofyziku, částicovou fyziku atd.
 
-Mezi jaderná data je možné řadit: mikroskopické účinné průřezy, diferenciální průřezy (úhlově i energeticky), rozpadové konstanty, výtěžky ze štěpení, spektra ze štěpení apod.\\
+Mezi jaderná data je možné řadit: mikroskopické účinné průřezy, diferenciální průřezy (úhlově i energeticky), rozpadové konstanty, výtěžky ze štěpení, spektra ze štěpení apod.
 
 Dále existují 2 přístupy:
 
@@ -22,15 +22,15 @@ Dále existují 2 přístupy:
 
 \subsubsection{Příprava a shromažďování}
 
-Veškeré experimentální výsledky jsou shromažďovány v mezinárodní databází \textbf{EXFOR} podle standardu z konference v Moskvě roku 1969. Současně obsahuje přibližně 23 tisíc sad experimentálních měření. Dále existuje ještě databáze \textbf{CINDA}, která obsahuje i dodatečné informace. \\
+Veškeré experimentální výsledky jsou shromažďovány v mezinárodní databází \textbf{EXFOR} podle standardu z konference v Moskvě roku 1969. Současně obsahuje přibližně 23 tisíc sad experimentálních měření. Dále existuje ještě databáze \textbf{CINDA}, která obsahuje i dodatečné informace. 
 
-K získávání dat se využívají různé metody. Pro získání celkového průřezu stačí změřit svazek před a za materiálem. Konkrétní reakce (štěpení, záchyt apod.) je možné dopočíst sledujeme-li i sekundární částice, které z reakcí vyletují. Úhlovou závislost je možné získat z různého pozicování detektoru. Pokud chceme vyfiltrovat určité energie, využívá se metoda ddoba letu (time of flight).\\
+K získávání dat se využívají různé metody. Pro získání celkového průřezu stačí změřit svazek před a za materiálem. Konkrétní reakce (štěpení, záchyt apod.) je možné dopočíst sledujeme-li i sekundární částice, které z reakcí vyletují. Úhlovou závislost je možné získat z různého pozicování detektoru. Pokud chceme vyfiltrovat určité energie, využívá se metoda ddoba letu (time of flight).
 
 Tato data se dají získat např. v CERNu, dále laboratoř GELINA v Belgii, nebo v ORNL. Nicméně získají se pouze bodové hodnoty v daných energiích, které se musí dále zpracovat a rozšířit (evaluovat). Např. $^{135}$Xe má známých pouze 80 hodnot, což skutečně není mnoho.
 
 \subsubsection{Evaluace (zhodnocení) a ukládání}
 
-Následuje evaluace (zhodnocení) v jednom ze světových datových center (USA, Evropa, Jaoponsko, Rusko, Čína). Proces evaluace má za úkol data protřídit, něco vyházet, něco zkombinovat (hlavně v oblasti rezonancí, používá se metoda nejmenších čtverců, Breit-Wigner apod.). Využívají se k tomu specializované kódy, např. \textbf{GNASH}, \textbf{EMPIRE}, \textbf{SAMMY}, jejichž aplikace je závislá na energetické rozsahu. Důraz se klade na aktinoidy a štěpení.\\
+Následuje evaluace (zhodnocení) v jednom ze světových datových center (USA, Evropa, Jaoponsko, Rusko, Čína). Proces evaluace má za úkol data protřídit, něco vyházet, něco zkombinovat (hlavně v oblasti rezonancí, používá se metoda nejmenších čtverců, Breit-Wigner apod.). Využívají se k tomu specializované kódy, např. \textbf{GNASH}, \textbf{EMPIRE}, \textbf{SAMMY}, jejichž aplikace je závislá na energetické rozsahu. Důraz se klade na aktinoidy a štěpení.
 
 Jednoduchou ukázkou evaluace je např. aplikace Breit-Wignerovy formule pro rezonance:
 
@@ -46,7 +46,7 @@ Jde pouze o kontrolu, jestli jsou zhodnocená data správná, dodržují fyziku 
 
 \subsubsection{Validace}
 
-Aby bylo možné data použít, je potřeba je ověřit s experimenty, tzv. validovat. To probíhá pomocí benchmarků, kde se srovnává $k_\text{ef}$, kinetické parametry či vyhořívání paliva. K validaci slouží mezinárodní projekt \textbf{ICSBEF} (International Criticality Safety Benchmark Evaluation Project) obsahující srovnávací úlohy pro kritické konfigurace a pro stínění. Dále může posloužit databáze \textbf{SFCOMPO-2.0}, která obsahuje data o složení palivových vzorků pro různé druhy reaktorů.\\
+Aby bylo možné data použít, je potřeba je ověřit s experimenty, tzv. validovat. To probíhá pomocí benchmarků, kde se srovnává $k_\text{ef}$, kinetické parametry či vyhořívání paliva. K validaci slouží mezinárodní projekt \textbf{ICSBEF} (International Criticality Safety Benchmark Evaluation Project) obsahující srovnávací úlohy pro kritické konfigurace a pro stínění. Dále může posloužit databáze \textbf{SFCOMPO-2.0}, která obsahuje data o složení palivových vzorků pro různé druhy reaktorů.
 
 Tímto způsobem vznikají zvalidované jaderné knihovny, které si kdokoliv může stáhnout a použít. Existuje několik knihoven, v reaktorové fyzice se používají zejména:
 
@@ -61,21 +61,21 @@ Každá knihovna se pak hodí pro něco jiného, např. JEFF se hodí pro rychl�
 
 \subsection{Proces zpracování jaderných dat}
 
-V následném zpracování je rozhodující, jestli nás zajímá spojitá či grupová struktura. V každém případě se k následujícímu popisu hodí např. kód \textbf{NJOY} (s jiným kódem jsme nepracovali, tudíž nic jiného neznám).\\
+V následném zpracování je rozhodující, jestli nás zajímá spojitá či grupová struktura. V každém případě se k následujícímu popisu hodí např. kód \textbf{NJOY} (s jiným kódem jsme nepracovali, tudíž nic jiného neznám).
 
-Ten funguje na principu jednotlivých modulů, které mezi sebou komunikují. Záleží na uživateli, co od dat požaduje. Dále jsou vyčteny ty nejdůležitější procedury, nicméně je jich celá řada dalších (moduly \textbf{GASPR} -- zahrnuje reakce produkující plyny (helium, vodík...), \textbf{HEATR} -- posuzuje radiační ohřev a radiační poškození, \textbf{PURR} -- příprava nerozlišených rezonancí pro stochastické kódy, či \textbf{THERMR} -- analýza rozptylu tepelných neutronů; které sem v životě nepoužil).\\
+Ten funguje na principu jednotlivých modulů, které mezi sebou komunikují. Záleží na uživateli, co od dat požaduje. Dále jsou vyčteny ty nejdůležitější procedury, nicméně je jich celá řada dalších (moduly \textbf{GASPR} -- zahrnuje reakce produkující plyny (helium, vodík...), \textbf{HEATR} -- posuzuje radiační ohřev a radiační poškození, \textbf{PURR} -- příprava nerozlišených rezonancí pro stochastické kódy, či \textbf{THERMR} -- analýza rozptylu tepelných neutronů; které sem v životě nepoužil).
 
 \subsubsection{Linearizace}
 
-Získaná a zhodnocená data jsou bodová. Pro získání informací mimo body se používá interpolace (prvním krokem je vždy lineární interpolace) případně matematický popis pro rezonance. V dalším kroku následují nelineární interpolace, které se ověřují zpětným součtem totálního průřezu $\rightarrow$ iterativní proces.\\
+Získaná a zhodnocená data jsou bodová. Pro získání informací mimo body se používá interpolace (prvním krokem je vždy lineární interpolace) případně matematický popis pro rezonance. V dalším kroku následují nelineární interpolace, které se ověřují zpětným součtem totálního průřezu $\rightarrow$ iterativní proces.
 
 NJOY nejprve vezme ENDF formát a přetvoří ho do PENDF formátu (Pointwise ENDF), se kterým dále pracuje. O to se stará modul \textbf{RECONR}, který umí zrekonstruovat rezonance a nelineární aproximace z ENDF. Opět probíhá kontrola přes součet totálního průřezu.
 
 \subsubsection{Úprava na teplotu}
 
-Zhodnocená jaderná data se ukládají pro teplotu 0~K. Nicméně díky Dopplerově efektu (rozšiřování rezonancí) je důležité data přepočíst na požadovanou teplotu (jde zejména o rezonanční a tepelnou oblast), čímž se mění energetická síť.\\
+Zhodnocená jaderná data se ukládají pro teplotu 0~K. Nicméně díky Dopplerově efektu (rozšiřování rezonancí) je důležité data přepočíst na požadovanou teplotu (jde zejména o rezonanční a tepelnou oblast), čímž se mění energetická síť.
 
-V NJOY provádí modul \textbf{BROADR}. Ten to provádí pomocí přesného řešení efektivního účinného průřezu (to je ten, který se ve FARE zaváděl pro popis Dopplerova efektu). Je definován tak, aby dával pro nuklidy v klidu stejnou reakční rychlost jako pro nuklidy v pohybu. Obecně klesá vrchol rezonancí na úkor šířky tak, aby plocha pod rezonancí zůstávala konstantní. Oblast 1/v je v pořádku, rovněž oblast nad 100~keV, nad kterou jsou rezonance nerozlišené
+V NJOY provádí modul \textbf{BROADR}. Ten to provádí pomocí přesného řešení efektivního účinného průřezu (to je ten, který se ve FARE zaváděl pro popis Dopplerova efektu). Je definován tak, aby dával pro nuklidy v klidu stejnou reakční rychlost jako pro nuklidy v pohybu. Obecně klesá vrchol rezonancí na úkor šířky tak, aby plocha pod rezonancí zůstávala konstantní. Oblast 1/v je v pořádku, rovněž oblast nad 100~keV, nad kterou jsou rezonance nerozlišené.
 
 \subsubsection{Grupování}
 
@@ -87,9 +87,9 @@ Pro deterministické kódy je důležité data energeticky zgrupovat. Tento proc
     \label{grupovani}
 \end{equation}
 
-V závislosti na analyzovaném systému se musí vhodně odhadnout spektrum neutronů, neboli jakou vážící funkci použiji.\\
+V závislosti na analyzovaném systému se musí vhodně odhadnout spektrum neutronů, neboli jakou vážící funkci použiji.
 
-Také se musí zvolit vhodná grupová struktura zohledňující očekávané spektrum v systému. Příliš jemná struktura zvyšuje výpočetní náročnost, naopak příliš hrubá zkresluje výsledky (může přehlédnout potřebné rezonance, překryv rezonancí FPs, aktinoidů či okolního materiálu apod.). Obecně rychlé systémy vyžadují více (tisíce) grup, než tepelné systémy. Např. moji oblíbení zástupci jsou XMAS pro tepelný reaktor a Vitamin-j pro rychlý reaktor, což jsou podmnožiny velké grupové struktury zavedené v ERANOSu, které se nějak dochovaly a používají se stále.\\
+Také se musí zvolit vhodná grupová struktura zohledňující očekávané spektrum v systému. Příliš jemná struktura zvyšuje výpočetní náročnost, naopak příliš hrubá zkresluje výsledky (může přehlédnout potřebné rezonance, překryv rezonancí FPs, aktinoidů či okolního materiálu apod.). Obecně rychlé systémy vyžadují více (tisíce) grup, než tepelné systémy. Např. moji oblíbení zástupci jsou XMAS pro tepelný reaktor a Vitamin-j pro rychlý reaktor, což jsou podmnožiny velké grupové struktury zavedené v ERANOSu, které se nějak dochovaly a používají se stále.
 
 V NJOY grupování provádí modul \textbf{GROUPR}, čímž vznikne formát GENDF (Groupwise ENDF). Ten dále připravuje matice přechodu mezi grupami (rozptylové přechody).
 
@@ -103,13 +103,13 @@ Grupování průřezů musí rovněž zohledňovat vliv samostínění. S rostou
     \label{samostineni}
 \end{equation}
 
-\noindent (znamená to, že když se např. vykreslí hustota toku v palivu, tak dochází k prudkým poklesům v oblastech rezonance. I proto je dobré volit vhodnou grupovou strukturu, abychom tento efekt zaznamenali).\\
+\noindent (znamená to, že když se např. vykreslí hustota toku v palivu, tak dochází k prudkým poklesům v oblastech rezonance. I proto je dobré volit vhodnou grupovou strukturu, abychom tento efekt zaznamenali).
 
 Pokud bychom chtěli dle rovnice \eqref{grupovani} data grupovat, je potřeba znát hustotu toku, což neznáme, protože je ovlivněna právě samostníněním. Pomocí přepisu \eqref{samostineni} do \eqref{grupovani} se pro vybraný nuklid $i$ rovnice přepíše do tvaru:
 
 $$ \bar{\sigma}_g^i = \dfrac{\int_g \dfrac{\sigma^i(E)}{\Sigma_t(E)} \text{d}E}{\int_g \dfrac{1}{\Sigma_t(E)} \text{d}E} = \dfrac{\int_g \dfrac{\sigma^i(E)}{N^i \sigma_t^i(E) + \sum_j N^j \sigma_t^j(E)} \text{d}E}{\int_g \dfrac{1}{N^i \sigma_t^i(E) + \sum_j N^j \sigma_t^j(E)} \text{d}E} = \dfrac{\int_g \dfrac{\sigma^i(E)}{\sigma_t^i(E) + \sigma_0^i(E)} \text{d}E}{\int_g \dfrac{1}{\sigma_t^i(E) + \sigma_0^i(E)} \text{d}E},$$
 
-\noindent kde $\sigma_0^i(E) = \sum_j \dfrac{N^j}{N^i} \sigma_t^j(E).$\\
+\noindent kde $\sigma_0^i(E) = \sum_j \dfrac{N^j}{N^i} \sigma_t^j(E).$
 
 Postupuje se pomocí tzv. \textbf{Bondarenkovy metody}, která zanedbává některé jemné efekty tím, že zavede efektivní hodnotu $\bar{\sigma}_0^i$ středovanou přes energii grupy:
 
@@ -127,7 +127,7 @@ V praxi jsou napočteny různé hodnoty Bondarenkových faktorů pro odlišné $
     \bar{\sigma}_g^i(\bar{\sigma}_0^i, T) = \bar{\sigma}_g^{i,\infty} \cdot F_g^i (\bar{\sigma}_0^i, T).}
 \end{equation}
 
-Ve zkratce: pokud grupový průřez pro daný nuklid  $i$ převyšuje průřez skutečného okolí $j$ (rezonance), dochází k efektu samostínění a reakční rychlost klesá, což se vyjádří poklesem grupového průřezu, což má na svědomí právě Bondarenkův faktor.\\
+Ve zkratce: pokud grupový průřez pro daný nuklid  $i$ převyšuje průřez skutečného okolí $j$ (rezonance), dochází k efektu samostínění a reakční rychlost klesá, což se vyjádří poklesem grupového průřezu, což má na svědomí právě Bondarenkův faktor.
 
 I tento proces má na svědomí modul \textbf{GROUPR}. Použije se tradiční váhová funkce hustoty toku neutronů (Maxwell, 1/v apod.), která má ale reálně propady, k čemuž se aproximuje pomocí rozkladu do Legendrových polynomů $\Phi_l(E)$:
 

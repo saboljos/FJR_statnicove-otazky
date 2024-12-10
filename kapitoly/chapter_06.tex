@@ -1,4 +1,4 @@
-\section{Poruchová teorie a její využití v reaktorové fyzice}
+\section[Poruchová teorie]{Poruchová teorie a její využití v reaktorové fyzice}
 
 \subsection{Odůvodnění}
 
@@ -8,7 +8,7 @@ Při provozu reaktoru dochází k častým dochylkám v parametrech od běžnéh
   \item prostorovou závislostí; jedná se o lokální změny v důsledku akumulace FP, lokálního vyhoření, vkládání vzorků k ozařování apod.
 \end{itemize}
 
-Pokud bychom chtěli systém analyzovat pomocí 2G, čí vícegrupového přístupu, nelze použít klasickou teorii, jelikož grupové konstanty se vztahují k celému objemu a nikoliv k lokálním změnám $\rightarrow$ bylo by potřeba velmi náročného 3D vícegrupového přístupu s prostorově závislými konstantami $\rightarrow$ vzhledem k výpočetní náročnosti nelze použít.\\
+Pokud bychom chtěli systém analyzovat pomocí 2G, čí vícegrupového přístupu, nelze použít klasickou teorii, jelikož grupové konstanty se vztahují k celému objemu a nikoliv k lokálním změnám $\rightarrow$ bylo by potřeba velmi náročného 3D vícegrupového přístupu s prostorově závislými konstantami $\rightarrow$ vzhledem k výpočetní náročnosti nelze použít.
 
 Alternativou je tzv. \textbf{poruchová teorie}, kterou lze využít pouze za předpokladu, že \textbf{daná porucha neovlivňuje výrazně hustotu toku neutronů v blízkosti poruchy}. Lze ji využít pro analýzu lokálních i celozónových poruch.
 
@@ -99,7 +99,7 @@ Navíc, platí-li:
   \label{definice_samosdruzeny_operator}}
 \end{equation}
 
-pak operátor $\mathcal{M}$ nazveme \textbf{samosdružený}.\\
+pak operátor $\mathcal{M}$ nazveme \textbf{samosdružený}.
 
 Jednoduchým aplikováním metody per partes a s trochou důvtipu jde dokázat, že:
 
@@ -118,8 +118,8 @@ Jako \textbf{sdruženou hustotu toku}, neboli \textbf{funkci vlivu} definujeme f
   \label{definice_sdruzena_funkce}}
 \end{equation}
 
-Je tedy očividné, že pro 1G přiblížení platí $\Psi = \Phi$, ale pro 2G přiblížení už tato relace neplatí. Funkci $\Psi$ musíme v takovém případě dopočíst (např. numericky) pomocí vztahu \eqref{definice_sdruzena_funkce} (což ovšem není těžké, jelikož sdružený operátor $\mathcal{M}^+$ lze získat prostou transpozicí).\\
-\\
+Je tedy očividné, že pro 1G přiblížení platí $\Psi = \Phi$, ale pro 2G přiblížení už tato relace neplatí. Funkci $\Psi$ musíme v takovém případě dopočíst (např. numericky) pomocí vztahu \eqref{definice_sdruzena_funkce} (což ovšem není těžké, jelikož sdružený operátor $\mathcal{M}^+$ lze získat prostou transpozicí).
+
 Stejně jako u funkce $\Phi$, tak i u funkce $\Psi$ lze z hraničních podmínek určit pouze tvar, a nikoliv velikost (tu získáme z normování výkonu), nicméně pro poruchovou teorii nic takového není potřeba.
 
 \subsubsection{1G poruchová teorie}
@@ -189,9 +189,9 @@ Ještě využijeme předpokladu, že v lokálním místě poruchy se nám hustot
   \label{reaktivita_1G_Sigma}}
 \end{equation}
 
-Z výše uvedené rovnice tedy vyplývá, že \textbf{efekt poruchy makroskopických účinných průřezů lze získat jejím vážením přes druhou mocninu hustoty toku neutronů}.\\
+Z výše uvedené rovnice tedy vyplývá, že \textbf{efekt poruchy makroskopických účinných průřezů lze získat jejím vážením přes druhou mocninu hustoty toku neutronů}.
 
-Jako poruchu v účinných průřezech lze uvažovat například vkládání štěpného ($\Sigma_f$) či absorbčního ($\Sigma_a$) materiálu dovnitř AZ. Např. na VR-1, pokud zavádíme vzorek či detektor do AZ, musíme se v její úrovni pohybovat pomaleji, aby regulační tyče stihly kompenzovat přebytek reaktivity a ta nevzrostla nad bezpečnostní úroveň, při jejíž překročení se reaktor sám odstaví.\\
+Jako poruchu v účinných průřezech lze uvažovat například vkládání štěpného ($\Sigma_f$) či absorbčního ($\Sigma_a$) materiálu dovnitř AZ. Např. na VR-1, pokud zavádíme vzorek či detektor do AZ, musíme se v její úrovni pohybovat pomaleji, aby regulační tyče stihly kompenzovat přebytek reaktivity a ta nevzrostla nad bezpečnostní úroveň, při jejíž překročení se reaktor sám odstaví.
 
 \textbf{b) Porucha v $D$:}
 
@@ -219,9 +219,9 @@ Trošku začarujeme s operátorem divergence a gradientu a získáváme fináln�
   \label{reaktivita_1G_D}}
 \end{equation}
 
-Rovnice nám tedy říká, že \textbf{změny v difúzním koeficientu jsou váženy pomocí druhé mocniny změny hustoty toku}. Nárůst difúzního koeficientu vede k záporné změně reaktivity, protože se zvyšuje únik neutronů.\\
+Rovnice nám tedy říká, že \textbf{změny v difúzním koeficientu jsou váženy pomocí druhé mocniny změny hustoty toku}. Nárůst difúzního koeficientu vede k záporné změně reaktivity, protože se zvyšuje únik neutronů.
 
-Efekt poruchy v difúzním koeficientu lze na VR-1 způsobit např. vypouštěním bublinek do AZ.\\
+Efekt poruchy v difúzním koeficientu lze na VR-1 způsobit např. vypouštěním bublinek do AZ.
 
 \textbf{c) Součet poruch:}
 
@@ -293,15 +293,15 @@ dostaneme finální vzorec tvaru:
 
 \textbf{c) Součet poruch:}
 
-Poruchy \eqref{reaktivita_2G_Sigma} a \eqref{reaktivita_2G_D} je možné opět kombinovat a výsledkem je absolutně nezapamatovatelný a šílený vztah, který se sem ani nevejde.\\
+Poruchy \eqref{reaktivita_2G_Sigma} a \eqref{reaktivita_2G_D} je možné opět kombinovat a výsledkem je absolutně nezapamatovatelný a šílený vztah, který se sem ani nevejde.
 
-Jedinou neznámou nakonec představuje sdružená hustota toku $\Psi$, ale jak je psáno v úvodu, její získání není obtížné, stačí pouze řešit okrajovou úlohu \eqref{definice_sdruzena_funkce}, kde sdružený operátor $\mathcal{M^+}$ získáme transpozicí.\\
+Jedinou neznámou nakonec představuje sdružená hustota toku $\Psi$, ale jak je psáno v úvodu, její získání není obtížné, stačí pouze řešit okrajovou úlohu \eqref{definice_sdruzena_funkce}, kde sdružený operátor $\mathcal{M^+}$ získáme transpozicí.
 
 Výsledky rovnic \eqref{reaktivita_2G_Sigma} a \eqref{reaktivita_2G_D} nejsou překvapivé, jejich interpretace je stejná jako v 1G případě. Opět je třeba uvažovat propojení $\Sigma$ a především to, že $\Sigma_{f2}$ výrazně ovlivňuje $\Sigma_2$.
 
 \subsection{Význam sdružené hustoty toku}
 
-Na jeji hodnotu lze aplikovat stejná předpokládaná řešení jako na $\Phi$, zároveň musí splňovat stejné hraniční podmínky. Ve vícegrupovém přiblížení se většinou využívá numerických metod.\\
+Na jeji hodnotu lze aplikovat stejná předpokládaná řešení jako na $\Phi$, zároveň musí splňovat stejné hraniční podmínky. Ve vícegrupovém přiblížení se většinou využívá numerických metod.
 
 Uvažujme nyní 1G přiblížení. Mějme velmi malý absorbátor o objemu $V_p$, který po vložení do AZ vyvolá poruchu v bodě $r_0$, kterou lze vyjádřit pomocí Diracovy delta funkce jako:
 
@@ -315,13 +315,13 @@ Jmenovatel pro velikost poruchy je nezávislý na její povaze (tento integrál 
 
 $$ \Psi_0 = - \dfrac{\rho}{C \Sigma_{ap} V_p \Phi(r_0)}. $$
 
-Výraz $\Sigma_{ap} V_p \Phi(r_0)$ udává počet neutronů zachycených absorbátorem za 1 sekundu $\rightarrow$ potom hodnota $\Psi(r_0)$ \textbf{je úměrná záporné změně reaktivity vztažené na 1 absorbovaný neutron v bodě $r_0$ za 1 sekundu}.\\
+Výraz $\Sigma_{ap} V_p \Phi(r_0)$ udává počet neutronů zachycených absorbátorem za 1 sekundu $\rightarrow$ potom hodnota $\Psi(r_0)$ \textbf{je úměrná záporné změně reaktivity vztažené na 1 absorbovaný neutron v bodě $r_0$ za 1 sekundu}.
 
-Ukazuje se tedy, že hodnota funkce $\Psi(r_0)$ \textbf{měří význam bodu $r_0$ vzhledem k jeho vlivu na reaktivitu systému}. Proto se také sdružené hustotě toku říká funkce vlivu.\\
+Ukazuje se tedy, že hodnota funkce $\Psi(r_0)$ \textbf{měří význam bodu $r_0$ vzhledem k jeho vlivu na reaktivitu systému}. Proto se také sdružené hustotě toku říká funkce vlivu.
 
-Podobný závěr je možné učinit také pro vložený štěpný materiál a pozitivní změnu reaktivity. \textbf{Sdružená hustota toku vyjadřuje relativní význam každé lokální změny v místě $r_0$, ať už vede k poklesu či vzrůstu reaktivity.}\\
+Podobný závěr je možné učinit také pro vložený štěpný materiál a pozitivní změnu reaktivity. \textbf{Sdružená hustota toku vyjadřuje relativní význam každé lokální změny v místě $r_0$, ať už vede k poklesu či vzrůstu reaktivity.}
 
-Obdobné změny lze učinit i pro vícegrupové přiblížení. Ve 2G přiblížení je funkce $\Psi_1(r)$ úměrná změně reaktivity vyvolané poruchou způsobující změnu počtu neutronů v rychlé, a $\Psi_2(r)$ v tepelné grupě (přičemž index 1 označuje právě rychlou, a index 2 tepelnou grupu).\\
+Obdobné změny lze učinit i pro vícegrupové přiblížení. Ve 2G přiblížení je funkce $\Psi_1(r)$ úměrná změně reaktivity vyvolané poruchou způsobující změnu počtu neutronů v rychlé, a $\Psi_2(r)$ v tepelné grupě (přičemž index 1 označuje právě rychlou, a index 2 tepelnou grupu).
 
 Z toho plyne finální dedukce, že \textbf{grupová sdružená hustota toku $\Psi_n(r)$ je úměrná vzrůstu či poklesu reaktivity v důsledku přírůstku či úbytku jednoho neutronu v dané grupě za sekundu v místě $r$}.
 

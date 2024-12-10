@@ -1,0 +1,51 @@
+\section[$S_n$ a $P_n$ metody]{Základy $S_n$ a $P_n$ metody a metody charakteristik, diskretizace proměnných v transportní rovnici a rozvoj úhlových závislostí do Legendrových polynomů}
+
+Momentálně neexistuje obecné analytické řešení transportní rovnice. Pokud ji chceme řešit, je nutné přejít ke zjednodušení. Obvykle se aplikuje přechod ze spojitosti na bodovou aproximaci, tj. grupové rozsekání pro energii, metoda sítí pro prostor a S$_n$ metoda pro směr. Výsledkem je strašně moc elementů a do té doby, než se začnou prodávat kvantové počítače, tak pro celozónový výpočet nevhodné.
+
+Dále se pro zjednodušení aplikuje oddělení velikosti a úhlové závislosti průřezu pro rozptyl, protože je závislý na všech proměnných a složitě by se vyčísloval. Zní to sice nóbl, ale ve výsledku se z funkce o více proměnných udělá součin dvou funkcí o méně proměnných pomocí rozvoje do Legendrových polynomů  (tím se oddělí směrová závislost) a sférických harmonických funkcí (tím se oddělí závislost původního a nového směru). 
+
+\subsection{Metody řešení transportní rovnice}
+
+Z teorie Fourierova rozkladu platí:
+
+$$\Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) = \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) P_l(\Omega' \cdot \Omega),$$
+$$\Sigma_{s,l}(\textbf{r}, E' \rightarrow E) = \int_{-1}^1 \Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) P_l(\Omega' \cdot \Omega) \text{d}\mu,$$
+
+\noindent kde $\Sigma_{s,l}$ je $l$-tý Legendrův koeficient pro rozptyl a $P_l$ je $l$-tý Legandrův polynom. Tím se oddělil prostor od směru. Dále se Legendrův polynom rozloží na sférické harmonické funkce:
+
+$$P_l(\Omega' \cdot \Omega) = \sum_{m=-l}^{+l} R_l^m(\Omega) R_l^m(\Omega'),$$
+
+\noindent kde $R_l^m$ jsou zmiňované sférické harmonické funkce. Tím se oddělil původní a nový směr. Rozptyl pak vypadá:
+
+$$\Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) = \sum_{l=0}^{\infty} \sum_{m=-l}^{+l} \dfrac{2l + 1}{4 \pi} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) R_l^m(\Omega) R_l^m(\Omega').$$
+
+Matematická vsuvka: Legandrovy polynomy i sférické harmonické funkce jsou bázové funkce, jsou tedy navzájem ortonormální (Legendrovy polynomy nejsou ortogonální, proto je tam ten normalizační zlomek). Legendrovy polynomy rozkládají prostor $(-1, +1)$ se skalárním součinem definovaným přes obyčejný integrál a sférické harmonické funkce sféru $(0, 4 \pi)$ a je možné je získat jako vlastní funkce Laplaciánu.
+
+Dále se zavádějí \textbf{úhlové momenty} $\phi_l^m$, které zjednodušují zápis. Jde o průmět do sférických harmonických funkcí, takže zjednodušeně řečeno, pokud jsou sférické harmonické funkce bází prostoru, tak vezmu hustotu toku a pomocí superpozice ji vyjádřím v těchto bázových souřadnicích:
+
+$$\phi_l^m(\textbf{r}, E') = \int_{4 \pi} R_l^m (\Omega') \Phi(\textbf{r}, \Omega', E') \text{d}\Omega'.$$
+
+Pro následný zápis transportní rovnice pak tedy platí:
+
+\begin{equation*}
+  \begin{multlined}
+    \int_\mathbb{R^+} \int_{4 \pi} \Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \text{d}E' = \\
+    = \int_\mathbb{R^+} \int_{4 \pi} \left [ \sum_{l=0}^{\infty} \sum_{m=-l}^{+l} \dfrac{2l + 1}{4 \pi} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) R_l^m(\Omega) R_l^m(\Omega') \right ] \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \text{d}E' = \\
+    = \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega) \int_\mathbb{R^+} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) \left ( \int_{4 \pi} R_l^m(\Omega') \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \right ) \text{d}E' =\\
+    = \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega) \int_\mathbb{R^+} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) \phi_l^m(\textbf{r}, E') \text{d}E'
+  \end{multlined}
+\end{equation*}
+
+A kvůli tomu se to dělá. Je to hezká matematika, ale reálně tomu na katedře skutečně rozumí jenom pár lidí, takže je asi zbytečný to umět nazpaměť.
+
+\subsubsection{S$_n$ metoda}
+
+Jedná se o směrovou diskretizaci prostorového úhlu $\Omega$. Neznámé poté představují úhlové hustoty toku neutronů $\Phi_d(\textbf{r})$ v $n$ vybraných směrech, čímž se z transportní rovnice odstraní směrová závislost. Pro výsledné řešní platí:
+
+$$\Phi(\textbf{r}, \Omega) \approx \sum_{d=1}^{n} \Phi_d(\textbf{r}) \delta(1-\Omega \cdot \Omega_d).$$
+
+\subsubsection{P$_n$ metoda}
+
+Vyjde se z rozvoje do Legendrových polynomů a sférických harmonickcý funkcí, který se utne ve stupni $n$. Tento rozvoj se poté zpětně dosadí do transportní rovnice (viz předešlé kompletní dosazení) a řeší se soustava $(n+1)^2$ rovnic, ve kterých neznámou hraje úhlový moment $\phi_l^m(\textbf{r})$. Tím se úplně zbavíme závislosti na $\Omega$. Výsledné řešení bude tvaru:
+
+$$\Phi(\textbf{r}, \Omega) \approx \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega)  \phi_l^m(\textbf{r}). $$
