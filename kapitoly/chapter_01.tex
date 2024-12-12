@@ -1,1 +1,194 @@
 \section[Difúzní teorie]{Odvození a využití difuzní teorie v reaktorové fyzice}
+
+\textbf{Difúzní rovnice} představuje základní rovnici stanovující prostorové rozložení neutronů v látce. Přesný popis neutronů je příliš komplikovaný, proto je vhodné volit určitá zjednodušení. Pro nejobecnější popis je nutné použít Boltmannovu transportní rovnici, nicméně s určitými zanedbáními postačuje pouze difúuzní rovnice, případně difúzní rovnice s transportními korekčními faktory.
+
+\subsection{Fickův zákon}
+
+Difúzní rovnice je založena na \textbf{Fickově zákonu}, který je možné znát např. z chemie (šíření látky proti směru gradientu koncentrace):
+
+\begin{equation}
+    \boxed{ \textbf{J} = - D \text{grad} \Phi = -D \nabla \phi, }
+\end{equation}
+
+kde $\textbf{J}$ značí hustotu proudu neutronů (vektor), $D$ značí difúzni koeficient a $\Phi$ značí hustotu toku neutronů. To samé z části platí i pro neutrony. Pokud je hustota toku neutronů v jedné oblasti vyšší, neutrony putují opačným směrem. 
+
+To a jak se v dané látce jsou ochotny šířít pak popisuje \textbf{difúzní koeficient} $D$. Difúzní rovnice předpokládá, že je difúzní koeficient funkcí materiálu, nikoliv polohy (izotropní rozptyl). V případě slabého anizotropního rozptylu je možné difúzní koeficient zavést za pomoci střední volné dráhy pro transport $\lambda_\text{tr}$ jako:
+
+$$ D = \dfrac{\lambda_\text{tr}}{3}, $$
+
+$$ \lambda_\text{tr} = \dfrac{1}{\Sigma_\text{tr}} = \dfrac{1}{\Sigma_\text{s}(1-\bar{\mu})}, $$
+
+kde střední volná dráha pro transport udává průměrnou vzdálenost, kterou neutron urazí v původním směru po nekonečném množství rozptylových srážek. Pro izotropní rozptyl v těžišťové soustavě pak navíc platí:
+
+$$ \bar{\mu} = \dfrac{2}{3A}. $$
+
+$\bar{\mu}$ zde označuje cosinus úhlu rozptylu.
+
+Obecně Fickův zákon platí všude, až na:
+
+\begin{itemize}
+    \item silně absorbční prostředí (absorbátory),
+    \item vzdálenost menší než 3 střední volné dráhy pro transport od zdroje, nebo od hranic difúzního prostředí,
+    \item silně anizotropní rozptyl.
+\end{itemize}
+
+Tyto podmínky jsou částečně všude, proto je potřeba k nim přistupovat opatrně, případně hledat jiná přiblížení.
+
+\subsection{Odvození}
+
+Odvození vychází z rovnice kontinuity. Pokud si představíme element objemu $V$, pak musí platit:
+
+\begin{equation*}
+    \boxed{
+    \begin{pmatrix} \text{rychlost změny} \\ \text{počtu neutronů} \end{pmatrix} = \begin{pmatrix} \text{rychlost produkce} \\ \text{neutronů} \end{pmatrix} - \begin{pmatrix} \text{rychlost absorbce} \\ \text{neutronů} \end{pmatrix} - \begin{pmatrix} \text{rychlost úniku} \\ \text{(difuze) neutronů} \end{pmatrix}.
+    }
+\end{equation*}
+
+Pokud $n(\textbf{r})$ označuje hustotu neutronů, pak \textbf{rychlost změny počtu neutronů} lze určit jako:
+
+$$ \dfrac{\text{d}}{\text{d}t} \int_V n(\textbf{r}) \: \text{d} V, $$
+
+přičemž derivaci je možné z nějaké random matematické věty šoupnout do integrálu, tedy:
+
+$$ \boxed{\int_V \dfrac{\partial n}{\partial t} \: \text{d} V.} $$
+
+\textbf{Rychlost produkce}, resp. \textbf{rychlost absorbce} je možné zapsat za pomoci reakčních rychlostí:
+
+$$ \boxed{\int_V s(\textbf{r}) + \nu \Sigma_\text{f} \Phi(\textbf{r}) \: \text{d} V,} $$
+
+$$ \boxed{\int_V \Sigma_\text{a} \Phi(\textbf{r}) \: \text{d} V.} $$
+
+rychlost úniku z elementu $V$ je pak dána difúzí a aplikací Fickova zákonu přes plochu $S$:
+
+$$ \oint_S \textbf{J} \cdot \text{d} \textbf{S}, $$
+
+což po aplikaci další random matematické věty pojmenované po nějakém slavném matematikovi přejde na:
+
+$$ \boxed{\int_V \text{div} \textbf{J} \: \text{d} V.} $$
+
+Teď už se to jenom poskládá dohromady, odstraní integrál (předpoklad, že to platí všude, tudíž se z integrální formy přejde do diferenciální), z divergence gradientu se udělá Laplacián (předpoklad, že $D$ není funkcí prostoru) a ještě se od hustoty neutronů přejde k hustotě toku neutronů, čímž dostaneme:
+
+\begin{equation}
+    \boxed{
+        \dfrac{\partial n}{\partial t} = \dfrac{1}{v} \dfrac{\partial \Phi}{\partial t} = D \Delta \Phi - \Sigma_\text{a} \Phi + s + \nu \Sigma_\text{f} \Phi.
+    }
+\end{equation}
+
+Ještě je možný jeden zápis, kdy difúuzní rovnici podělím difúzním koeficientem, čímž se do rovnice dostane difúzní délka $L$, resp. difúzní plocha $L^2$:
+
+$$ L^2 = \dfrac{D}{\Sigma_\text{a}}, $$
+
+\begin{equation}
+    \boxed{
+        \dfrac{1}{D v} \dfrac{\partial \Phi}{\partial t} = \Delta \Phi - \dfrac{1}{L^2} \Phi + \dfrac{s}{D} + \dfrac{\nu \Sigma_\text{f}}{D} \Phi.
+    }
+\end{equation}
+
+\textbf{Difúzní plocha} popisuje látku vzhledem k tomu, kolik je neutron schopný procestovat v prostředí před tím, než bude absorbován. Pokud se bude uvažovat pravděpodobnost absorbce, která se zintegruje přes trasu a nalezne se střední hodnota tak vyjde, že $L^2$ představuje 1/6 střední hodnoty čtverce přímé zvdálenosti mezi místem vzniku a místem absorbce.
+
+Hodnoty $L$ a $D$ se liší od materiálu, pro základní moderátory platí:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Moderátor} & \textbf{hustota (g/cm$^3$)} & $D$ \textbf{(cm)} & $L$ \textbf{(cm)} \\ \midrule
+    H\textsubscript{2}O & 1,00 & 0,13 & 2,62 \\
+    D\textsubscript{2}O & 1,10 & 0,76 & 147 \\
+    Be & 1,85 & 0,45 & 22 \\
+    Grafit & 1,60 & 0,87 & 61 \\ \bottomrule
+    \end{tabular}
+    \caption{Tabulka vlastností moderátorů.}
+\end{table}
+    
+
+\subsection{Řešení}
+
+Jedná se o diferenciální rovnici, tudíž pro její řešení je nutné stanovit okrajové podmínky. Mezi ty patří:
+
+\begin{itemize}
+    \item Konečnost a nezápornost hustoty toku neutronů $0 \leq \Phi < \infty $.
+    \item Rovnost hustoty toku a proudu na rozhraní $\Phi_A = \Phi_B$ \& $\textbf{J}_A = \textbf{J}_B$.
+    \item Okrajová podmínka na vnějším rozhraní.
+    \item Zdrojové podmínky.
+\end{itemize}
+
+Podmínku na vnějším rozhraní je možné zavést za pomoci extrapolované délky $d$, jelikož bylo zjištěno, že pokud hustota toku klesne na nulu ve vzdálenosti $d$ od rozhraní, pak se spočtené rozložení blíží realitě. Extrapolovanou délku je možné stanovit jako:
+
+$$ d = 0,71 \lambda_\text{tr} = 2,13 D. $$
+
+Zdrojové podmínky se týkají geometrie zdroje $s$. Jelikož difúzní rovnice neplatí v místě zdroje, je nezbytné tyto oblasti řešit samostatně. Postupuje se tak, že se difúzka řeší mimo zdroj, přičemž zdroj samotný se obklopí plochou, kterou prochází všechny emitované neutrony o vydatnosti $S$. Limitní podmínku je pak možné stanovit dle geometrie jako:
+
+\begin{itemize}
+    \item $ \lim_{x \to 0} 2 \: \textbf{J}(x) = S $ pro rovinný zdroj (2 plochy),
+    \item $ \lim_{r \to 0} 4 \pi r^2 \: \textbf{J}(r) = S $ pro bodový zdroj (plocha sféry),
+    \item $ \lim_{r \to 0} 2 \pi r \: \textbf{J}(r) = S $ pro přímkový zdroj (obvod kružnice).
+\end{itemize}
+
+Difúzka je jednoduše řešitelná i analyticky, kor stacionární případ. Stačí nalézt vhodného Laplaciána dle geometrie a přepsat rovnici do tvaru:
+
+$$ \Delta \Phi \pm A^2 = 0 $$
+
+Výsledné řešení je pak závislé na znamínku. Pokud převládá absorbce nad produkcí (ZAF1, difúze v prostředí $ - A^2$), vede řešení na hyperbolické funkce a Modifikované Besselovy funkce typu $I_n$ a $K_n$. Pokud převládá produkce nad absorbcí (ZAF2, homogenní reaktor $ + A^2$), vede řešení na goniometrické funkce a Besselovy funkce typu $J_n$ a $Y_n$.
+
+\subsection{Grupová difúzní rovnice}
+
+Difúzní rovnice je možné zapsat i s energetickou závislotí za pomoci rozgrupování. Poté se pro každou grupu řeší vlastní difúzka, přičemž přechod mezi grupami se zapisuje pomocí rozptylového grupového průžezu $\Sigma_{m \to n}$, tedy pravděpodobnost přechodu z grupy $m$ do grupy $n$. Grupa s nejvyšší energií se označuje indexem $1$ a s klesající energií roste číslo grupy. Skupinová difúzní rovnice pro grupu $g$ pak vypadá (stacionární případ, kde zdroj ze štěpení je zahrnut v koeficientu $s$):
+
+\begin{equation}
+    \boxed{
+        D_g \Delta \Phi_g - \Sigma_\text{a,g} \Phi_g - \sum^N_{h=g+1} \Sigma_{g \to h} \Phi_g + \sum^{g-1}_{h=1} \Sigma_{h \to g} \Phi_h = -s_g.
+    }
+\end{equation}
+
+Zde předpokládáme pouze downscattering, tedy přesun z vyšší grup do nižší grupy (resp. z nižšího pořadového čísla do vyššího). To obecně platí pro vysoké energie (neutrony vznikají s energií v řádech MeVů a postupně termalizují, tedy pouze ztrácejí energii rozptylovými srážkami), na úrovní tepelné energie se může objevovat i upscattering a celkový popis je složitější.
+
+\subsection{2G přiblížení}
+
+Obecně je nutné uvažovat alespoň 2 grupy, tepelné a rychlé neutrony s hranicí na 0,625 eV. Ukazuje se, že hustotu toku tepelných neutronů je možné popsat za pomoci \textbf{Maxwellovy distribuce}. Pak je možné účinné průřezy vystředovat a uvažovat celou tepelnou oblast jako jednu grupu se středovanými průřezy. 
+
+Maxwellova distribuce je dána:
+
+$$ n(E) = \dfrac{2 \pi n}{(\pi k T)^{3/2}} \sqrt{E} \: \text{exp} \left(- \dfrac{E}{kT}\right), $$
+
+rychlost je definuje:
+
+$$ v(E) = \sqrt{\dfrac{2E}{m}}, $$
+
+a pak je možné určit hustotu toku tepelných neutronů $\phi_T$ jako:
+
+$$ \Phi_T = \int_T \Phi(E) \: \text{d}E = \int_T n(E) v(E) \: \text{d}E = \dfrac{2n}{\sqrt{\pi}} \sqrt{\dfrac{2kT}{m}} $$
+
+Tím se určí střední hustota toku tepelných neutronů, která se pak aplikuje na středované průřezy:
+
+$$ \bar{\Sigma} = \dfrac{1}{\Phi_T} \int_T \Sigma(E) \Phi(E) \: \text{d}E.$$
+
+Pokud navíc platí oblast $1/v$ (a pokud ne, přidá se korekční faktor $g$), tak je možné nahradit:
+
+$$ \Sigma(E) \Phi(E) = \Sigma(E_0) \Phi_0, $$
+
+kde index 0 odpovídá energii 0,0253 eV, tedy 293 K, což se nalezne v tabulkách. Celkové výrazy pak budou:
+
+$$ \boxed{\bar{\Sigma} = \dfrac{\sqrt{\pi}}{2} g(T) \Sigma(E_0) \sqrt{\dfrac{T_0}{T}},} $$
+
+což platí pro všechny hodnoty (průřezy, energie, difúzní koeficienty apod.).
+
+Nyní je už možné zkompletovat 2G sadu difúzních rovnic:
+
+\begin{equation}
+    \boxed{
+        \Delta \Phi_T - \dfrac{1}{L_T^2} \Phi_T = -\dfrac{\Sigma_1 \Phi_1}{\bar{D}},
+    }
+\end{equation}
+
+\begin{equation}
+    \boxed{
+        \Delta \Phi_1 - \dfrac{1}{\tau} \Phi_1 = -\dfrac{s_1}{D_1},
+    }
+\end{equation}
+
+kde $\tau$ označuje Fermiho stáří neutronů (1/6 čtverce přímé vzdálenosti mezi vznikem a přechodem do tepelné grupy, příp. absorbce), a kde zdrojem tepelných neutronů je scattering z rychlé grupy, a zdroje v rychlé grupě jsou označeny jako $s_1$ (např. ze štěpení).
+
+\subsection{Využití}
+
+Difúzka se využívá jako první přiblížení, pokud nás zajímá transport neutronů, rozložení neutronového pole, kritičnost reaktoru, efekt moderátoru a reflektoru apod. Využívá se i v praxi, jelikož její řešení je velmi jednoduché. Např. pokud řešíme celozónový výpočet, tak většina všech full-core nástrojů využívají právě difuzní řešení (Andrea, PARCS apod.), které se řeší numericky (nodálně, sítěmi apod.). Z lattice kódu se vytáhne sada účinných průřezů a v full-core kódu se tyhle průřezy nastrkají do difúzní rovnice.
