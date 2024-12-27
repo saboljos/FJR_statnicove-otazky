@@ -1,1 +1,121 @@
 \section[Metody jader a vlastních funkcí]{Zavedení metody jader a metody vlastních funkcí pro řešení úloh z reaktorové fyziky a transportu záření}
+
+Pokud máme jednoduše definovanou geometrii zrojové podmínky (bod, přímka, plocha), je možné řešit difuzní rovnici přímo analyticky. Problém nastává, pokud jsou zdroje zadány komplikovaněji. V takovém případě je potřeba postupovat obecněji a úlohu zobecnit na tzv. \textbf{zobecněnou difúzní rovnici}.
+
+\subsection{Zavedení zobecněné difúzní rovnice}
+
+Vychází se z toho, že jednotlivé zdroje v prostředí identifikujeme jako body, které se pak zintegrují. Z přímého řešení izotropního bodového zdroje v nekonečném prostředí víme, jak vypadá řešení difúzní rovnice, tedy:
+
+$$ \Phi(\textbf{r}) = \dfrac{S}{4 \pi D} \dfrac{\text{exp} \left(- \dfrac{\textbf{r}}{L}\right)}{\textbf{r}}. $$
+
+To platí, je-li zdroj $S$ v počátku. Pokud uvažujeme zdroj v bodě $\textbf{r}'$, tak za pomoci tranlace získáme:
+
+$$ \Phi(\textbf{r}) = \dfrac{S}{4 \pi D} \dfrac{\text{exp} \left(- \dfrac{|\textbf{r}-\textbf{r}'|}{L}\right)}{|\textbf{r}-\textbf{r}'|}. $$
+
+Nyní se přejde k infinitezimálnímu vyjádření. Předpokládáme-li zdrojovou funkci $s(\textbf{r}')$ v elementu objemu $\text{d}V'$, pak přírůstek hustoty toku neutronů v bodě $\textbf{r}$ z takového bodu bude:
+
+$$ \text{d}\Phi(\textbf{r}) = \dfrac{s(\textbf{r}')}{4 \pi D} \dfrac{\text{exp} \left(- \dfrac{|\textbf{r}-\textbf{r}'|}{L}\right)}{|\textbf{r}-\textbf{r}'|} \: \text{d}V'. $$
+
+Řešením v daném prostředí je pak integrace přes celý objem, tedy zobecněné řešení:
+
+\begin{equation}
+    \Phi(\textbf{r}) = \int_V \dfrac{s(\textbf{r}')}{4 \pi D} \dfrac{\text{exp} \left(- \dfrac{|\textbf{r}-\textbf{r}'|}{L}\right)}{|\textbf{r}-\textbf{r}'|} \: \text{d}V'.
+\end{equation}
+
+\subsection{Metoda jader}
+
+Nyní je třeba nalézt řešení. Postupuje se zavedením tzv. \textbf{difúzního bodového jádra v nekonečném prostředí} $G(\textbf{r},\textbf{r}')$:
+
+$$ \boxed{G(\textbf{r},\textbf{r}') = \dfrac{1}{4 \pi D} \dfrac{\text{exp} \left(- \dfrac{|\textbf{r}-\textbf{r}'|}{L}\right)}{|\textbf{r}-\textbf{r}'|}}. $$
+
+Rovnice se pak řeší ve tvaru:
+
+$$ \boxed{\Phi(\textbf{r}) = \int_V s(\textbf{r}')G(\textbf{r},\textbf{r}') \: \text{d}V'.} $$
+
+Jde o řešení za pomoci Greenovy funkce (viz RMF), což je někdy řešitelné, a jindy zase ne. Proto je k tomuto třeba přistupovat pouze v případě, že neexistuje jednodušší analytické řešení. Tohle funguje vždy (otázkou je, kdy jsme schopni integrál vyčíslit).
+
+Dále je možné využít symetrie, a pokud to jde, tak zakomponovat jiné tvary difúzních jader:
+
+$$\text{bod:   } \: \: \boxed{G(\textbf{r},\textbf{r}') = \dfrac{1}{4 \pi D} \dfrac{\text{exp} \left(- \dfrac{|\textbf{r}-\textbf{r}'|}{L}\right)}{|\textbf{r}-\textbf{r}'|}} $$
+
+$$\text{rovina:   } \: \: \boxed{G(\textbf{r},\textbf{r}') = \dfrac{L}{2 D} \text{exp} \left(- \dfrac{|\textbf{r}-\textbf{r}'|}{L}\right)} $$
+
+\subsection{Metoda vlastních funkcí}
+
+Druhou metodou je metoda vlastních funkcí, která vychází z rozkladu hustoty toku neutronů do Fourierovy řady. K tomu je důležité nejprve nalézt vhodnou bázi vlastních funkcí. Ty musí být takové, aby byly jednoduše řešitelné. Vychází se tedy z rozkladu báze jádra Laplaciánu v takové geometrii, ve které daný problém řešíme\footnote{Ano, hustotu toku je možné rozložit v podstatě do jakýchkoliv bázových funkcí, nicméně pouze některé nám případ zjednodušší (1ku je taky možné rozepsat jako nekonečnou sumu, ale proč bychom to dělali, žejo :) ).}. Jde o:
+
+\begin{itemize}
+    \item 1D (nekonečná deska): sinus a cosinus, případně hyperbolický sinus a cosinus
+    \item 2D (nekonečný válec): besselky (asi??)
+    \item 3D (sféra): sférické harmonické funkce
+\end{itemize}
+
+\subsubsection{1D -- nekonečná deska}
+
+Oproti obecnému řešení je možné vyházet i z desky o konečné tloušťce $a$. Máme zobecněnou difúzní rovnici tvaru:
+
+$$ \Delta \Phi(x) - \dfrac{1}{L^2} \Phi(x) = - \dfrac{s(x)}{D}, $$
+
+kterou rozložíme do bázových funkcí $\varphi_n$ sinus a cosinus, tedy nulové řešení Laplaceova operátoru v 1D:
+
+$$ \Delta \varphi(x) + B^2 \varphi(x) = 0. $$
+
+Pro zjednodušení příklad zesymetrizujeme, čímž všechny liché bázové funkce sinus vyjsou s nulovým argumentem, a dostaneme pouze bázové funkce cosinus tvaru:
+
+$$ \varphi_n(x) = C_n \: \text{cos} \left(B_n x\right). $$
+
+Na úlohu se dále aplikují hraniční podmínky $\Phi\left(\pm \dfrac{a}{2}\right) = 0$, čímž se zároveň najdou hodnoty vlastních čísel $B_n$:
+
+$$ \varphi_n(x) = C_n \: \text{cos} \left(\dfrac{n \pi}{a} x\right). $$
+
+Tím tedy víme, že veškeré vlastní funkce splňují symetrii, hraniční podmínku i diferenciální rovnici s nulovou pravou stranou.
+
+Dále je třeba nalézt koeficienty $C_n$. Z teorie o rozkladu Fourierovy řady platí:
+
+$$ f(x) = \sum_{0}^{\infty} C_n \varphi_n(x), $$
+
+$$ C_n = \dfrac{1}{|\varphi_n(x)|^2} \int_{-\infty}^{\infty} f(x) \varphi_n(x) \: \text{d} x. $$
+
+Zlomek před integrálem je normovací konstanta, jelikož takto nemáme zaručeno, že jsou funkce ortonormální, pouze ortogonální. V našem případě nekonečné desky se koeficienty $C_n$ naleznou dle:
+
+$$ C_n = \dfrac{2}{a} \int_{-a/2}^{a/2} \Phi(x) \text{cos} \left(\dfrac{n \pi}{a} x\right) \: \text{d} x. $$
+
+Tímto způsobem tedy rozvinu funkce $\Phi(x)$ (hledaná) a $s(x)$ (tu znám):
+
+$$ \Phi(x) = \sum_{0}^{\infty} C_n \phi_n(x), $$
+
+$$ s(x) = \sum_{0}^{\infty} S_n \phi_n(x), $$
+
+a ty dosadíme do původní difúzní rovnice:
+
+$$ \Delta \Phi(x) - \dfrac{1}{L^2} \Phi(x) = - \dfrac{s(x)}{D}, $$
+
+$$ \dfrac{\text{d}^2}{\text{d}x^2} \left( \sum_{n=0}^{\infty} C_n \phi_n(x) \right) - \dfrac{1}{L^2} \left( \sum_{n=0}^{\infty} C_n \phi_n(x) \right) = - \dfrac{1}{D} \left( \sum_{n=0}^{\infty} S_n \phi_n(x) \right), $$
+
+$$ \sum_{n=0}^{\infty} C_n \left( \dfrac{\text{d}^2 \varphi_n(x)}{\text{d}x^2} - \dfrac{1}{L^2} \varphi_n(x) \right) = \sum_{n=0}^{\infty} S_n \left(- \dfrac{1}{D} \varphi_n(x) \right). $$
+
+Díky chytrému zvolení bázových funkcí dosadíme za druhou derivaci $\varphi_n(x)$:
+
+$$ \dfrac{\text{d}^2 \varphi_n(x)}{\text{d}x^2} + B_n \varphi_n(x) = 0, $$
+
+$$ \sum_{n=0}^{\infty} C_n \left( -B_n \varphi_n(x) - \dfrac{1}{L^2} \varphi_n(x) \right) = \sum_{n=0}^{\infty} S_n \left(- \dfrac{1}{D} \varphi_n(x) \right), $$
+
+čímž jsme se zbavili derivace. Nyní stačí přejít k rovnosti koeficientů (bázové funkce je možné vytknout), a jelikož koeficienty $S_n$ známe (je možné je určit na základě znalosti funkce $s(x)$), je možné nalézt vyjádření koeficientů $C_n$ jako:
+
+$$ C_n = \dfrac{S_n/D}{B_n^2 + 1/L^2}. $$
+
+Pokud vše dosadíme do jednoho vzorečku, získáme:
+
+$$\Phi(x) = \sum_{n=0}^{\infty} \dfrac{\dfrac{S_n}{D}}{\left(\dfrac{\pi n}{a} \right)^2 + \dfrac{1}{L^2}} \: \text{cos} \left( \dfrac{\pi n}{a} x\right). $$
+
+Ještě se dosadí za koeficienty $S_n$, což vede na finální řešení:
+
+$$ \boxed{ \Phi(x) = \dfrac{2}{a}  \int_{-a/2}^{a/2} s(x') \sum_{n=0}^{\infty}\left( \dfrac{\dfrac{1}{D}}{\left(\dfrac{\pi n}{a} \right)^2 + \dfrac{1}{L^2}} \text{cos} \left( \dfrac{\pi n}{a} x'\right) \text{cos} \left( \dfrac{\pi n}{a} x\right) \right) \: \text{d}x'.} $$
+
+A jsme zpátky u zobecněného řešení Greenovy funkce.
+
+\subsection{Využití}
+
+Celá metoda zobecnéného difúzního jádra je aplikovatelná na více rozměrů a je ji možné využít téměř vždy, nicméně v numerických kóodech nemá opodstatnění (hodí se pouze pro analytická vyjádření).
+
+Metoda rozkladu do vlastních funkcí se také hodí téměř vždy, navíc je tím možné rozlišit energetickou a prostorovou závislost (viz $S_n$ a $P_n$ metody).

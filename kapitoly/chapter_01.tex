@@ -1,6 +1,6 @@
 \section[Difúzní teorie]{Odvození a využití difuzní teorie v reaktorové fyzice}
 
-\textbf{Difúzní rovnice} představuje základní rovnici stanovující prostorové rozložení neutronů v látce. Přesný popis neutronů je příliš komplikovaný, proto je vhodné volit určitá zjednodušení. Pro nejobecnější popis je nutné použít Boltmannovu transportní rovnici, nicméně s určitými zanedbáními postačuje pouze difúuzní rovnice, případně difúzní rovnice s transportními korekčními faktory.
+\textbf{Difúzní rovnice} představuje základní rovnici stanovující prostorové rozložení neutronů v látce. Přesný popis neutronů je příliš komplikovaný, proto je vhodné volit určitá zjednodušení. Pro nejobecnější popis je nutné použít Boltzmannovu transportní rovnici, nicméně s určitými zanedbáními postačuje pouze difúuzní rovnice, případně difúzní rovnice s transportními korekčními faktory.
 
 \subsection{Fickův zákon}
 
@@ -12,7 +12,7 @@ Difúzní rovnice je založena na \textbf{Fickově zákonu}, který je možné z
 
 kde $\textbf{J}$ značí hustotu proudu neutronů (vektor), $D$ značí difúzni koeficient a $\Phi$ značí hustotu toku neutronů. To samé z části platí i pro neutrony. Pokud je hustota toku neutronů v jedné oblasti vyšší, neutrony putují opačným směrem. 
 
-To a jak se v dané látce jsou ochotny šířít pak popisuje \textbf{difúzní koeficient} $D$. Difúzní rovnice předpokládá, že je difúzní koeficient funkcí materiálu, nikoliv polohy (izotropní rozptyl). V případě slabého anizotropního rozptylu je možné difúzní koeficient zavést za pomoci střední volné dráhy pro transport $\lambda_\text{tr}$ jako:
+To a jak jsou neutrony ochotny se v dané látce šířít pak popisuje \textbf{difúzní koeficient} $D$. Difúzní rovnice předpokládá, že je difúzní koeficient funkcí materiálu, nikoliv polohy (izotropní rozptyl). V případě slabého anizotropního rozptylu je možné difúzní koeficient zavést za pomoci \textbf{střední volné dráhy pro transport} $\lambda_\text{tr}$ jako:
 
 $$ D = \dfrac{\lambda_\text{tr}}{3}, $$
 
@@ -48,7 +48,7 @@ Pokud $n(\textbf{r})$ označuje hustotu neutronů, pak \textbf{rychlost změny p
 
 $$ \dfrac{\text{d}}{\text{d}t} \int_V n(\textbf{r}) \: \text{d} V, $$
 
-přičemž derivaci je možné z nějaké random matematické věty šoupnout do integrálu, tedy:
+přičemž derivaci je možné z nějaké chytré matematické věty šoupnout do integrálu, tedy:
 
 $$ \boxed{\int_V \dfrac{\partial n}{\partial t} \: \text{d} V.} $$
 
@@ -58,15 +58,15 @@ $$ \boxed{\int_V s(\textbf{r}) + \nu \Sigma_\text{f} \Phi(\textbf{r}) \: \text{d
 
 $$ \boxed{\int_V \Sigma_\text{a} \Phi(\textbf{r}) \: \text{d} V.} $$
 
-rychlost úniku z elementu $V$ je pak dána difúzí a aplikací Fickova zákonu přes plochu $S$:
+Rychlost úniku z elementu $V$ je pak dána difúzí a aplikací Fickova zákonu přes plochu $S$:
 
 $$ \oint_S \textbf{J} \cdot \text{d} \textbf{S}, $$
 
-což po aplikaci další random matematické věty pojmenované po nějakém slavném matematikovi přejde na:
+což po aplikaci další chytré matematické věty pojmenované po nějakém slavném matematikovi přejde na:
 
 $$ \boxed{\int_V \text{div} \textbf{J} \: \text{d} V.} $$
 
-Teď už se to jenom poskládá dohromady, odstraní integrál (předpoklad, že to platí všude, tudíž se z integrální formy přejde do diferenciální), z divergence gradientu se udělá Laplacián (předpoklad, že $D$ není funkcí prostoru) a ještě se od hustoty neutronů přejde k hustotě toku neutronů, čímž dostaneme:
+Teď už se to jenom poskládá dohromady, odstraní integrál (předpoklad, že to platí všude, tudíž se z integrální formy přejde do diferenciální), z divergence gradientu se udělá Laplacián (předpoklad, že $D$ není funkcí prostoru, a tudíž půjde vytkntout) a ještě se od hustoty neutronů přejde k hustotě toku neutronů, čímž dostaneme:
 
 \begin{equation}
     \boxed{
@@ -113,11 +113,11 @@ Jedná se o diferenciální rovnici, tudíž pro její řešení je nutné stano
     \item Zdrojové podmínky.
 \end{itemize}
 
-Podmínku na vnějším rozhraní je možné zavést za pomoci extrapolované délky $d$, jelikož bylo zjištěno, že pokud hustota toku klesne na nulu ve vzdálenosti $d$ od rozhraní, pak se spočtené rozložení blíží realitě. Extrapolovanou délku je možné stanovit jako:
+Podmínku na vnějším rozhraní je možné zavést za pomoci \textbf{extrapolované délky} $d$, jelikož bylo zjištěno, že pokud hustota toku klesne na nulu ve vzdálenosti $d$ od rozhraní, pak se spočtené rozložení blíží realitě. Extrapolovanou délku je možné stanovit jako:
 
 $$ d = 0,71 \lambda_\text{tr} = 2,13 D. $$
 
-Zdrojové podmínky se týkají geometrie zdroje $s$. Jelikož difúzní rovnice neplatí v místě zdroje, je nezbytné tyto oblasti řešit samostatně. Postupuje se tak, že se difúzka řeší mimo zdroj, přičemž zdroj samotný se obklopí plochou, kterou prochází všechny emitované neutrony o vydatnosti $S$. Limitní podmínku je pak možné stanovit dle geometrie jako:
+Zdrojové podmínky se týkají geometrie \textbf{zdroje} $s$. Jelikož difúzní rovnice neplatí v místě zdroje, je nezbytné tyto oblasti řešit samostatně. Postupuje se tak, že se difúzka řeší mimo zdroj, přičemž zdroj samotný se obklopí plochou, kterou prochází všechny emitované neutrony o vydatnosti $S$. Limitní podmínku je pak možné stanovit dle geometrie jako:
 
 \begin{itemize}
     \item $ \lim_{x \to 0} 2 \: \textbf{J}(x) = S $ pro rovinný zdroj (2 plochy),
@@ -133,7 +133,7 @@ Výsledné řešení je pak závislé na znamínku. Pokud převládá absorbce n
 
 \subsection{Grupová difúzní rovnice}
 
-Difúzní rovnice je možné zapsat i s energetickou závislotí za pomoci rozgrupování. Poté se pro každou grupu řeší vlastní difúzka, přičemž přechod mezi grupami se zapisuje pomocí rozptylového grupového průžezu $\Sigma_{m \to n}$, tedy pravděpodobnost přechodu z grupy $m$ do grupy $n$. Grupa s nejvyšší energií se označuje indexem $1$ a s klesající energií roste číslo grupy. Skupinová difúzní rovnice pro grupu $g$ pak vypadá (stacionární případ, kde zdroj ze štěpení je zahrnut v koeficientu $s$):
+Difúzní rovnice je možné zapsat i s energetickou závislotí za pomoci rozgrupování. Poté se pro každou grupu řeší vlastní difúzka, přičemž přechod mezi grupami se zapisuje pomocí \textbf{rozptylového grupového průžezu} $\Sigma_{m \to n}$, tedy pravděpodobnost přechodu z grupy $m$ do grupy $n$. Grupa s nejvyšší energií se označuje indexem $1$ a s klesající energií roste číslo grupy. Skupinová difúzní rovnice pro grupu $g$ pak vypadá (stacionární případ, kde zdroj ze štěpení je zahrnut v koeficientu $s$):
 
 \begin{equation}
     \boxed{
@@ -143,7 +143,7 @@ Difúzní rovnice je možné zapsat i s energetickou závislotí za pomoci rozgr
 
 Zde předpokládáme pouze downscattering, tedy přesun z vyšší grup do nižší grupy (resp. z nižšího pořadového čísla do vyššího). To obecně platí pro vysoké energie (neutrony vznikají s energií v řádech MeVů a postupně termalizují, tedy pouze ztrácejí energii rozptylovými srážkami), na úrovní tepelné energie se může objevovat i upscattering a celkový popis je složitější.
 
-\subsection{2G přiblížení}
+\subsection{2G přiblížení \& grupování}
 
 Obecně je nutné uvažovat alespoň 2 grupy, tepelné a rychlé neutrony s hranicí na 0,625 eV. Ukazuje se, že hustotu toku tepelných neutronů je možné popsat za pomoci \textbf{Maxwellovy distribuce}. Pak je možné účinné průřezy vystředovat a uvažovat celou tepelnou oblast jako jednu grupu se středovanými průřezy. 
 
@@ -192,3 +192,19 @@ kde $\tau$ označuje Fermiho stáří neutronů (1/6 čtverce přímé vzdáleno
 \subsection{Využití}
 
 Difúzka se využívá jako první přiblížení, pokud nás zajímá transport neutronů, rozložení neutronového pole, kritičnost reaktoru, efekt moderátoru a reflektoru apod. Využívá se i v praxi, jelikož její řešení je velmi jednoduché. Např. pokud řešíme celozónový výpočet, tak většina všech full-core nástrojů využívají právě difuzní řešení (Andrea, PARCS apod.), které se řeší numericky (nodálně, sítěmi apod.). Z lattice kódu se vytáhne sada účinných průřezů a v full-core kódu se tyhle průřezy nastrkají do difúzní rovnice.
+
+Mezi rovnice odvozené v rámci ZAF patří:
+
+\subsubsection{Modifikovaná 2G kritická rovnice}
+
+Vychází z předpokladu, že máme homogenní systém popsaný za pomoci 2G rovnice. Neutrony vznikají ze štěpení jako rychlé neutrony, přecházejí do tepelné oblasti kde inicializují štěpení. Celá úloha je pak zestaciarizována za pomoci koeficientu násobení. Ke štěpení rychlými neutrony nedochází vůbec.
+
+$$ k_\text{ef} = \dfrac{k_\infty}{1 + B^2 \cdot M^2}, $$
+
+kde $k_\infty$ představuje koeficient násobení pro systém bez úniku, $B^2$ představuje geometrický faktor (dáno geometrií) a $M^2$ představuje migrační plochu (dáno materiálem).
+
+Na rovnici je možné pohlížet i jako na pravděpodobnost, že neutron neunikne $P_\text{NL}$. Pokud se navíc migrační plocha přepíše jako suma difúzní plochy (charakterizuje transport tepelných neutronů, tedy proces difuze) a Fermiho stáří (charakterizuje transport rychlých neutronů, tedy proces termalizace), pak platí:
+
+$$ P_\text{NL} = \dfrac{k_\text{ef}}{k_\infty} = \dfrac{1}{1 + B^2 \cdot (L^2 + \tau)} \approx \dfrac{1}{1 + B^2 \cdot L^2} \cdot \dfrac{1}{1 + B^2 \cdot \tau} = P_\text{TNL} \cdot P_\text{FNL}. $$
+
+Rovnici je možné i zobecnit pro konkrétnější případy, více grup apod.
