@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.4.8)  27 DEC 2024 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.4.8)  27 DEC 2024 22:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -805,26 +805,26 @@ Overfull \hbox (46.32231pt too wide) detected at line 199
 [][]
  []
 
-[19] [20]) [21] [22]
+[19] [20] [21]) [22]
 \openout2 = `kapitoly/chapter_04.aux'.
 
- (./kapitoly/chapter_04.tex
-Overfull \hbox (9.55362pt too wide) in paragraph at lines 24--25
+ (./kapitoly/chapter_04.tex [23
+
+
+
+]
+Overfull \hbox (9.55362pt too wide) in paragraph at lines 43--44
 \OT1/cmr/m/n/10.95 pros-toru, tak vezmu hus-totu toku a po-moc^^S^^P su-per-poz-ice ji vyj^^Sad^^Tr^^S^^Pm v t^^Techto b^^Sazov^^Sych sou^^Tradnic^^S^^Pch: 
  []
 
-[23
-
-
-
-]) [24]
+[24] [25]) [26]
 \openout2 = `kapitoly/chapter_05.aux'.
 
- (./kapitoly/chapter_05.tex [25
+ (./kapitoly/chapter_05.tex [27
 
 
 
-] [26]
+] [28]
 Overfull \hbox (7.2116pt too wide) in paragraph at lines 76--77
 \OT1/cmr/m/n/10.95 Zhodnocen^^Sa jadern^^Sa data se ukl^^Sadaj^^S^^P pro teplotu 0 K. Nicm^^Sen^^Te d^^S^^Pky Dopplerov^^Te efektu (roz^^Tsi^^Trov^^San^^S^^P
  []
@@ -834,19 +834,19 @@ Overfull \hbox (0.3041pt too wide) in paragraph at lines 78--79
 []\OT1/cmr/m/n/10.95 V NJOY prov^^Sad^^S^^P modul \OT1/cmr/bx/n/10.95 BROADR\OT1/cmr/m/n/10.95 . Ten to prov^^Sad^^S^^P po-moc^^S^^P p^^Tresn^^Seho ^^Tre^^Tsen^^S^^P efek-tivn^^S^^Pho ^^Su^^Tcinn^^Seho
  []
 
-[27] [28]) [29]
+[29] [30]) [31]
 \openout2 = `kapitoly/chapter_06.aux'.
 
- (./kapitoly/chapter_06.tex [30
+ (./kapitoly/chapter_06.tex [32
 
 
 
-] [31] [32] [33]
+] [33] [34] [35]
 Overfull \hbox (1.1341pt too wide) in paragraph at lines 192--193
 []\OT1/cmr/m/n/10.95 Z v^^Sy^^Tse uve-den^^Se rovnice tedy vypl^^Syv^^Sa, ^^Tze \OT1/cmr/bx/n/10.95 efekt poruchy makroskopick^^Sych ^^Su^^Tcinn^^Sych pr^^Wu^^Trez^^Wu
  []
 
-[34] [35] [36]) [37]
+[36] [37] [38]) [39]
 \openout2 = `kapitoly/chapter_07.aux'.
 
  (./kapitoly/chapter_07.tex
@@ -859,81 +859,81 @@ Overfull \hbox (16.97429pt too wide) in paragraph at lines 24--25
 \OT1/cmr/bx/n/10.95 Rovnice kinetiky reak-toru \OT1/cmr/m/n/10.95 = rovnice popisuj^^S^^Pc^^S^^P z^^Savislost zm^^Teny v^^Systupn^^S^^Pch parametr^^Wu (v^^Sysledk^^Wu)
  []
 
-[38
+[40
 
 
 
-] [39] [40] [41]
+] [41] [42] [43]
 Overfull \hbox (9.14355pt too wide) in paragraph at lines 205--206
 \OT1/cmr/m/n/10.95 8 skupin, ENDF/B 6 skupin) po-dle polo^^Tcasu roz-padu. Pro popis se zav^^Sad^^S^^P tzv. \OT1/cmr/bx/n/10.95 pod^^S^^Pl zpo^^Tzd^^Ten^^Sych
  []
 
-[42]
+[44]
 Overfull \hbox (0.23601pt too wide) in paragraph at lines 260--261
 []\OT1/cmr/m/n/10.95 Nyn^^S^^P si je^^Tst^^Te uka^^Tzme rovnice jed-no-bodov^^Se kinetiky se zpo^^Tzd^^Ten^^Symi neu-trony. Odvozen^^S^^P je podobn^^Se
  []
 
-[43]
+[45]
 Overfull \hbox (3.10757pt too wide) in paragraph at lines 298--309
  [][] 
  []
 
-) [44]
+) [46]
 \openout2 = `kapitoly/chapter_08.aux'.
 
- (./kapitoly/chapter_08.tex [45
+ (./kapitoly/chapter_08.tex [47
 
 
 
-] [46]
-<img/impulsni.jpg, id=178, 433.62pt x 440.847pt>
+] [48]
+<img/impulsni.jpg, id=185, 433.62pt x 440.847pt>
 File: img/impulsni.jpg Graphic file (type jpg)
 <use img/impulsni.jpg>
 Package pdftex.def Info: img/impulsni.jpg  used on input line 126.
 (pdftex.def)             Requested size: 273.14922pt x 277.71489pt.
- [47] [48 <./img/impulsni.JPG>]
-<img/zn-rho.jpg, id=186, 732.93825pt x 483.60675pt>
+ [49] [50 <./img/impulsni.JPG>]
+<img/zn-rho.jpg, id=195, 732.93825pt x 483.60675pt>
 File: img/zn-rho.jpg Graphic file (type jpg)
 <use img/zn-rho.jpg>
 Package pdftex.def Info: img/zn-rho.jpg  used on input line 176.
 (pdftex.def)             Requested size: 455.24408pt x 300.38652pt.
- [49]
-<img/prechodova.jpg, id=191, 666.69075pt x 377.0085pt>
+ [51]
+<img/prechodova.jpg, id=199, 666.69075pt x 377.0085pt>
 File: img/prechodova.jpg Graphic file (type jpg)
 <use img/prechodova.jpg>
 Package pdftex.def Info: img/prechodova.jpg  used on input line 189.
 (pdftex.def)             Requested size: 318.66946pt x 180.20267pt.
- [50 <./img/zn-rho.JPG> <./img/prechodova.JPG>] [51]
-<img/periodicke.jpg, id=199, 672.111pt x 301.125pt>
+ [52 <./img/zn-rho.JPG> <./img/prechodova.JPG>] [53]
+<img/periodicke.jpg, id=206, 672.111pt x 301.125pt>
 File: img/periodicke.jpg Graphic file (type jpg)
 <use img/periodicke.jpg>
 Package pdftex.def Info: img/periodicke.jpg  used on input line 273.
 (pdftex.def)             Requested size: 227.62204pt x 101.98138pt.
- [52]
-<img/periodicke_reseni.jpg, id=203, 829.29825pt x 375.804pt>
+ [54]
+<img/periodicke_reseni.jpg, id=210, 829.29825pt x 375.804pt>
 File: img/periodicke_reseni.jpg Graphic file (type jpg)
 <use img/periodicke_reseni.jpg>
 Package pdftex.def Info: img/periodicke_reseni.jpg  used on input line 289.
 (pdftex.def)             Requested size: 227.62204pt x 103.14857pt.
- [53 <./img/periodicke.JPG> <./img/periodicke_reseni.JPG>]
-<img/konstantni_produkce.jpg, id=207, 707.0415pt x 445.665pt>
+ [55 <./img/periodicke.JPG> <./img/periodicke_reseni.JPG>]
+<img/konstantni_produkce.jpg, id=215, 707.0415pt x 445.665pt>
 File: img/konstantni_produkce.jpg Graphic file (type jpg)
 <use img/konstantni_produkce.jpg>
 Package pdftex.def Info: img/konstantni_produkce.jpg  used on input line 320.
 (pdftex.def)             Requested size: 227.62204pt x 143.47255pt.
- [54 <./img/konstantni_produkce.JPG>]
-<img/okamzity_skok.jpg, id=211, 555.87675pt x 371.58826pt>
+ [56 <./img/konstantni_produkce.JPG>]
+<img/okamzity_skok.jpg, id=219, 555.87675pt x 371.58826pt>
 File: img/okamzity_skok.jpg Graphic file (type jpg)
 <use img/okamzity_skok.jpg>
 Package pdftex.def Info: img/okamzity_skok.jpg  used on input line 347.
 (pdftex.def)             Requested size: 227.62204pt x 152.15372pt.
-<img/zdroj.jpg, id=212, 764.8575pt x 425.79076pt>
+<img/zdroj.jpg, id=220, 764.8575pt x 425.79076pt>
 File: img/zdroj.jpg Graphic file (type jpg)
 <use img/zdroj.jpg>
 Package pdftex.def Info: img/zdroj.jpg  used on input line 360.
 (pdftex.def)             Requested size: 364.19664pt x 202.74648pt.
- [55 <./img/okamzity_skok.JPG>] [56 <./img/zdroj.JPG>]
-<img/podil_N_ukazka.jpg, id=220, 394.47375pt x 285.4665pt>
+ [57 <./img/okamzity_skok.JPG>] [58 <./img/zdroj.JPG>]
+<img/podil_N_ukazka.jpg, id=227, 394.47375pt x 285.4665pt>
 File: img/podil_N_ukazka.jpg Graphic file (type jpg)
 <use img/podil_N_ukazka.jpg>
 Package pdftex.def Info: img/podil_N_ukazka.jpg  used on input line 391.
@@ -943,65 +943,65 @@ Overfull \hbox (12.41289pt too wide) in paragraph at lines 396--397
 []\OT1/cmr/m/n/10.95 Vyjdeme z pro-duk^^Tcn^^S^^Pho tvaru rovnic kinetiky (ale pouze z prvn^^S^^P rovnice, zpo^^Tzd^^Tenky n^^Sas nezaj^^S^^Pmaj^^S^^P),
  []
 
-<img/podil_N_1.jpg, id=221, 393.8715pt x 289.68225pt>
+<img/podil_N_1.jpg, id=228, 393.8715pt x 289.68225pt>
 File: img/podil_N_1.jpg Graphic file (type jpg)
 <use img/podil_N_1.jpg>
 Package pdftex.def Info: img/podil_N_1.jpg  used on input line 414.
 (pdftex.def)             Requested size: 273.14922pt x 200.90645pt.
-[57 <./img/podil_N_ukazka.JPG>]
-<img/podil_N_2.jpg, id=225, 402.303pt x 284.86424pt>
+[59 <./img/podil_N_ukazka.JPG>]
+<img/podil_N_2.jpg, id=232, 402.303pt x 284.86424pt>
 File: img/podil_N_2.jpg Graphic file (type jpg)
 <use img/podil_N_2.jpg>
 Package pdftex.def Info: img/podil_N_2.jpg  used on input line 427.
 (pdftex.def)             Requested size: 273.14922pt x 193.41823pt.
- [58 <./img/podil_N_1.JPG> <./img/podil_N_2.JPG>] [59]
+ [60 <./img/podil_N_1.JPG> <./img/podil_N_2.JPG>] [61]
 Overfull \hbox (1.61488pt too wide) in paragraph at lines 489--490
 []\OT1/cmr/m/n/10.95 Podobn^^Seho v^^Sysledku jsme dos^^Sahli u^^Tz v im-pulsn^^S^^P charak-ter-is-tice, ale tam jsme museli p^^Tredpokl^^Sadat
  []
 
-[60]
-<img/frekvencni.jpg, id=235, 330.63525pt x 194.52675pt>
+[62]
+<img/frekvencni.jpg, id=243, 330.63525pt x 194.52675pt>
 File: img/frekvencni.jpg Graphic file (type jpg)
 <use img/frekvencni.jpg>
 Package pdftex.def Info: img/frekvencni.jpg  used on input line 556.
 (pdftex.def)             Requested size: 227.62204pt x 133.92082pt.
- [61]
-<img/frekvencni_zavislost.jpg, id=240, 681.747pt x 427.5975pt>
+ [63]
+<img/frekvencni_zavislost.jpg, id=247, 681.747pt x 427.5975pt>
 File: img/frekvencni_zavislost.jpg Graphic file (type jpg)
 <use img/frekvencni_zavislost.jpg>
 Package pdftex.def Info: img/frekvencni_zavislost.jpg  used on input line 567.
 (pdftex.def)             Requested size: 455.24408pt x 285.54277pt.
- [62 <./img/frekvencni.JPG> <./img/frekvencni_zavislost.JPG>]
-<img/amplituda_frekvence.jpg, id=244, 289.68225pt x 200.54926pt>
+ [64 <./img/frekvencni.JPG> <./img/frekvencni_zavislost.JPG>]
+<img/amplituda_frekvence.jpg, id=251, 289.68225pt x 200.54926pt>
 File: img/amplituda_frekvence.jpg Graphic file (type jpg)
 <use img/amplituda_frekvence.jpg>
 Package pdftex.def Info: img/amplituda_frekvence.jpg  used on input line 612.
 (pdftex.def)             Requested size: 227.62204pt x 157.58757pt.
- [63] [64 <./img/amplituda_frekvence.JPG>]) [65]
+ [65] [66 <./img/amplituda_frekvence.JPG>]) [67]
 \openout2 = `kapitoly/chapter_09.aux'.
 
  (./kapitoly/chapter_09.tex
-<img/ZV.JPG, id=254, 484.209pt x 294.50024pt>
+<img/ZV.JPG, id=262, 484.209pt x 294.50024pt>
 File: img/ZV.JPG Graphic file (type jpg)
 <use img/ZV.JPG>
 Package pdftex.def Info: img/ZV.JPG  used on input line 22.
 (pdftex.def)             Requested size: 318.66946pt x 193.82251pt.
- [66
+ [68
 
 
 
  <./img/ZV.JPG>]
-<img/voda-uran.JPG, id=258, 426.99525pt x 259.56975pt>
+<img/voda-uran.JPG, id=266, 426.99525pt x 259.56975pt>
 File: img/voda-uran.JPG Graphic file (type jpg)
 <use img/voda-uran.JPG>
 Package pdftex.def Info: img/voda-uran.JPG  used on input line 57.
 (pdftex.def)             Requested size: 318.66946pt x 193.72626pt.
- [67]
+ [69]
 Overfull \hbox (3.7124pt too wide) in paragraph at lines 89--90
 []$\OT1/cmr/m/n/10.95 ^^A\OML/cmm/m/it/10.95 T[]$ \OT1/cmr/m/n/10.95 -- p^^Tredstavuje teplotn^^S^^P od-chylku od i-t^^Se slo^^Tzky (teplotn^^S^^P rozd^^S^^Pl od kr-i-t-ick^^Seho a aktu^^Saln^^S^^Pho
  []
 
-[68 <./img/voda-uran.JPG>] [69]
+[70 <./img/voda-uran.JPG>] [71]
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
@@ -1016,7 +1016,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-) [70]
+) [72]
 \openout2 = `kapitoly/chapter_10.aux'.
 
  (./kapitoly/chapter_10.tex
@@ -1029,11 +1029,11 @@ Overfull \hbox (0.15489pt too wide) in paragraph at lines 5--6
 \OT1/cmr/m/n/10.95 Z^^Sakladn^^S^^Pm principem pro de-ter-min-i-stick^^Se k^^Sody je p^^Tr^^S^^Pm^^Se ^^Tre^^Tsen^^S^^P matem-at-ick^^Sych rovnic popisuj^^S^^Pc^^S^^Pch
  []
 
-[71
+[73
 
 
 
-] [72]) [73]
+] [74]) [75]
 \openout2 = `kapitoly/chapter_11.aux'.
 
  (./kapitoly/chapter_11.tex
@@ -1041,22 +1041,22 @@ Overfull \hbox (2.40315pt too wide) in paragraph at lines 19--20
 \OT1/cmr/m/n/10.95 D^^Sale je pot^^Treba nav-zorko-vat dan^^Sa ^^Tc^^S^^Psla po-dle jist^^Sych pravd^^Tepodobnostn^^S^^Pch funkc^^S^^P $\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )$. Gener^^Sator
  []
 
-[74
+[76
 
 
 
 ]
-<img/rejection_sampling.png, id=285, 578.16pt x 264.5082pt>
+<img/rejection_sampling.png, id=292, 578.16pt x 264.5082pt>
 File: img/rejection_sampling.png Graphic file (type png)
 <use img/rejection_sampling.png>
 Package pdftex.def Info: img/rejection_sampling.png  used on input line 48.
 (pdftex.def)             Requested size: 318.66946pt x 145.79073pt.
- [75 <./img/rejection_sampling.png>] [76]
+ [77 <./img/rejection_sampling.png>] [78]
 Overfull \hbox (29.40564pt too wide) in paragraph at lines 116--117
 \OT1/cmr/m/n/10.95 Nyn^^S^^P jsme u^^Tz v bod^^Te, kde do-jde k n^^Tejak^^Se reakci, zb^^Syv^^Sa zjis-tit k jak^^Se. To se op^^Tet ur^^Tc^^S^^P pravd^^Tepodobnostn^^Te,
  []
 
-) [77]
+) [79]
 \openout2 = `kapitoly/chapter_12.aux'.
 
  (./kapitoly/chapter_12.tex
@@ -1069,11 +1069,11 @@ Overfull \hbox (6.4511pt too wide) in paragraph at lines 39--40
 []\OT1/cmr/m/n/10.95 Funguje na stejn^^Sem z^^Sakladu, pouze rozkl^^Sad^^Sa ex-po-nenci^^Saln^^S^^P matici do Cheby-shevov^^Sych racion^^Saln^^S^^Pch
  []
 
-[78
+[80
 
 
 
-]) [79]
+]) [81]
 \openout2 = `kapitoly/chapter_13.aux'.
 
  (./kapitoly/chapter_13.tex
@@ -1101,14 +1101,14 @@ Overfull \hbox (1.09846pt too wide) in paragraph at lines 29--30
 []$\OT1/cmr/m/n/10.95 ^^F[]$ -- p^^Trevr^^Sacen^^Sa hod-nota p^^Tredstavuje dr^^Sahu, kterou neu-tron uraz^^S^^P po nekone^^Tcn^^Sem mno^^Tzstv^^S^^P
  []
 
-[80
+[82
 
 
 
-] [81]) [82]
+] [83]) [84]
 \openout2 = `kapitoly/chapter_14.aux'.
 
- (./kapitoly/chapter_14.tex) [83
+ (./kapitoly/chapter_14.tex) [85
 
 
 
@@ -1125,11 +1125,11 @@ Here is how much of TeX's memory you used:
  527331 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,103p,976b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (83 pages, 1306148 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on main.pdf (85 pages, 1322222 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 267 compressed objects within 3 object streams
+ 436 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  103 words of extra memory for PDF output out of 10000 (max. 10000000)
 

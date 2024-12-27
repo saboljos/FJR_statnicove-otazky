@@ -4,18 +4,37 @@ Momentálně neexistuje obecné analytické řešení transportní rovnice. Poku
 
 Dále se pro zjednodušení aplikuje oddělení velikosti a úhlové závislosti průřezu pro rozptyl, protože je závislý na všech proměnných a složitě by se vyčísloval. Zní to sice nóbl, ale ve výsledku se z funkce o více proměnných udělá součin dvou funkcí o méně proměnných pomocí rozvoje do Legendrových polynomů  (tím se oddělí směrová závislost) a sférických harmonických funkcí (tím se oddělí závislost původního a nového směru). 
 
+Problém je, že tímto získáme poměrně přesné řešení, ale pouze na základě definovaného modelu. Největším problémem tedy není řešení, ale to, jakým způsobem provedu daná zjednodušení při definování modelu. Model se musí vhodně:
+
+\begin{itemize}
+  \item rozgrupovat (počet grup a jejich velikost tak, aby se zachytily případně rezonance),
+  \item homogenizovat (správná homogenizace účinných průřezů),
+  \item provést patřičné předpoklady (izotropní rozptyl, nezávislost hustoty toku mezi palivovou a mimopalivovou oblastí apod.).
+\end{itemize}
+
 \subsection{Metody řešení transportní rovnice}
 
-Z teorie Fourierova rozkladu platí:
+Máme transportní rovnici ve stacionárním tvaru, kterou chceme řešit:
+
+\begin{equation*}
+  \boxed{
+  \begin{multlined}
+    \left[ \Omega \cdot \nabla + \Sigma_t(\textbf{r},E) \right] \Phi(\textbf{r}, \Omega, E) = \int_\mathbb{R^+} \int_{4\pi} \Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) \Phi(\textbf{r}, \Omega', E') \: \text{d}\Omega' \text{d}E' + \\
+    + \dfrac{\chi(E)}{4\pi} \int_\mathbb{R^+} \int_{4\pi} \nu(E') \Sigma_f(\textbf{r}, E') \Phi(\textbf{r}, \Omega', E') \: \text{d}\Omega' \text{d}E' + S(\text{r},\Omega,E)
+  \end{multlined}}
+\end{equation*}
+
+Tato rovnice je příliš složitá (účinný průřez pro rozptyl je závislý úplně na všem), tudíž se přejde k rozkladu funkcí za pomoci Fourierových řad. Nejprve se za pomoci Legendrových polynomů oddělí poloha od směru:
 
 $$\Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) = \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) P_l(\Omega' \cdot \Omega),$$
-$$\Sigma_{s,l}(\textbf{r}, E' \rightarrow E) = \int_{-1}^1 \Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) P_l(\Omega' \cdot \Omega) \text{d}\mu,$$
 
-\noindent kde $\Sigma_{s,l}$ je $l$-tý Legendrův koeficient pro rozptyl a $P_l$ je $l$-tý Legandrův polynom. Tím se oddělil prostor od směru. Dále se Legendrův polynom rozloží na sférické harmonické funkce:
+$$\Sigma_{s,l}(\textbf{r}, E' \rightarrow E) = \int_{-1}^1 \Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) P_l(\Omega' \cdot \Omega) \: \text{d}\mu,$$
+
+\noindent kde $\Sigma_{s,l}$ je $l$-tý Legendrův koeficient pro rozptyl a $P_l$ je $l$-tý Legandrův polynom. Dále se oddělí původní směr od nového směru za pomoci sférických harmonických funkcí:
 
 $$P_l(\Omega' \cdot \Omega) = \sum_{m=-l}^{+l} R_l^m(\Omega) R_l^m(\Omega'),$$
 
-\noindent kde $R_l^m$ jsou zmiňované sférické harmonické funkce. Tím se oddělil původní a nový směr. Rozptyl pak vypadá:
+\noindent kde $R_l^m$ jsou zmiňované sférické harmonické funkce. Rozptyl pak vypadá:
 
 $$\Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) = \sum_{l=0}^{\infty} \sum_{m=-l}^{+l} \dfrac{2l + 1}{4 \pi} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) R_l^m(\Omega) R_l^m(\Omega').$$
 
@@ -23,29 +42,85 @@ Matematická vsuvka: Legandrovy polynomy i sférické harmonické funkce jsou b�
 
 Dále se zavádějí \textbf{úhlové momenty} $\phi_l^m$, které zjednodušují zápis. Jde o průmět do sférických harmonických funkcí, takže zjednodušeně řečeno, pokud jsou sférické harmonické funkce bází prostoru, tak vezmu hustotu toku a pomocí superpozice ji vyjádřím v těchto bázových souřadnicích:
 
-$$\phi_l^m(\textbf{r}, E') = \int_{4 \pi} R_l^m (\Omega') \Phi(\textbf{r}, \Omega', E') \text{d}\Omega'.$$
+$$\phi_l^m(\textbf{r}, E') = \int_{4 \pi} R_l^m (\Omega') \Phi(\textbf{r}, \Omega', E') \: \text{d}\Omega'.$$
 
 Pro následný zápis transportní rovnice pak tedy platí:
 
 \begin{equation*}
   \begin{multlined}
-    \int_\mathbb{R^+} \int_{4 \pi} \Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \text{d}E' = \\
+    \text{PS 1} = \int_\mathbb{R^+} \int_{4 \pi} \Sigma_s(\textbf{r}, \Omega' \cdot \Omega, E' \rightarrow E) \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \text{d}E' = \\
     = \int_\mathbb{R^+} \int_{4 \pi} \left [ \sum_{l=0}^{\infty} \sum_{m=-l}^{+l} \dfrac{2l + 1}{4 \pi} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) R_l^m(\Omega) R_l^m(\Omega') \right ] \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \text{d}E' = \\
     = \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega) \int_\mathbb{R^+} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) \left ( \int_{4 \pi} R_l^m(\Omega') \Phi(\textbf{r}, \Omega', E') \text{d}\Omega' \right ) \text{d}E' =\\
     = \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega) \int_\mathbb{R^+} \Sigma_{s,l}(\textbf{r}, E' \rightarrow E) \phi_l^m(\textbf{r}, E') \text{d}E'
   \end{multlined}
 \end{equation*}
 
+\begin{equation*}
+  \begin{multlined}
+    \text{PS 2} = \dfrac{\chi(E)}{4\pi} \int_\mathbb{R^+} \int_{4\pi} \nu(E') \Sigma_f(\textbf{r}, E') \Phi(\textbf{r}, \Omega', E') \: \text{d}\Omega' \text{d}E' + S(\text{r},\Omega,E)
+  \end{multlined}
+\end{equation*}
+
+V posledním kroku se zbavíme energetické závislosti (integrálu) grupováním a rovnice provážeme přes $k_\text{ef}$, čímž se vytvoří $G$ soustav energeticky nezávislých monoenergetických rovnic:
+
+\begin{equation*}
+  \boxed{
+  \begin{multlined}
+    \left[ \Omega \cdot \nabla + \Sigma_t^g(\textbf{r}) \right] \Phi^g(\textbf{r}, \Omega) = \sum_{g'=1}^{G} \sum_{l=0}^{\infty} \dfrac{2l+1}{4\pi} \sum_{m=-l}^{+l} \Sigma_{s,l}^{g' \to g}(\textbf{r}) \phi_l^{m,g'}(\textbf{r}) R_l^m(\Omega) + \\
+    + \dfrac{1}{k_\text{ef}} \dfrac{\chi^g}{4\pi} \sum_{g'=1}^{G} \nu^{g'} \Sigma_f^{g'}(\textbf{r}) \phi^{g'}(\textbf{r}) + S^g(\text{r},\Omega)
+  \end{multlined}}
+\end{equation*}
+
 A kvůli tomu se to dělá. Je to hezká matematika, ale reálně tomu na katedře skutečně rozumí jenom pár lidí, takže je asi zbytečný to umět nazpaměť.
 
 \subsubsection{S$_n$ metoda}
 
-Jedná se o směrovou diskretizaci prostorového úhlu $\Omega$. Neznámé poté představují úhlové hustoty toku neutronů $\Phi_d(\textbf{r})$ v $n$ vybraných směrech, čímž se z transportní rovnice odstraní směrová závislost. Pro výsledné řešní platí:
+Vychází z \textbf{diskretizace}, konkrétně ze směrové diskretizace prostorového úhlu $\Omega$. Neznámé poté představují úhlové hustoty toku neutronů $\Phi_d(\textbf{r})$ v $n$ vybraných směrech (jde o $d$-tý směr z $n$ diskretizací), čímž se z transportní rovnice odstraní směrová závislost (pro každý úhel se řeší samostatná rovnice, celkem $n$ rovnic).
+
+Úhlové momenty se místo integrace počítají přibližnou kvadraturou $w_d$, což řešení zjednodušší:
+
+$$\phi_l^m(\textbf{r}) = \int_{4 \pi} \Phi(\textbf{r}, \Omega') R_l^m (\Omega') \: \text{d}\Omega' \approx \sum_{d=1}^{n} w_d \Phi_d(\textbf{r}) R_l^m(\Omega_d). $$
+
+Pro výsledné řešní platí:
 
 $$\Phi(\textbf{r}, \Omega) \approx \sum_{d=1}^{n} \Phi_d(\textbf{r}) \delta(1-\Omega \cdot \Omega_d).$$
 
+(Tady upřímně moc nechápu, jak se ty momenty přesně získají. Nicméně prostě se musí nějak naleznout a poté posčítat.)
+
 \subsubsection{P$_n$ metoda}
 
-Vyjde se z rozvoje do Legendrových polynomů a sférických harmonickcý funkcí, který se utne ve stupni $n$. Tento rozvoj se poté zpětně dosadí do transportní rovnice (viz předešlé kompletní dosazení) a řeší se soustava $(n+1)^2$ rovnic, ve kterých neznámou hraje úhlový moment $\phi_l^m(\textbf{r})$. Tím se úplně zbavíme závislosti na $\Omega$. Výsledné řešení bude tvaru:
+Vychází z \textbf{projekce}. Vyjde se z rozvoje do Legendrových polynomů a sférických harmonickcý funkcí, který se utne ve stupni $n$. Tento rozvoj se poté zpětně dosadí do transportní rovnice (viz předešlé kompletní dosazení), vynásobí se $R_l^m(\Omega)$ a zintegruje přes $\Omega$ a vyřeší se soustava $(n+1)^2$ rovnic, ve kterých neznámou hraje úhlový moment $\phi_l^m(\textbf{r})$. Tím se úplně zbavíme závislosti na $\Omega$. 
 
-$$\Phi(\textbf{r}, \Omega) \approx \sum_{l=0}^{\infty} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega)  \phi_l^m(\textbf{r}). $$
+Výsledné řešení bude tvaru:
+
+$$\Phi(\textbf{r}, \Omega) \approx \sum_{l=0}^{n} \dfrac{2l + 1}{4 \pi} \sum_{m=-l}^{+l} R_l^m(\Omega)  \phi_l^m(\textbf{r}). $$
+
+\subsubsection{SP$_n$ metoda}
+
+Jde o kombinaci předešlých metod. S$_n$ metoda řeší $n$ různých směrů, tedy $n$ rovnic. P$_n$ metoda vyžaduje dokonce $(n+1)^2$ rovnic. Obě metody je možné zkombinovat. Vyberou se dominantní směry transportu, které se rozvinou za pomoci Legendrových polynomů, čímž se počet rovnic zredukuje na $(n+3)$.
+
+Poznámka: Je to magie, nějak to funguje. 
+
+\subsection{Metoda charakteristik}
+
+Vychází z integrace transportní rovnice podél trajektorie ve směru $\Omega_d$ (tzv. charakteristiky). 
+
+Předpokládejme směr $d$, kolem kterého se vytkne prostor $m$ (analogie k elementu objemu) o délce $R$. Neutrony vstupují do prostoru $m$ o objemu $V_m$, interagují podél délky $R$ (látka je zde popsatelná za pomoci účinného průřezu $\Sigma_m$) a poté vystupují. 
+
+Bilance pro hustotu toku je dána rozptylem a štěpením dle integrální transportní rovnice (štěpení pro zjednodušení popisuji funkcí $Q_d(m)$):
+
+$$ \Phi_d^\text{out}(m) = \Phi_d^\text{in}(m) \: e^{-\Sigma_m R} + \dfrac{1 - e^{-\Sigma_m R}}{\Sigma_m} Q_d(m). $$
+
+Bilance pro hustotu proudu je dána tím co reálně vstupuje a vystupuje:
+
+$$ \textbf{J}_d^\text{out}(m) = \textbf{J}_d^\text{in}(m) - V_m \Sigma_m \Phi_d(m) + V_m Q_d(m), $$
+
+přičemž hustota proudu se stanoví přes sumu všech trajektorií přes prostor $m$ podél dané charakteristiky:
+
+$$ \textbf{J}_d (m) = \sum_{j \in \text{traj}} S_\perp \phi_{d,j}(m). $$
+
+Tyto 3 rovnice mezi sebou provážu, čímž se získá finální řešení hustoty toku neutronů pro směr $d$:
+
+$$ \Phi_d(m) = \dfrac{1}{\Sigma_m} \left[ \sum_{j \in \text{traj}} \dfrac{S_\perp}{V_m} \left( \Phi_{d,t}^\text{in}(m) - \Phi_{d,t}^\text{out}(m) \right) + Q_d(m) \right] $$
+
+Pro vícegrupový výpočet je zapotřebí opět energetické provázání a grupování.
