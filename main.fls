@@ -1126,6 +1126,11 @@ INPUT ./kapitoly/chapter_12.tex
 INPUT kapitoly/chapter_12.tex
 INPUT ./kapitoly/chapter_12.tex
 INPUT kapitoly/chapter_12.tex
+INPUT ./img/burnup_matrix.JPG
+INPUT ./img/burnup_matrix.JPG
+INPUT img/burnup_matrix.JPG
+INPUT ./img/burnup_matrix.JPG
+INPUT ./img/burnup_matrix.JPG
 INPUT ./kapitoly/chapter_13.tex
 INPUT ./kapitoly/chapter_13.tex
 INPUT ./kapitoly/chapter_13.tex
