@@ -1,100 +1,106 @@
-\contentsline {section}{\numberline {1}Difúzní teorie}{5}{}%
-\contentsline {subsection}{\numberline {1.1}Fickův zákon}{5}{}%
-\contentsline {subsection}{\numberline {1.2}Odvození}{6}{}%
-\contentsline {subsection}{\numberline {1.3}Řešení}{7}{}%
-\contentsline {subsection}{\numberline {1.4}Grupová difúzní rovnice}{8}{}%
-\contentsline {subsection}{\numberline {1.5}2G přiblížení \& grupování}{8}{}%
-\contentsline {subsection}{\numberline {1.6}Využití}{9}{}%
-\contentsline {subsubsection}{\numberline {1.6.1}Modifikovaná 2G kritická rovnice}{9}{}%
-\contentsline {section}{\numberline {2}Metody jader a vlastních funkcí}{11}{}%
-\contentsline {subsection}{\numberline {2.1}Zavedení zobecněné difúzní rovnice}{11}{}%
-\contentsline {subsection}{\numberline {2.2}Metoda jader}{11}{}%
-\contentsline {subsection}{\numberline {2.3}Metoda vlastních funkcí}{12}{}%
-\contentsline {subsubsection}{\numberline {2.3.1}1D -- nekonečná deska}{12}{}%
-\contentsline {subsection}{\numberline {2.4}Využití}{14}{}%
-\contentsline {section}{\numberline {3}Transportní rovnice}{15}{}%
-\contentsline {subsection}{\numberline {3.1}Boltzmanova integro-diferenciální transportní rovnice}{15}{}%
-\contentsline {subsubsection}{\numberline {3.1.1}Předpoklady}{15}{}%
-\contentsline {subsubsection}{\numberline {3.1.2}Matematický aparát}{15}{}%
-\contentsline {subsubsection}{\numberline {3.1.3}Odvození}{17}{}%
-\contentsline {subsubsection}{\numberline {3.1.4}Podmínky platnosti a řešitelnost}{19}{}%
-\contentsline {subsection}{\numberline {3.2}Integrální tvar transportní rovnice}{20}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}Odvození}{20}{}%
-\contentsline {subsection}{\numberline {3.3}Možná řešení}{21}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}Deska}{21}{}%
-\contentsline {subsection}{\numberline {3.4}Využití}{22}{}%
-\contentsline {section}{\numberline {4}$S_n$ a $P_n$ metody}{23}{}%
-\contentsline {subsection}{\numberline {4.1}Metody řešení transportní rovnice}{23}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}S$_n$ metoda}{25}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}P$_n$ metoda}{25}{}%
-\contentsline {subsubsection}{\numberline {4.1.3}SP$_n$ metoda}{25}{}%
-\contentsline {subsection}{\numberline {4.2}Metoda charakteristik}{26}{}%
-\contentsline {section}{\numberline {5}Jaderná data}{27}{}%
-\contentsline {subsection}{\numberline {5.1}Proces zaznamenávání jaderných dat}{27}{}%
-\contentsline {subsubsection}{\numberline {5.1.1}Příprava a shromažďování}{27}{}%
-\contentsline {subsubsection}{\numberline {5.1.2}Evaluace (zhodnocení) a ukládání}{28}{}%
-\contentsline {subsubsection}{\numberline {5.1.3}Verifikace}{28}{}%
-\contentsline {subsubsection}{\numberline {5.1.4}Validace}{28}{}%
-\contentsline {subsection}{\numberline {5.2}Proces zpracování jaderných dat}{29}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Linearizace}{29}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}Úprava na teplotu}{29}{}%
-\contentsline {subsubsection}{\numberline {5.2.3}Grupování}{29}{}%
-\contentsline {subsubsection}{\numberline {5.2.4}Zohlednění samostínění}{30}{}%
-\contentsline {subsubsection}{\numberline {5.2.5}Spojování}{31}{}%
-\contentsline {section}{\numberline {6}Poruchová teorie}{32}{}%
-\contentsline {subsection}{\numberline {6.1}Odůvodnění}{32}{}%
-\contentsline {subsection}{\numberline {6.2}Odvození poruchy reaktivity}{32}{}%
-\contentsline {subsection}{\numberline {6.3}Způsoby výpočtu $\Delta \nu $}{33}{}%
-\contentsline {subsubsection}{\numberline {6.3.1}Matematický aparát}{33}{}%
-\contentsline {subsubsection}{\numberline {6.3.2}1G poruchová teorie}{34}{}%
-\contentsline {subsubsection}{\numberline {6.3.3}2G poruchový operátor}{37}{}%
-\contentsline {subsection}{\numberline {6.4}Význam sdružené hustoty toku}{38}{}%
-\contentsline {subsection}{\numberline {6.5}Příklady aplikace poruchové teorie}{39}{}%
-\contentsline {section}{\numberline {7}Bodová kinetika}{40}{}%
-\contentsline {subsection}{\numberline {7.1}Pojmy}{40}{}%
-\contentsline {subsection}{\numberline {7.2}Odvození}{40}{}%
-\contentsline {subsubsection}{\numberline {7.2.1}Bez vlivu zpožděných neutronů:}{41}{}%
-\contentsline {subsubsection}{\numberline {7.2.2}S vlivem zpožděných neutronů:}{44}{}%
-\contentsline {subsection}{\numberline {7.3}Přehled vzorečků}{46}{}%
-\contentsline {section}{\numberline {8}Základní charakteristiky jednobodové kinitiky}{47}{}%
-\contentsline {subsection}{\numberline {8.1}Řešení bez vlivu zpožděných neutronů}{47}{}%
-\contentsline {subsection}{\numberline {8.2}Řešení s vlivem zpožděných neutronů}{47}{}%
-\contentsline {subsubsection}{\numberline {8.2.1}Impulsní charakeristika}{49}{}%
-\contentsline {subsubsection}{\numberline {8.2.2}Přechodová charakteristika}{50}{}%
-\contentsline {subsubsection}{\numberline {8.2.3}Frekvenční charakteristika}{61}{}%
-\contentsline {subsubsection}{\numberline {8.2.4}Vlivy zjendnodušení}{66}{}%
-\contentsline {section}{\numberline {9}Zpětné vazby}{68}{}%
-\contentsline {subsection}{\numberline {9.1}Zpětné vazby}{68}{}%
-\contentsline {subsubsection}{\numberline {9.1.1}Doppler}{69}{}%
-\contentsline {subsubsection}{\numberline {9.1.2}Vodo-uranový poměr}{69}{}%
-\contentsline {subsubsection}{\numberline {9.1.3}Dutinový efekt}{70}{}%
-\contentsline {subsection}{\numberline {9.2}Zpětnovazební koeficienty reaktivity}{71}{}%
-\contentsline {subsection}{\numberline {9.3}Přenosová funkce zpětné vazby}{71}{}%
-\contentsline {subsection}{\numberline {9.4}Modely dynamiky reaktoru}{72}{}%
-\contentsline {section}{\numberline {10}Monte-Carlo}{73}{}%
-\contentsline {subsection}{\numberline {10.1}Základní filosofie}{73}{}%
-\contentsline {subsection}{\numberline {10.2}Analogová a neanalogová metoda}{74}{}%
-\contentsline {subsection}{\numberline {10.3}Redukce variance}{74}{}%
-\contentsline {section}{\numberline {11}Náhodná procházka}{76}{}%
-\contentsline {subsection}{\numberline {11.1}Matematická vsuvka}{76}{}%
-\contentsline {subsubsection}{\numberline {11.1.1}Generace pseudonáhodných čísel}{76}{}%
-\contentsline {subsubsection}{\numberline {11.1.2}Random Sampling - Náhodné vzorkování}{76}{}%
-\contentsline {subsection}{\numberline {11.2}Popis náhodné procházky}{77}{}%
-\contentsline {subsubsection}{\numberline {11.2.1}Vznik}{78}{}%
-\contentsline {subsubsection}{\numberline {11.2.2}Tracking}{78}{}%
-\contentsline {subsubsection}{\numberline {11.2.3}Reakce}{79}{}%
-\contentsline {subsubsection}{\numberline {11.2.4}Detektory}{79}{}%
-\contentsline {subsubsection}{\numberline {11.2.5}Zánik}{79}{}%
-\contentsline {section}{\numberline {12}Vyhořívání}{80}{}%
-\contentsline {subsection}{\numberline {12.1}Formulace úlohy}{80}{}%
-\contentsline {subsection}{\numberline {12.2}Iterační schéma}{81}{}%
-\contentsline {subsection}{\numberline {12.3}Způsoby řešení}{81}{}%
-\contentsline {subsubsection}{\numberline {12.3.1}MATREX metoda}{81}{}%
-\contentsline {subsubsection}{\numberline {12.3.2}CRAM metoda}{82}{}%
-\contentsline {subsubsection}{\numberline {12.3.3}Analýza transmutační trajektorie}{82}{}%
-\contentsline {section}{\numberline {13}Celozónové výpočty}{83}{}%
-\contentsline {subsection}{\numberline {13.1}Transportní (deterministický) výpočet}{83}{}%
-\contentsline {subsubsection}{\numberline {13.1.1}Homogenizace}{83}{}%
-\contentsline {subsubsection}{\numberline {13.1.2}Parametrizace}{84}{}%
-\contentsline {subsubsection}{\numberline {13.1.3}Celozónový výpočet}{85}{}%
-\contentsline {section}{\numberline {14}Citlivostní analýza}{86}{}%
+\contentsline {section}{\numberline {1}Difúzní teorie}{6}{}%
+\contentsline {subsection}{\numberline {1.1}Fickův zákon}{6}{}%
+\contentsline {subsection}{\numberline {1.2}Odvození}{7}{}%
+\contentsline {subsection}{\numberline {1.3}Řešení}{8}{}%
+\contentsline {subsection}{\numberline {1.4}Grupová difúzní rovnice}{9}{}%
+\contentsline {subsection}{\numberline {1.5}2G přiblížení \& grupování}{9}{}%
+\contentsline {subsection}{\numberline {1.6}Využití}{10}{}%
+\contentsline {subsubsection}{\numberline {1.6.1}Modifikovaná 2G kritická rovnice}{10}{}%
+\contentsline {section}{\numberline {2}Metody jader a vlastních funkcí}{12}{}%
+\contentsline {subsection}{\numberline {2.1}Zavedení zobecněné difúzní rovnice}{12}{}%
+\contentsline {subsection}{\numberline {2.2}Metoda jader}{12}{}%
+\contentsline {subsection}{\numberline {2.3}Metoda vlastních funkcí}{13}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}1D -- nekonečná deska}{13}{}%
+\contentsline {subsection}{\numberline {2.4}Využití}{15}{}%
+\contentsline {section}{\numberline {3}Transportní rovnice}{16}{}%
+\contentsline {subsection}{\numberline {3.1}Boltzmanova integro-diferenciální transportní rovnice}{16}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Předpoklady}{16}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Matematický aparát}{16}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}Odvození}{18}{}%
+\contentsline {subsubsection}{\numberline {3.1.4}Podmínky platnosti a řešitelnost}{20}{}%
+\contentsline {subsection}{\numberline {3.2}Integrální tvar transportní rovnice}{21}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Odvození}{21}{}%
+\contentsline {subsection}{\numberline {3.3}Možná řešení}{22}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Deska}{22}{}%
+\contentsline {subsection}{\numberline {3.4}Využití}{23}{}%
+\contentsline {section}{\numberline {4}$S_n$ a $P_n$ metody}{24}{}%
+\contentsline {subsection}{\numberline {4.1}Metody řešení transportní rovnice}{24}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}S$_n$ metoda}{26}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}P$_n$ metoda}{26}{}%
+\contentsline {subsubsection}{\numberline {4.1.3}SP$_n$ metoda}{26}{}%
+\contentsline {subsection}{\numberline {4.2}Metoda charakteristik}{27}{}%
+\contentsline {section}{\numberline {5}Jaderná data}{28}{}%
+\contentsline {subsection}{\numberline {5.1}Proces zaznamenávání jaderných dat}{28}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Příprava a shromažďování}{28}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}Evaluace (zhodnocení) a ukládání}{29}{}%
+\contentsline {subsubsection}{\numberline {5.1.3}Verifikace}{29}{}%
+\contentsline {subsubsection}{\numberline {5.1.4}Validace}{29}{}%
+\contentsline {subsection}{\numberline {5.2}Proces zpracování jaderných dat}{30}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Linearizace}{30}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Úprava na teplotu}{30}{}%
+\contentsline {subsubsection}{\numberline {5.2.3}Grupování}{30}{}%
+\contentsline {subsubsection}{\numberline {5.2.4}Zohlednění samostínění}{31}{}%
+\contentsline {subsubsection}{\numberline {5.2.5}Spojování}{32}{}%
+\contentsline {section}{\numberline {6}Poruchová teorie}{33}{}%
+\contentsline {subsection}{\numberline {6.1}Odůvodnění}{33}{}%
+\contentsline {subsection}{\numberline {6.2}Odvození poruchy reaktivity}{33}{}%
+\contentsline {subsection}{\numberline {6.3}Způsoby výpočtu $\Delta \nu $}{34}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}Matematický aparát}{34}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}1G poruchová teorie}{35}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}2G poruchový operátor}{38}{}%
+\contentsline {subsection}{\numberline {6.4}Význam sdružené hustoty toku}{39}{}%
+\contentsline {subsection}{\numberline {6.5}Příklady aplikace poruchové teorie}{40}{}%
+\contentsline {section}{\numberline {7}Bodová kinetika}{41}{}%
+\contentsline {subsection}{\numberline {7.1}Pojmy}{41}{}%
+\contentsline {subsection}{\numberline {7.2}Odvození}{41}{}%
+\contentsline {subsubsection}{\numberline {7.2.1}Bez vlivu zpožděných neutronů:}{42}{}%
+\contentsline {subsubsection}{\numberline {7.2.2}S vlivem zpožděných neutronů:}{45}{}%
+\contentsline {subsection}{\numberline {7.3}Přehled vzorečků}{47}{}%
+\contentsline {section}{\numberline {8}Základní charakteristiky jednobodové kinitiky}{48}{}%
+\contentsline {subsection}{\numberline {8.1}Řešení bez vlivu zpožděných neutronů}{48}{}%
+\contentsline {subsection}{\numberline {8.2}Řešení s vlivem zpožděných neutronů}{48}{}%
+\contentsline {subsubsection}{\numberline {8.2.1}Impulsní charakeristika}{50}{}%
+\contentsline {subsubsection}{\numberline {8.2.2}Přechodová charakteristika}{51}{}%
+\contentsline {subsubsection}{\numberline {8.2.3}Frekvenční charakteristika}{62}{}%
+\contentsline {subsubsection}{\numberline {8.2.4}Vlivy zjendnodušení}{67}{}%
+\contentsline {section}{\numberline {9}Zpětné vazby}{69}{}%
+\contentsline {subsection}{\numberline {9.1}Zpětné vazby}{69}{}%
+\contentsline {subsubsection}{\numberline {9.1.1}Doppler}{70}{}%
+\contentsline {subsubsection}{\numberline {9.1.2}Vodo-uranový poměr}{70}{}%
+\contentsline {subsubsection}{\numberline {9.1.3}Dutinový efekt}{71}{}%
+\contentsline {subsection}{\numberline {9.2}Zpětnovazební koeficienty reaktivity}{72}{}%
+\contentsline {subsection}{\numberline {9.3}Přenosová funkce zpětné vazby}{72}{}%
+\contentsline {subsection}{\numberline {9.4}Modely dynamiky reaktoru}{73}{}%
+\contentsline {section}{\numberline {10}Monte-Carlo}{74}{}%
+\contentsline {subsection}{\numberline {10.1}Základní filosofie}{74}{}%
+\contentsline {subsection}{\numberline {10.2}Analogová a neanalogová metoda}{75}{}%
+\contentsline {subsection}{\numberline {10.3}Redukce variance}{75}{}%
+\contentsline {section}{\numberline {11}Náhodná procházka}{77}{}%
+\contentsline {subsection}{\numberline {11.1}Matematická vsuvka}{77}{}%
+\contentsline {subsubsection}{\numberline {11.1.1}Generace pseudonáhodných čísel}{77}{}%
+\contentsline {subsubsection}{\numberline {11.1.2}Random Sampling - Náhodné vzorkování}{77}{}%
+\contentsline {subsection}{\numberline {11.2}Popis náhodné procházky}{78}{}%
+\contentsline {subsubsection}{\numberline {11.2.1}Vznik}{79}{}%
+\contentsline {subsubsection}{\numberline {11.2.2}Tracking}{79}{}%
+\contentsline {subsubsection}{\numberline {11.2.3}Reakce}{80}{}%
+\contentsline {subsubsection}{\numberline {11.2.4}Detektory}{80}{}%
+\contentsline {subsubsection}{\numberline {11.2.5}Zánik}{80}{}%
+\contentsline {section}{\numberline {12}Vyhořívání}{81}{}%
+\contentsline {subsection}{\numberline {12.1}Formulace úlohy}{81}{}%
+\contentsline {subsection}{\numberline {12.2}Iterační schéma}{82}{}%
+\contentsline {subsection}{\numberline {12.3}Způsoby řešení}{82}{}%
+\contentsline {subsubsection}{\numberline {12.3.1}MATREX metoda}{82}{}%
+\contentsline {subsubsection}{\numberline {12.3.2}CRAM metoda}{83}{}%
+\contentsline {subsubsection}{\numberline {12.3.3}Analýza transmutační trajektorie}{83}{}%
+\contentsline {section}{\numberline {13}Celozónové výpočty}{84}{}%
+\contentsline {subsection}{\numberline {13.1}Transportní (deterministický) výpočet}{84}{}%
+\contentsline {subsubsection}{\numberline {13.1.1}Homogenizace}{84}{}%
+\contentsline {subsubsection}{\numberline {13.1.2}Parametrizace}{85}{}%
+\contentsline {subsubsection}{\numberline {13.1.3}Celozónový výpočet}{86}{}%
+\contentsline {section}{\numberline {14}Citlivostní analýza}{87}{}%
+\contentsline {subsection}{\numberline {14.1}Zdroje nejistot}{87}{}%
+\contentsline {subsubsection}{\numberline {14.1.1}Volba vhodného výpočetního nástroje}{87}{}%
+\contentsline {subsubsection}{\numberline {14.1.2}Chyba modelu}{87}{}%
+\contentsline {subsubsection}{\numberline {14.1.3}Chyba vstupních dat}{87}{}%
+\contentsline {subsection}{\numberline {14.2}Citlivostní analýza koeficientu násobení}{87}{}%
+\contentsline {subsection}{\numberline {14.3}Citlivostní analýza výpočtu vyhoření}{88}{}%

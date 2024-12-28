@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.4.8)  28 DEC 2024 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.4.8)  28 DEC 2024 18:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -755,11 +755,11 @@ No file none.tex.
 
 
 
-])
+] [4])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [4]
+ [5]
 \openout2 = `kapitoly/chapter_01.aux'.
 
  (./kapitoly/chapter_01.tex
@@ -767,24 +767,24 @@ Overfull \hbox (11.50032pt too wide) in paragraph at lines 3--4
 \OT1/cmr/m/n/10.95 jobecn^^Tej^^Ts^^S^^P popis je nutn^^Se pou^^Tz^^S^^Pt Boltz-man-novu trans-portn^^S^^P rovnici, nicm^^Sen^^Te s ur^^Tcit^^Symi zanedb^^San^^S^^Pmi
  []
 
-[5
+[6
 
-] [6] [7]
+] [7] [8]
 Overfull \hbox (9.71274pt too wide) in paragraph at lines 136--137
 \OT1/cmr/m/n/10.95 ka^^Tzdou grupu ^^Tre^^Ts^^S^^P vlastn^^S^^P dif^^Suzka, p^^Tri^^Tcem^^Tz p^^Trechod mezi gru-pami se za-pisuje po-moc^^S^^P \OT1/cmr/bx/n/10.95 rozptylov^^Seho
  []
 
-[8] [9]) [10]
+[9] [10]) [11]
 \openout2 = `kapitoly/chapter_02.aux'.
 
- (./kapitoly/chapter_02.tex [11
+ (./kapitoly/chapter_02.tex [12
 
 
 
-] [12] [13]) [14]
+] [13] [14]) [15]
 \openout2 = `kapitoly/chapter_03.aux'.
 
- (./kapitoly/chapter_03.tex [15
+ (./kapitoly/chapter_03.tex [16
 
 
 
@@ -800,15 +800,15 @@ Overfull \hbox (15.80237pt too wide) in paragraph at lines 85--86
 \OT1/cmr/bx/n/10.95 ob-jemu f^^Sazov^^Seho pros-toru\OT1/cmr/m/n/10.95 , zat^^S^^Pmco $[]$ \OT1/cmr/bx/n/10.95 ud^^Sav^^Sa po^^Tcet neu-tron^^Wu, kter^^Sy proch^^Saz^^S^^P na steradi^^San,
  []
 
-[16] [17] [18]
+[17] [18] [19]
 Overfull \hbox (46.32231pt too wide) detected at line 199
 [][]
  []
 
-[19] [20] [21]) [22]
+[20] [21] [22]) [23]
 \openout2 = `kapitoly/chapter_04.aux'.
 
- (./kapitoly/chapter_04.tex [23
+ (./kapitoly/chapter_04.tex [24
 
 
 
@@ -817,14 +817,14 @@ Overfull \hbox (9.55362pt too wide) in paragraph at lines 43--44
 \OT1/cmr/m/n/10.95 pros-toru, tak vezmu hus-totu toku a po-moc^^S^^P su-per-poz-ice ji vyj^^Sad^^Tr^^S^^Pm v t^^Techto b^^Sazov^^Sych sou^^Tradnic^^S^^Pch: 
  []
 
-[24] [25]) [26]
+[25] [26]) [27]
 \openout2 = `kapitoly/chapter_05.aux'.
 
- (./kapitoly/chapter_05.tex [27
+ (./kapitoly/chapter_05.tex [28
 
 
 
-] [28]
+] [29]
 Overfull \hbox (7.2116pt too wide) in paragraph at lines 76--77
 \OT1/cmr/m/n/10.95 Zhodnocen^^Sa jadern^^Sa data se ukl^^Sadaj^^S^^P pro teplotu 0 K. Nicm^^Sen^^Te d^^S^^Pky Dopplerov^^Te efektu (roz^^Tsi^^Trov^^San^^S^^P
  []
@@ -834,19 +834,19 @@ Overfull \hbox (0.3041pt too wide) in paragraph at lines 78--79
 []\OT1/cmr/m/n/10.95 V NJOY prov^^Sad^^S^^P modul \OT1/cmr/bx/n/10.95 BROADR\OT1/cmr/m/n/10.95 . Ten to prov^^Sad^^S^^P po-moc^^S^^P p^^Tresn^^Seho ^^Tre^^Tsen^^S^^P efek-tivn^^S^^Pho ^^Su^^Tcinn^^Seho
  []
 
-[29] [30]) [31]
+[30] [31]) [32]
 \openout2 = `kapitoly/chapter_06.aux'.
 
- (./kapitoly/chapter_06.tex [32
+ (./kapitoly/chapter_06.tex [33
 
 
 
-] [33] [34] [35]
+] [34] [35] [36]
 Overfull \hbox (1.1341pt too wide) in paragraph at lines 192--193
 []\OT1/cmr/m/n/10.95 Z v^^Sy^^Tse uve-den^^Se rovnice tedy vypl^^Syv^^Sa, ^^Tze \OT1/cmr/bx/n/10.95 efekt poruchy makroskopick^^Sych ^^Su^^Tcinn^^Sych pr^^Wu^^Trez^^Wu
  []
 
-[36] [37] [38]) [39]
+[37] [38] [39]) [40]
 \openout2 = `kapitoly/chapter_07.aux'.
 
  (./kapitoly/chapter_07.tex
@@ -859,81 +859,81 @@ Overfull \hbox (16.97429pt too wide) in paragraph at lines 24--25
 \OT1/cmr/bx/n/10.95 Rovnice kinetiky reak-toru \OT1/cmr/m/n/10.95 = rovnice popisuj^^S^^Pc^^S^^P z^^Savislost zm^^Teny v^^Systupn^^S^^Pch parametr^^Wu (v^^Sysledk^^Wu)
  []
 
-[40
+[41
 
 
 
-] [41] [42] [43]
+] [42] [43] [44]
 Overfull \hbox (9.14355pt too wide) in paragraph at lines 205--206
 \OT1/cmr/m/n/10.95 8 skupin, ENDF/B 6 skupin) po-dle polo^^Tcasu roz-padu. Pro popis se zav^^Sad^^S^^P tzv. \OT1/cmr/bx/n/10.95 pod^^S^^Pl zpo^^Tzd^^Ten^^Sych
  []
 
-[44]
+[45]
 Overfull \hbox (0.23601pt too wide) in paragraph at lines 260--261
 []\OT1/cmr/m/n/10.95 Nyn^^S^^P si je^^Tst^^Te uka^^Tzme rovnice jed-no-bodov^^Se kinetiky se zpo^^Tzd^^Ten^^Symi neu-trony. Odvozen^^S^^P je podobn^^Se
  []
 
-[45]
+[46]
 Overfull \hbox (3.10757pt too wide) in paragraph at lines 298--309
  [][] 
  []
 
-) [46]
+) [47]
 \openout2 = `kapitoly/chapter_08.aux'.
 
- (./kapitoly/chapter_08.tex [47
+ (./kapitoly/chapter_08.tex [48
 
 
 
-] [48]
-<img/impulsni.jpg, id=185, 433.62pt x 440.847pt>
+] [49]
+<img/impulsni.jpg, id=189, 433.62pt x 440.847pt>
 File: img/impulsni.jpg Graphic file (type jpg)
 <use img/impulsni.jpg>
 Package pdftex.def Info: img/impulsni.jpg  used on input line 126.
 (pdftex.def)             Requested size: 273.14922pt x 277.71489pt.
- [49] [50 <./img/impulsni.JPG>]
-<img/zn-rho.jpg, id=195, 732.93825pt x 483.60675pt>
+ [50] [51 <./img/impulsni.JPG>]
+<img/zn-rho.jpg, id=198, 732.93825pt x 483.60675pt>
 File: img/zn-rho.jpg Graphic file (type jpg)
 <use img/zn-rho.jpg>
 Package pdftex.def Info: img/zn-rho.jpg  used on input line 176.
 (pdftex.def)             Requested size: 455.24408pt x 300.38652pt.
- [51]
-<img/prechodova.jpg, id=199, 666.69075pt x 377.0085pt>
+ [52]
+<img/prechodova.jpg, id=202, 666.69075pt x 377.0085pt>
 File: img/prechodova.jpg Graphic file (type jpg)
 <use img/prechodova.jpg>
 Package pdftex.def Info: img/prechodova.jpg  used on input line 189.
 (pdftex.def)             Requested size: 318.66946pt x 180.20267pt.
- [52 <./img/zn-rho.JPG> <./img/prechodova.JPG>] [53]
-<img/periodicke.jpg, id=206, 672.111pt x 301.125pt>
+ [53 <./img/zn-rho.JPG> <./img/prechodova.JPG>] [54]
+<img/periodicke.jpg, id=209, 672.111pt x 301.125pt>
 File: img/periodicke.jpg Graphic file (type jpg)
 <use img/periodicke.jpg>
 Package pdftex.def Info: img/periodicke.jpg  used on input line 273.
 (pdftex.def)             Requested size: 227.62204pt x 101.98138pt.
- [54]
-<img/periodicke_reseni.jpg, id=210, 829.29825pt x 375.804pt>
+ [55]
+<img/periodicke_reseni.jpg, id=214, 829.29825pt x 375.804pt>
 File: img/periodicke_reseni.jpg Graphic file (type jpg)
 <use img/periodicke_reseni.jpg>
 Package pdftex.def Info: img/periodicke_reseni.jpg  used on input line 289.
 (pdftex.def)             Requested size: 227.62204pt x 103.14857pt.
- [55 <./img/periodicke.JPG> <./img/periodicke_reseni.JPG>]
-<img/konstantni_produkce.jpg, id=215, 707.0415pt x 445.665pt>
+ [56 <./img/periodicke.JPG> <./img/periodicke_reseni.JPG>]
+<img/konstantni_produkce.jpg, id=218, 707.0415pt x 445.665pt>
 File: img/konstantni_produkce.jpg Graphic file (type jpg)
 <use img/konstantni_produkce.jpg>
 Package pdftex.def Info: img/konstantni_produkce.jpg  used on input line 320.
 (pdftex.def)             Requested size: 227.62204pt x 143.47255pt.
- [56 <./img/konstantni_produkce.JPG>]
-<img/okamzity_skok.jpg, id=219, 555.87675pt x 371.58826pt>
+ [57 <./img/konstantni_produkce.JPG>]
+<img/okamzity_skok.jpg, id=222, 555.87675pt x 371.58826pt>
 File: img/okamzity_skok.jpg Graphic file (type jpg)
 <use img/okamzity_skok.jpg>
 Package pdftex.def Info: img/okamzity_skok.jpg  used on input line 347.
 (pdftex.def)             Requested size: 227.62204pt x 152.15372pt.
-<img/zdroj.jpg, id=220, 764.8575pt x 425.79076pt>
+<img/zdroj.jpg, id=223, 764.8575pt x 425.79076pt>
 File: img/zdroj.jpg Graphic file (type jpg)
 <use img/zdroj.jpg>
 Package pdftex.def Info: img/zdroj.jpg  used on input line 360.
 (pdftex.def)             Requested size: 364.19664pt x 202.74648pt.
- [57 <./img/okamzity_skok.JPG>] [58 <./img/zdroj.JPG>]
-<img/podil_N_ukazka.jpg, id=227, 394.47375pt x 285.4665pt>
+ [58 <./img/okamzity_skok.JPG>] [59 <./img/zdroj.JPG>]
+<img/podil_N_ukazka.jpg, id=230, 394.47375pt x 285.4665pt>
 File: img/podil_N_ukazka.jpg Graphic file (type jpg)
 <use img/podil_N_ukazka.jpg>
 Package pdftex.def Info: img/podil_N_ukazka.jpg  used on input line 391.
@@ -943,65 +943,65 @@ Overfull \hbox (12.41289pt too wide) in paragraph at lines 396--397
 []\OT1/cmr/m/n/10.95 Vyjdeme z pro-duk^^Tcn^^S^^Pho tvaru rovnic kinetiky (ale pouze z prvn^^S^^P rovnice, zpo^^Tzd^^Tenky n^^Sas nezaj^^S^^Pmaj^^S^^P),
  []
 
-<img/podil_N_1.jpg, id=228, 393.8715pt x 289.68225pt>
+<img/podil_N_1.jpg, id=231, 393.8715pt x 289.68225pt>
 File: img/podil_N_1.jpg Graphic file (type jpg)
 <use img/podil_N_1.jpg>
 Package pdftex.def Info: img/podil_N_1.jpg  used on input line 414.
 (pdftex.def)             Requested size: 273.14922pt x 200.90645pt.
-[59 <./img/podil_N_ukazka.JPG>]
-<img/podil_N_2.jpg, id=232, 402.303pt x 284.86424pt>
+[60 <./img/podil_N_ukazka.JPG>]
+<img/podil_N_2.jpg, id=235, 402.303pt x 284.86424pt>
 File: img/podil_N_2.jpg Graphic file (type jpg)
 <use img/podil_N_2.jpg>
 Package pdftex.def Info: img/podil_N_2.jpg  used on input line 427.
 (pdftex.def)             Requested size: 273.14922pt x 193.41823pt.
- [60 <./img/podil_N_1.JPG> <./img/podil_N_2.JPG>] [61]
+ [61 <./img/podil_N_1.JPG> <./img/podil_N_2.JPG>] [62]
 Overfull \hbox (1.61488pt too wide) in paragraph at lines 489--490
 []\OT1/cmr/m/n/10.95 Podobn^^Seho v^^Sysledku jsme dos^^Sahli u^^Tz v im-pulsn^^S^^P charak-ter-is-tice, ale tam jsme museli p^^Tredpokl^^Sadat
  []
 
-[62]
-<img/frekvencni.jpg, id=243, 330.63525pt x 194.52675pt>
+[63]
+<img/frekvencni.jpg, id=246, 330.63525pt x 194.52675pt>
 File: img/frekvencni.jpg Graphic file (type jpg)
 <use img/frekvencni.jpg>
 Package pdftex.def Info: img/frekvencni.jpg  used on input line 556.
 (pdftex.def)             Requested size: 227.62204pt x 133.92082pt.
- [63]
-<img/frekvencni_zavislost.jpg, id=247, 681.747pt x 427.5975pt>
+ [64]
+<img/frekvencni_zavislost.jpg, id=250, 681.747pt x 427.5975pt>
 File: img/frekvencni_zavislost.jpg Graphic file (type jpg)
 <use img/frekvencni_zavislost.jpg>
 Package pdftex.def Info: img/frekvencni_zavislost.jpg  used on input line 567.
 (pdftex.def)             Requested size: 455.24408pt x 285.54277pt.
- [64 <./img/frekvencni.JPG> <./img/frekvencni_zavislost.JPG>]
-<img/amplituda_frekvence.jpg, id=251, 289.68225pt x 200.54926pt>
+ [65 <./img/frekvencni.JPG> <./img/frekvencni_zavislost.JPG>]
+<img/amplituda_frekvence.jpg, id=254, 289.68225pt x 200.54926pt>
 File: img/amplituda_frekvence.jpg Graphic file (type jpg)
 <use img/amplituda_frekvence.jpg>
 Package pdftex.def Info: img/amplituda_frekvence.jpg  used on input line 612.
 (pdftex.def)             Requested size: 227.62204pt x 157.58757pt.
- [65] [66 <./img/amplituda_frekvence.JPG>]) [67]
+ [66] [67 <./img/amplituda_frekvence.JPG>]) [68]
 \openout2 = `kapitoly/chapter_09.aux'.
 
  (./kapitoly/chapter_09.tex
-<img/ZV.JPG, id=262, 484.209pt x 294.50024pt>
+<img/ZV.JPG, id=265, 484.209pt x 294.50024pt>
 File: img/ZV.JPG Graphic file (type jpg)
 <use img/ZV.JPG>
 Package pdftex.def Info: img/ZV.JPG  used on input line 22.
 (pdftex.def)             Requested size: 318.66946pt x 193.82251pt.
- [68
+ [69
 
 
 
  <./img/ZV.JPG>]
-<img/voda-uran.JPG, id=266, 426.99525pt x 259.56975pt>
+<img/voda-uran.JPG, id=269, 426.99525pt x 259.56975pt>
 File: img/voda-uran.JPG Graphic file (type jpg)
 <use img/voda-uran.JPG>
 Package pdftex.def Info: img/voda-uran.JPG  used on input line 57.
 (pdftex.def)             Requested size: 318.66946pt x 193.72626pt.
- [69] [70 <./img/voda-uran.JPG>]
+ [70] [71 <./img/voda-uran.JPG>]
 Overfull \hbox (3.7124pt too wide) in paragraph at lines 99--100
 []$\OT1/cmr/m/n/10.95 ^^A\OML/cmm/m/it/10.95 T[]$ \OT1/cmr/m/n/10.95 -- p^^Tredstavuje teplotn^^S^^P od-chylku od i-t^^Se slo^^Tzky (teplotn^^S^^P rozd^^S^^Pl od kr-i-t-ick^^Seho a aktu^^Saln^^S^^Pho
  []
 
-[71]
+[72]
 Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
@@ -1016,7 +1016,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-) [72]
+) [73]
 \openout2 = `kapitoly/chapter_10.aux'.
 
  (./kapitoly/chapter_10.tex
@@ -1029,11 +1029,11 @@ Overfull \hbox (0.15489pt too wide) in paragraph at lines 5--6
 \OT1/cmr/m/n/10.95 Z^^Sakladn^^S^^Pm principem pro de-ter-min-i-stick^^Se k^^Sody je p^^Tr^^S^^Pm^^Se ^^Tre^^Tsen^^S^^P matem-at-ick^^Sych rovnic popisuj^^S^^Pc^^S^^Pch
  []
 
-[73
+[74
 
 
 
-] [74]) [75]
+] [75]) [76]
 \openout2 = `kapitoly/chapter_11.aux'.
 
  (./kapitoly/chapter_11.tex
@@ -1041,22 +1041,22 @@ Overfull \hbox (2.40315pt too wide) in paragraph at lines 19--20
 \OT1/cmr/m/n/10.95 D^^Sale je pot^^Treba nav-zorko-vat dan^^Sa ^^Tc^^S^^Psla po-dle jist^^Sych pravd^^Tepodobnostn^^S^^Pch funkc^^S^^P $\OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )$. Gener^^Sator
  []
 
-[76
+[77
 
 
 
 ]
-<img/rejection_sampling.png, id=292, 578.16pt x 264.5082pt>
+<img/rejection_sampling.png, id=295, 578.16pt x 264.5082pt>
 File: img/rejection_sampling.png Graphic file (type png)
 <use img/rejection_sampling.png>
 Package pdftex.def Info: img/rejection_sampling.png  used on input line 48.
 (pdftex.def)             Requested size: 318.66946pt x 145.79073pt.
- [77 <./img/rejection_sampling.png>] [78]
+ [78 <./img/rejection_sampling.png>] [79]
 Overfull \hbox (29.40564pt too wide) in paragraph at lines 116--117
 \OT1/cmr/m/n/10.95 Nyn^^S^^P jsme u^^Tz v bod^^Te, kde do-jde k n^^Tejak^^Se reakci, zb^^Syv^^Sa zjis-tit k jak^^Se. To se op^^Tet ur^^Tc^^S^^P pravd^^Tepodobnostn^^Te,
  []
 
-) [79]
+) [80]
 \openout2 = `kapitoly/chapter_12.aux'.
 
  (./kapitoly/chapter_12.tex
@@ -1064,16 +1064,16 @@ Overfull \hbox (7.45699pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/14.4 V^^Sypo^^Tcty vyho^^Tren^^S^^P jadern^^Seho paliva, for-mu-lace ^^Sulohy a metoda
  []
 
-<img/burnup_matrix.JPG, id=305, 359.54324pt x 333.04425pt>
+<img/burnup_matrix.JPG, id=308, 359.54324pt x 333.04425pt>
 File: img/burnup_matrix.JPG Graphic file (type jpg)
 <use img/burnup_matrix.JPG>
 Package pdftex.def Info: img/burnup_matrix.JPG  used on input line 25.
 (pdftex.def)             Requested size: 227.62204pt x 210.85059pt.
-[80
+[81
 
 
 
- <./img/burnup_matrix.JPG>] [81]
+ <./img/burnup_matrix.JPG>] [82]
 Overfull \hbox (6.4511pt too wide) in paragraph at lines 73--74
 []\OT1/cmr/m/n/10.95 Funguje na stejn^^Sem z^^Sakladu, pouze rozkl^^Sad^^Sa ex-po-nenci^^Saln^^S^^P matici do Cheby-shevov^^Sych racion^^Saln^^S^^Pch
  []
@@ -1083,7 +1083,7 @@ Overfull \hbox (5.74133pt too wide) in paragraph at lines 81--82
 \OT1/cmr/m/n/10.95 Vych^^Saz^^S^^P z rozvoje jed-notliv^^Sych trans-mu-tac^^S^^P a p^^Trem^^Ten do line^^Sarn^^S^^Pch ^^Tret^^Tezc^^Wu. Vyjde se ze z^^Sakladn^^S^^Pho
  []
 
-) [82]
+) [83]
 \openout2 = `kapitoly/chapter_13.aux'.
 
  (./kapitoly/chapter_13.tex
@@ -1111,18 +1111,38 @@ Overfull \hbox (1.09846pt too wide) in paragraph at lines 27--28
 []$\OT1/cmr/m/n/10.95 ^^F[]$ -- p^^Trevr^^Sacen^^Sa hod-nota p^^Tredstavuje dr^^Sahu, kterou neu-tron uraz^^S^^P po nekone^^Tcn^^Sem mno^^Tzstv^^S^^P
  []
 
-[83
+[84
 
 
 
-] [84]) [85]
+] [85]) [86]
 \openout2 = `kapitoly/chapter_14.aux'.
 
- (./kapitoly/chapter_14.tex) [86
+ (./kapitoly/chapter_14.tex
+Overfull \hbox (0.24611pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/10.95 pou^^Tziju Monte-Carlo p^^Tr^^S^^Pstup, de-ter-min-i-stick^^Sy p^^Tr^^S^^Pstup, nebo si nap^^S^^P^^Tsu n^^Teco s^^Sam (pro zjednodu^^Tsen^^Se
+ []
+
+
+Overfull \hbox (0.99518pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/n/10.95 namod-eluju prak-ticky coko-liv. U de-ter-min-i-stick^^Sych n^^Sastroj^^Wu se mus^^S^^P ^^Sulohy zna^^Tcn^^Te zjednodu^^Tsovat,
+ []
+
+[87
 
 
 
-] (./main.aux (./none.aux) (./kapitoly/chapter_01.aux) (./kapitoly/chapter_02.aux) (./kapitoly/chapter_03.aux) (./kapitoly/chapter_04.aux) (./kapitoly/chapter_05.aux) (./kapitoly/chapter_06.aux) (./kapitoly/chapter_07.aux) (./kapitoly/chapter_08.aux) (./kapitoly/chapter_09.aux) (./kapitoly/chapter_10.aux) (./kapitoly/chapter_11.aux) (./kapitoly/chapter_12.aux) (./kapitoly/chapter_13.aux) (./kapitoly/chapter_14.aux))
+]
+Overfull \hbox (5.531pt too wide) in paragraph at lines 41--42
+[]\OT1/cmr/m/n/10.95 Implicitn^^S^^P ko-e-fi-cienty -- vz-tahuj^^S^^P se na zm^^Tenu ko-e-fi-cientu n^^Sasoben^^S^^P ($\OML/cmm/m/it/10.95 k$\OT1/cmr/m/n/10.95 ) v d^^Wusledku samost^^S^^Pn^^Ten^^S^^P 
+ []
+
+
+Overfull \hbox (12.01746pt too wide) in paragraph at lines 46--47
+\OT1/cmr/m/n/10.95 kter^^Sy provedu zm^^Tenou ato-mov^^Se hus-toty ve vs-tupn^^S^^Pm mod-elu (pot^^Trebuju pohnout s makroskopick^^Sym
+ []
+
+) [88] (./main.aux (./none.aux) (./kapitoly/chapter_01.aux) (./kapitoly/chapter_02.aux) (./kapitoly/chapter_03.aux) (./kapitoly/chapter_04.aux) (./kapitoly/chapter_05.aux) (./kapitoly/chapter_06.aux) (./kapitoly/chapter_07.aux) (./kapitoly/chapter_08.aux) (./kapitoly/chapter_09.aux) (./kapitoly/chapter_10.aux) (./kapitoly/chapter_11.aux) (./kapitoly/chapter_12.aux) (./kapitoly/chapter_13.aux) (./kapitoly/chapter_14.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1136,10 +1156,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,15n,103p,976b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (86 pages, 1361748 bytes).
+Output written on main.pdf (88 pages, 1368488 bytes).
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 277 compressed objects within 3 object streams
+ 446 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  108 words of extra memory for PDF output out of 10000 (max. 10000000)
 

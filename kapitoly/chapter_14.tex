@@ -1,1 +1,52 @@
 \section[Citlivostní analýza]{Zdroj nejistot numerických výpočtů v jaderných datech a analýza citlivosti koeficientu násobení}
+
+\subsection{Zdroje nejistot}
+
+Zdrojů nejistot může být několik, liší se velikostně apod. Mezi ty nejdominantnější patří (asi):
+
+\subsubsection{Volba vhodného výpočetního nástroje}
+
+V prnvím případě je potřeba zvolit způsob, jakým výpočet provedu. V prvním kroku jestli použiju Monte-Carlo přístup, deterministický přístup, nebo si napíšu něco sám (pro zjednodušené výpočty to stačí).
+
+Nejlepší je sáhnout po nějakém validovaném kódu, ale tam je problém, že bývají většinou validovány pouze na některé úlohy. Například ANDREA je validována na VVER reaktory (zatím), přičemž tahá data z HELIOSu, otázka co bychom dostali, pokud bychom modelovali vlastní reaktor a data tahali třeba ze Serpentu.
+
+\subsubsection{Chyba modelu}
+
+V druhém kroku záleží, jak si model nadefinuju. U Monte-Carlo přístupu o nic nejde, tam namodeluju prakticky cokoliv. U deterministických nástrojů se musí úlohy značně zjednodušovat, a tady už záleží, jestli ji nezjednoduším až moc. Proběhlý výpočet pak sice bude správně, ale nebude odpovídat realitě, jelikož ani model neodpovídal realitě.
+
+To samé platí o fyzických modelech, projektová dokumentace se bude od reality lišit, vždy budou nějaké vůle mezi skutečnými a požadovanými rozměry. To samé přesné materiálově složení, uchycení apod.
+
+\subsubsection{Chyba vstupních dat}
+
+Pokud už mám model hotový, tak přicházejí na řadu data, tedy účinné průřezy. Někde jsem slyšel, že jenom samotné průřezy mohou udělat chybu až 100-200 pcm (nevím co je na tom pravdy), ale asi skutečně záleží. Každá knihovna dává jiné průřezy, které se jinak chovají. To samé verze mezi sebou.
+
+Například vím, že JEFF knihovny mají data pro $^{233}$U převzaty z knihovny ENDF/B-VII.0, nicméně ty jsou staré strašně dlouho a v nových ENDF/B knihovnách se výrazně upravily, což má za následek, že JEFF výpočty jsou na tomhle izotopu dost odlišné. A teď otázka, co je ale správně. 
+
+Další problém je, že k danému izotopu nemáme dost dat, to se týká hlavně štěpných produktů (transurany jsou proměřeny docela dobře, jenom hlavní izotopy uranu obsahují v nových knihovnách tisíce bodů, naopak $^{135}$Xe jenom 80). A tohle všechno potom ovlivní finální reaktivitu.
+
+\subsection{Citlivostní analýza koeficientu násobení}
+
+Jedním z hlavních cílů, které chceme výpočtem určit, je stanovení kritičnosti. Proto je důležité provádět tzv. citlivostní analýzu koeficientu násobení, tedy jak se nám změní koeficient násobení, pokud nějak změním vstupní data (rozměry, hustoty, účinné průřezy). Poté vím, na kterou změnu je daný systém nejvíce citlivý, a na co si při provádění experimentu dát pozor.
+
+Dle analýz se ukazuje, že u LWR reaktorů může být nejistota až 500 pcm, pro rychlé reaktory mnohem více (tisíce pcm), přičemž největší nejistotu hrají právě vstupní data (průřezy). Když mi např. Serpent vyplivne nejistotu 10 pcm, tak to je pouze nejistota ve výpočtu, reálně se ještě musí připočíst nejistota způsobená těmito vstupními daty.
+
+Tato procedura se může stanovit za pomoci nástroje \textbf{TSUNAMI}, který spadá pod SCALE (nic jiného jsme si neukazovali), který určuje nejistoty výpočtu v důsledku tabelovaných kovariančních dat (co to znamená? nevim). Výpočtem se stanoví koeficienty citlivosti, které stanovují změnu koeficientu násobení při změně daného parametru:
+
+$$ S_{k,\Sigma_{x,g}} = \dfrac{\dfrac{\partial k}{k}}{\dfrac{\partial \Sigma_{x,g}}{\Sigma_{x,g}}}. $$
+
+Rozlišujeme:
+
+\begin{itemize}
+    \item Explicitní koeficienty -- vztahují se na změnu koeficientu násobení ($k$) při změně vstupních účinných průřezů ($\Sigma_{x,g}$)
+    \item Implicitní koeficienty -- vztahují se na změnu koeficientu násobení ($k$) v důsledku samostínění
+\end{itemize}
+
+Tyto koeficienty poté sečteme, čímž známe finální efekt citlivosti.
+
+V druhém kroku je ještě vhodné, aby se takto určená nejistota zkontrolovala s přímým výpočtem, který provedu změnou atomové hustoty ve vstupním modelu (potřebuju pohnout s makroskopickým průřezem, a jelikož s mikroskopickým průřezem jen tak nehnu, tak hnu s koncentrací, což se projeví na makroskopickém průřezu). V praxi se pak hodí počítat s takovou změnou, která vyvolá 0,5 \% změnu v koeficientu násobení.
+
+\subsection{Citlivostní analýza výpočtu vyhoření}
+
+Dále pod SCALEm existuje nástroj \textbf{SAMPLER}, který se hodí pro výpočty vyhoření a funguje tak, že nějakým způsobem navzorkovává data (opět, jak?). Tím je možné získat složení v čase s danými nejistotami.
+
+S tím jsme ani nepracovali, nic o něm nevím.
